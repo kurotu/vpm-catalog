@@ -1,3 +1,6 @@
+# vpm repositories
+repos/*.json
+
 # build output
 dist/
 # generated types
