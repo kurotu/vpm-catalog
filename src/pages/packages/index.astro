@@ -1,0 +1,42 @@
+---
+import Nav from "~/components/Nav.astro";
+import type { VPMPackage, VPMRepository } from "~/types";
+
+const findLatestVersion = (packages: VPMPackage[], name: string) => {
+  const filtered = packages.filter(pkg => pkg.name === name);
+  if (filtered.length === 0) {
+    return null;
+  }
+  filtered.sort((a, b) => {
+    return a.version.localeCompare(b.version);
+  });
+  return filtered[filtered.length - 1];
+};
+
+const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
+const packages = allRepos.flatMap((repo) => {
+  return Object.keys(repo.packages).flatMap(name => {
+    const group = repo.packages[name];
+    return Object.keys(group.versions).map(version => {
+      return group.versions[version];
+    });
+  });
+});
+const names = Array.from(new Set(packages.map(pkg => pkg.name)));
+const pkgs = names
+  .map(name => {
+    const pkg = findLatestVersion(packages, name);
+    return pkg;
+  })
+  .filter((p): p is NonNullable<typeof p> => p !== null)
+  .sort((a, b) => {
+    return a.displayName.localeCompare(b.displayName);
+  });
+---
+<Nav />
+<h1>Packages</h1>
+{pkgs.map(pkg => (
+    <h2><a href={`/packages/${pkg.name}`}>{pkg.displayName}</a></h2>
+    <p>{pkg.description}</p>
+    <p>Version: {pkg.version}</p>
+))}

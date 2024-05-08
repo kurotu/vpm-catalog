@@ -1,0 +1,18 @@
+---
+import Nav from "~/components/Nav.astro";
+import type { VPMRepository } from "~/types";
+
+const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
+allRepos.sort((a, b) => a.name.localeCompare(b.name));
+
+---
+<Nav />
+<h1>Repositories</h1>
+{allRepos.map(repo => (
+  <div>
+    <h2><a href={`/repositories/${repo.id}`}>{repo.name}</a></h2>
+    <p>ID: {repo.id}</p>
+    <p>URL: {repo.url}</p>
+    <p>Author: {repo.author}</p>
+  </div>
+))}

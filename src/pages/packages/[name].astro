@@ -1,0 +1,67 @@
+---
+import type { GetStaticPaths } from "astro";
+import Nav from "~/components/Nav.astro";
+import type { VPMPackage, VPMRepository } from "~/types";
+
+export const getStaticPaths = (async () => {
+  const findLatestVersion = (packages: VPMPackage[], name: string) => {
+    const filtered = packages.filter(pkg => pkg.name === name);
+    if (filtered.length === 0) {
+      return null;
+    }
+    filtered.sort((a, b) => {
+      return a.version.localeCompare(b.version);
+    });
+    return filtered[filtered.length - 1];
+  };
+
+  const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
+  const packages = allRepos.flatMap((repo) => {
+    return Object.keys(repo.packages).flatMap(name => {
+      const group = repo.packages[name];
+      return Object.keys(group.versions).map(version => {
+        return group.versions[version];
+      });
+    });
+  });
+  const names = Array.from(new Set(packages.map(pkg => pkg.name)));
+  return names.map(name => {
+    const pkg = findLatestVersion(packages, name);
+    return {
+      params: {
+        name: name
+      },
+      props: {
+        pkg: pkg
+      }}
+  });
+}) satisfies GetStaticPaths;
+
+const {pkg} = Astro.props;
+---
+<Nav />
+<h1>{pkg?.displayName}</h1>
+<p>Name: {pkg?.name}</p>
+<p>Version: {pkg?.version}</p>
+<p>Description: {pkg?.description}</p>
+<p>Unity: {pkg?.unity ? `${pkg.unity} or later` : 'Any version'}</p>
+<p>Author: {pkg?.author?.name}</p>
+<p>ChangelogURL: <a target="_blank" href={pkg?.changelogUrl}>{pkg?.changelogUrl}</a></p>
+<p>Dependencies: {pkg?.dependencies ? Object.keys(pkg?.dependencies).join(',') : null}</p>
+<p>DocumentationURL: <a target="_blank" href={pkg?.documentationUrl}>{pkg?.documentationUrl}</a></p>
+<p>HideInEditor: {pkg?.hideInEditor}</p>
+<p>Keywords: {pkg?.keywords?.join(',')}</p>
+<p>License: {pkg?.license}</p>
+<p>LicensesURL: <a target="_blank" href={pkg?.licensesUrl}>{pkg?.licensesUrl}</a></p>
+
+<hr />
+
+<p>VPM Dependencies:</p>
+<ul>
+  {pkg?.vpmDependencies ? Object.keys(pkg?.vpmDependencies).map(p => <li><a href={`/packages/${p}`}>{p}</a></li>) : null}
+</ul>
+<p>Legacy Packages:</p>
+<ul>
+  {pkg?.legacyPackages?.map(p => <li><a href={`/packages/${p}`}>{p}</a></li>)}
+</ul>
+<p>URL: {pkg?.url}</p>

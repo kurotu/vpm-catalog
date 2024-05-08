@@ -1,0 +1,53 @@
+---
+import type { GetStaticPaths } from "astro";
+import { SemVer } from 'semver';
+import Nav from "~/components/Nav.astro";
+import type { VPMRepository, VPMPackageGroup } from "~/types";
+
+export const getStaticPaths = (async () => {
+  const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
+  return allRepos.map(repo => ({
+    params: {
+      id: repo.id
+    },
+    props: {
+        repo: repo
+    }
+  }));
+}) satisfies GetStaticPaths;
+
+const {repo}: {repo: VPMRepository} = Astro.props;
+
+const findLatestVersion = (group: VPMPackageGroup) => {
+  const versions = Object.keys(group.versions).filter(v => !v.includes('-')).map(v => new SemVer(v));
+  if (versions.length === 0) {
+    return null;
+  }
+  versions.sort();
+  return versions[versions.length - 1];
+}
+
+const packages = Object.keys(repo.packages)
+  .map(packageId => {
+    const group = repo.packages[packageId];
+    const latestVersion = findLatestVersion(group);
+    if (latestVersion === null) {
+      return null;
+    }
+    return group.versions[latestVersion.toString()];
+  })
+  .filter((p): p is NonNullable<typeof p> => p !== null);
+packages.sort((a, b) => a.displayName.localeCompare(b.displayName));
+---
+<Nav />
+<h1>{repo.name}</h1>
+<p>{repo.author}</p>
+<p>{repo.url}</p>
+<ul>
+  {packages.map(pkg => (
+    <li>
+      <a href={`/packages/${pkg.name}`}>{pkg.displayName}</a>
+      {pkg.version}
+    </li>
+  ))}
+</ul>
