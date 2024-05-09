@@ -1,6 +1,4 @@
 ---
-import Nav from '~/components/Nav.astro';
-
 interface Props {
   title: string;
 }
@@ -16,7 +14,6 @@ const {title} = Astro.props;
 		<title>{title} | VPM Catalog</title>
 	</head>
 	<body>
-    <Nav />
     <slot />
 	</body>
 </html>

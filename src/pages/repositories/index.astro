@@ -1,6 +1,5 @@
 ---
-import Nav from "~/components/Nav.astro";
-import Layout from "~/layouts/Layout.astro";
+import Layout from "~/layouts/DrawerLayout.astro";
 import type { VPMRepository } from "~/utils/vpm";
 
 const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
