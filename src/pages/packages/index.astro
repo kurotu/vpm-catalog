@@ -1,34 +1,16 @@
 ---
 import Nav from "~/components/Nav.astro";
-import type { VPMPackage, VPMRepository } from "~/types";
-
-const findLatestVersion = (packages: VPMPackage[], name: string) => {
-  const filtered = packages.filter(pkg => pkg.name === name);
-  if (filtered.length === 0) {
-    return null;
-  }
-  filtered.sort((a, b) => {
-    return a.version.localeCompare(b.version);
-  });
-  return filtered[filtered.length - 1];
-};
+import { type VPMPackage, type VPMRepository, findLatestPackage, getAllPackages } from "~/utils/vpm";
 
 const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
-const packages = allRepos.flatMap((repo) => {
-  return Object.keys(repo.packages).flatMap(name => {
-    const group = repo.packages[name];
-    return Object.keys(group.versions).map(version => {
-      return group.versions[version];
-    });
-  });
-});
-const names = Array.from(new Set(packages.map(pkg => pkg.name)));
-const pkgs = names
+const allReleasePackages = getAllPackages(allRepos).filter(p => !p.version.includes('-'));
+
+const allNames = Array.from(new Set(allReleasePackages.map(pkg => pkg.name)));
+const pkgs = allNames
   .map(name => {
-    const pkg = findLatestVersion(packages, name);
-    return pkg;
+    return findLatestPackage(allReleasePackages.filter(p => p.name=== name));
   })
-  .filter((p): p is NonNullable<typeof p> => p !== null)
+  .filter((p): p is VPMPackage => p ? true : false)
   .sort((a, b) => {
     return a.displayName.localeCompare(b.displayName);
   });

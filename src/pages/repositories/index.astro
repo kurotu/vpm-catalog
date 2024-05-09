@@ -1,6 +1,6 @@
 ---
 import Nav from "~/components/Nav.astro";
-import type { VPMRepository } from "~/types";
+import type { VPMRepository } from "~/utils/vpm";
 
 const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
 allRepos.sort((a, b) => a.name.localeCompare(b.name));

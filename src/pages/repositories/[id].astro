@@ -1,8 +1,8 @@
 ---
 import type { GetStaticPaths } from "astro";
-import { SemVer } from 'semver';
 import Nav from "~/components/Nav.astro";
-import type { VPMRepository, VPMPackageGroup } from "~/types";
+import type { VPMPackage } from "~/utils/vpm";
+import { type VPMRepository, findLatestReleasePackage } from "~/utils/vpm";
 
 export const getStaticPaths = (async () => {
   const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
@@ -18,25 +18,10 @@ export const getStaticPaths = (async () => {
 
 const {repo}: {repo: VPMRepository} = Astro.props;
 
-const findLatestVersion = (group: VPMPackageGroup) => {
-  const versions = Object.keys(group.versions).filter(v => !v.includes('-')).map(v => new SemVer(v));
-  if (versions.length === 0) {
-    return null;
-  }
-  versions.sort();
-  return versions[versions.length - 1];
-}
+const packages = Object.values(repo.packages)
+  .map(findLatestReleasePackage)
+  .filter((p): p is VPMPackage => p ? true : false)
 
-const packages = Object.keys(repo.packages)
-  .map(packageId => {
-    const group = repo.packages[packageId];
-    const latestVersion = findLatestVersion(group);
-    if (latestVersion === null) {
-      return null;
-    }
-    return group.versions[latestVersion.toString()];
-  })
-  .filter((p): p is NonNullable<typeof p> => p !== null);
 packages.sort((a, b) => a.displayName.localeCompare(b.displayName));
 ---
 <Nav />
