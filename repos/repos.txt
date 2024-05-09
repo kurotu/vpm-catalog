@@ -1,3 +1,5 @@
 https://kurotu.github.io/vpm-repos/vpm.json
 https://vpm.anatawa12.com/vpm.json
 https://vpm.nadena.dev/vpm.json
+https://vrchat.github.io/packages/index.json
+https://vrchat-community.github.io/vpm-listing-curated/index.json
