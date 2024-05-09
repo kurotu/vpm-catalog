@@ -1,5 +1,5 @@
 ---
-import Nav from "~/components/Nav.astro";
+import Layout from "~/layouts/Layout.astro";
 import { type VPMPackage, type VPMRepository, findLatestPackage, getAllPackages } from "~/utils/vpm";
 
 const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
@@ -14,11 +14,13 @@ const pkgs = allNames
   .sort((a, b) => {
     return a.displayName.localeCompare(b.displayName);
   });
+const title = "Packages";
 ---
-<Nav />
-<h1>Packages</h1>
-{pkgs.map(pkg => (
-    <h2><a href={`/packages/${pkg.name}`}>{pkg.displayName}</a></h2>
-    <p>{pkg.description}</p>
-    <p>Version: {pkg.version}</p>
-))}
+<Layout title={title}>
+  <h1>{title}</h1>
+  {pkgs.map(pkg => (
+      <h2><a href={`/packages/${pkg.name}`}>{pkg.displayName}</a></h2>
+      <p>{pkg.description}</p>
+      <p>Version: {pkg.version}</p>
+  ))}
+</Layout>

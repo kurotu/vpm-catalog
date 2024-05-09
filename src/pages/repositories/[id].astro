@@ -1,6 +1,6 @@
 ---
 import type { GetStaticPaths } from "astro";
-import Nav from "~/components/Nav.astro";
+import Layout from "~/layouts/Layout.astro";
 import type { VPMPackage } from "~/utils/vpm";
 import { type VPMRepository, findLatestReleasePackage } from "~/utils/vpm";
 
@@ -24,15 +24,16 @@ const packages = Object.values(repo.packages)
 
 packages.sort((a, b) => a.displayName.localeCompare(b.displayName));
 ---
-<Nav />
-<h1>{repo.name}</h1>
-<p>{repo.author}</p>
-<p>{repo.url}</p>
-<ul>
-  {packages.map(pkg => (
-    <li>
-      <a href={`/packages/${pkg.name}`}>{pkg.displayName}</a>
-      {pkg.version}
-    </li>
-  ))}
-</ul>
+<Layout title={repo.name}>
+  <h1>{repo.name}</h1>
+  <p>{repo.author}</p>
+  <p>{repo.url}</p>
+  <ul>
+    {packages.map(pkg => (
+      <li>
+        <a href={`/packages/${pkg.name}`}>{pkg.displayName}</a>
+        {pkg.version}
+      </li>
+    ))}
+  </ul>
+</Layout>

@@ -1,18 +1,8 @@
 ---
-import Nav from "~/components/Nav.astro";
+import Layout from "~/layouts/Layout.astro";
 
+const title = "VPM Catalog";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-    <Nav />
-		<h1>VPM Catalog</h1>
-	</body>
-</html>
+<Layout title={title}>
+  <h1>{title}</h1>
+</Layout>

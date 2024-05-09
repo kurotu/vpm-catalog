@@ -1,18 +1,21 @@
 ---
 import Nav from "~/components/Nav.astro";
+import Layout from "~/layouts/Layout.astro";
 import type { VPMRepository } from "~/utils/vpm";
 
 const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
 allRepos.sort((a, b) => a.name.localeCompare(b.name));
 
+const title = "Repositories";
 ---
-<Nav />
-<h1>Repositories</h1>
-{allRepos.map(repo => (
-  <div>
-    <h2><a href={`/repositories/${repo.id}`}>{repo.name}</a></h2>
-    <p>ID: {repo.id}</p>
-    <p>URL: {repo.url}</p>
-    <p>Author: {repo.author}</p>
-  </div>
-))}
+<Layout title={title}>
+  <h1>{title}</h1>
+  {allRepos.map(repo => (
+    <div>
+      <h2><a href={`/repositories/${repo.id}`}>{repo.name}</a></h2>
+      <p>ID: {repo.id}</p>
+      <p>URL: {repo.url}</p>
+      <p>Author: {repo.author}</p>
+    </div>
+  ))}
+</Layout>
