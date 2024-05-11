@@ -33,7 +33,7 @@ packages.sort((a, b) => a.displayName.localeCompare(b.displayName));
     {label: "Repositories", href: "/repositories"},
     {label: repo.name},
   ]}/>
-  <Head1 text={repo.name} />
+  <Head1>{repo.name}</Head1>
   <div class="mb-2" />
   <p>{repo.author}</p>
   <p class="mb-4">{repo.url}</p>

@@ -43,7 +43,7 @@ const {Content} = Astro.props.readme ?? { Content: undefined };
         Content
           ? <Prose><Content /></Prose>
           : <div>
-              <Head1 text={pkg.displayName} />
+              <Head1>{pkg.displayName}</Head1>
               <p class="mt-4 text-lg">{pkg.description}</p>
           </div>
       }
