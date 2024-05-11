@@ -1,4 +1,6 @@
 ---
+import Breadcrumbs from "~/components/Breadcrumbs.astro";
+import Head1 from "~/components/Head1.astro";
 import PackageCard from "~/components/PackageCard.astro";
 import Layout from "~/layouts/CenterLayout.astro";
 import { type VPMPackage, type VPMRepository, findLatestPackage, getAllPackages } from "~/utils/vpm";
@@ -18,7 +20,11 @@ const packages = allNames
 const title = "Packages";
 ---
 <Layout title={title}>
-  <h1 class="text-4xl mb-6">{title}</h1>
+  <Breadcrumbs items={[
+    {label: "Home", href: "/"},
+    {label: "Packages"},
+  ]}/>
+  <Head1 text={title} />
   {packages.map(pkg => (
     <div class="mb-2">
       <PackageCard pkg={pkg} />

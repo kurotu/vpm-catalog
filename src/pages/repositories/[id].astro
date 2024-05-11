@@ -1,5 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro";
+import Breadcrumbs from "~/components/Breadcrumbs.astro";
+import Head1 from "~/components/Head1.astro";
 import PackageCard from "~/components/PackageCard.astro";
 import Layout from "~/layouts/CenterLayout.astro";
 import type { VPMPackage } from "~/utils/vpm";
@@ -26,7 +28,12 @@ const packages = Object.values(repo.packages)
 packages.sort((a, b) => a.displayName.localeCompare(b.displayName));
 ---
 <Layout title={repo.name}>
-  <h1 class="text-4xl mb-6">{repo.name}</h1>
+  <Breadcrumbs items={[
+    {label: "Home", href: "/"},
+    {label: "Repositories", href: "/repositories"},
+    {label: repo.name},
+  ]}/>
+  <Head1 text={repo.name} />
   <p>{repo.author}</p>
   <p>{repo.url}</p>
   <ul>

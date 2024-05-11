@@ -1,0 +1,20 @@
+---
+interface Item {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const {items} = Astro.props;
+
+---
+<div class="text-sm breadcrumbs">
+  <ul>
+    {items.map(item => (item.href
+      ? <li><a href={item.href}>{item.label}</a></li>
+      : <li>{item.label}</li>))}
+  </ul>
+</div>
