@@ -1,4 +1,5 @@
 ---
+import RepositoryCard from "~/components/RepositoryCard.astro";
 import Layout from "~/layouts/CenterLayout.astro";
 import type { VPMRepository } from "~/utils/vpm";
 
@@ -8,13 +9,10 @@ allRepos.sort((a, b) => a.name.localeCompare(b.name));
 const title = "Repositories";
 ---
 <Layout title={title}>
-  <h1>{title}</h1>
+  <h1 class="text-4xl mb-6">{title}</h1>
   {allRepos.map(repo => (
-    <div>
-      <h2><a href={`/repositories/${repo.id}`}>{repo.name}</a></h2>
-      <p>ID: {repo.id}</p>
-      <p>URL: {repo.url}</p>
-      <p>Author: {repo.author}</p>
+    <div class="mb-2">
+      <RepositoryCard repository={repo} />
     </div>
   ))}
 </Layout>

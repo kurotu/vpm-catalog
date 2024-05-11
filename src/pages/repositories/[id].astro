@@ -32,9 +32,7 @@ packages.sort((a, b) => a.displayName.localeCompare(b.displayName));
   <ul>
     {packages.map(pkg => (
       <div class="mb-2">
-        <a href={`/packages/${pkg.name}`}>
         <PackageCard pkg={pkg} />
-        </a>
       </div>
     ))}
   </ul>

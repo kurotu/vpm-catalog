@@ -1,0 +1,22 @@
+---
+import type { VPMRepository } from '~/utils/vpm'
+import Card from './Card.astro';
+
+interface Props {
+  repository: VPMRepository
+}
+
+const { repository } = Astro.props;
+
+---
+<Card>
+  <div class="card-body flex-row">
+    <div class="flex-grow flex-col">
+      <h2 class="card-title"><a class="btn-link" href=`/repositories/${repository.id}`>{repository.name}</h2>
+      <p>{repository.url}</p>
+    </div>
+    <div class="card-actions flex-grow justify-end">
+      <a href={`vcc://vpm/addRepo?url=${repository.url}`} class="btn btn-sm">Add to VCC</a>
+    </div>
+  </div>
+</Card>

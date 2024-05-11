@@ -21,9 +21,7 @@ const title = "Packages";
   <h1 class="text-4xl mb-6">{title}</h1>
   {packages.map(pkg => (
     <div class="mb-2">
-      <a href={`/packages/${pkg.name}`}>
       <PackageCard pkg={pkg} />
-      </a>
     </div>
   ))}
 </Layout>

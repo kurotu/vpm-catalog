@@ -1,5 +1,6 @@
 ---
 import type { VPMPackage } from '~/utils/vpm'
+import Card from './Card.astro';
 
 interface Props {
   pkg: VPMPackage
@@ -8,9 +9,11 @@ interface Props {
 const { pkg } = Astro.props;
 
 ---
-<div class="card card-bordered md:card-normal card-compact bg-base-100 shadow-xl">
-  <div class="card-body">
-    <h2 class="card-title">{pkg.displayName}</h2>
-    <p>{pkg.description}</p>
+<Card>
+  <div class="card-body flex-row">
+    <div class="flex-grow flex-col">
+      <h2 class="card-title"><a class="btn-link" href=`/packages/${pkg.name}`>{pkg.displayName}</h2>
+      <p>{pkg.description}</p>
+    </div>
   </div>
-</div>
+</Card>
