@@ -13,8 +13,13 @@ const {items} = Astro.props;
 ---
 <div class="text-sm breadcrumbs mb-2">
   <ul>
-    {items.map(item => (item.href
-      ? <li><a href={item.href}>{item.label}</a></li>
-      : <li>{item.label}</li>))}
+    {items.map((item, i) =>
+      <li class:list={[i === items.length - 1 ? "overflow-hidden" : null]}>
+        {item.href
+          ? <a href={item.href}>{item.label}</a>
+          : item.label
+        }
+      </li>
+    )}
   </ul>
 </div>
