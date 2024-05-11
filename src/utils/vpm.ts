@@ -68,3 +68,7 @@ export const findLatestPackage = (packages: VPMPackage[]) => {
   });
   return sorted[packages.length - 1];
 }
+
+export const vccAddRepoLink = (url: string) => {
+  return `vcc://vpm/addRepo?url=${url}`;
+}

@@ -11,7 +11,7 @@ interface Props {
 const {items} = Astro.props;
 
 ---
-<div class="text-sm breadcrumbs">
+<div class="text-sm breadcrumbs mb-2">
   <ul>
     {items.map(item => (item.href
       ? <li><a href={item.href}>{item.label}</a></li>

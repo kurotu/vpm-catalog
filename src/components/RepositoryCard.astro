@@ -1,5 +1,5 @@
 ---
-import type { VPMRepository } from '~/utils/vpm'
+import { vccAddRepoLink, type VPMRepository } from '~/utils/vpm'
 import Card from './Card.astro';
 
 interface Props {
@@ -16,7 +16,7 @@ const { repository } = Astro.props;
       <p>{repository.url}</p>
     </div>
     <div class="card-actions flex-grow justify-end">
-      <a href={`vcc://vpm/addRepo?url=${repository.url}`} class="btn btn-sm">Add to VCC</a>
+      <a href={vccAddRepoLink(repository.url)} class="btn btn-sm">Add to VCC</a>
     </div>
   </div>
 </Card>

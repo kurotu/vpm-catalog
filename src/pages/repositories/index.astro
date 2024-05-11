@@ -16,6 +16,7 @@ const title = "Repositories";
     {label: "Repositories", href: "/repositories"},
   ]}/>
   <Head1 text={title} />
+  <div class="mb-6" />
   {allRepos.map(repo => (
     <div class="mb-2">
       <RepositoryCard repository={repo} />
