@@ -1,0 +1,130 @@
+---
+import { findLatestPackage, getAllPackages, getPackages, type VPMPackage, type VPMRepository } from "~/utils/vpm";
+
+interface Props {
+  pkg: VPMPackage;
+}
+
+const {pkg} = Astro.props;
+
+const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
+const pkgs = getAllPackages(allRepos);
+
+const repositories = allRepos.map((repo) => {
+  return {
+    repository: repo,
+    count: getPackages(repo.packages[pkg.name] ?? {versions: {}}).length,
+  }
+}).filter((repo) => repo.count > 0);
+repositories.sort((a, b) => {
+  if (a.count === b.count) {
+    return a.repository.name.localeCompare(b.repository.name);
+  }
+  return b.count - a.count;
+}).reverse();
+
+const vpmDependencies = Object.keys(pkg.vpmDependencies ?? []).map((dep) => {
+  const deps = pkgs.filter((p) => p.name === dep)
+  return findLatestPackage(deps);
+}).filter((p): p is VPMPackage => p !== undefined);
+
+const licenseLabel = pkg.license ?? pkg.licensesUrl ? "View license" : "Undefined";
+
+---
+<style>
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  h2 + * {
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+</style>
+
+<h2 class="text-2xl font-bold">Documentation</h2>
+<p>
+  {
+    pkg.documentationUrl
+    ? <a class="link link-primary" target="_blank" href={pkg.documentationUrl}>View documentation</a>
+    : "No documentation URL"
+  }
+</p>
+
+<h2 class="text-2xl font-bold">Repositories</h2>
+<ul>
+  {
+    repositories.map((repo) => (
+      <li>
+        <a class="link link-primary" href={`/repositories/${repo.repository.id}`}>{repo.repository.name}</a>
+        ({repo.count} {repo.count > 1 ? 'versions' : 'version'})
+      </li>
+    ))
+  }
+</ul>
+
+<h2 class="text-2xl font-bold">Version</h2>
+<p>
+  {pkg.version}
+  {
+    pkg.changelogUrl
+    ? <span>(<a class="link link-primary" target="_blank" href={pkg.changelogUrl}>Changelog</a>)</span>
+    : null
+  }
+</p>
+</div>
+
+<h2 class="text-2xl font-bold">Unity version</h2>
+{
+  pkg.unity
+  ? <p>{pkg.unity} or later</p>
+  : <p>Any</p>
+}
+
+<h2 class="text-2xl font-bold">Dependencies</h2>
+{
+  pkg.dependencies
+  ? <ul>
+    {
+      Object.keys(pkg.dependencies).map((dep) => (
+        <li>{dep}</li>
+      ))
+    }
+  </ul>
+  : <p>No dependencies</p>
+}
+
+<h2 class="text-2xl font-bold">VPM Dependencies</h2>
+{
+  vpmDependencies.length > 0
+  ? <ul>
+    {
+      vpmDependencies.map((dep) => (
+        <li><a class="link link-primary" href={`/packages/${dep.name}`}>{dep.displayName}</a></li>
+      ))
+    }
+  </ul>
+  : <p>No dependencies</p>
+}
+
+<h2 class="text-2xl font-bold">License</h2>
+<p>
+  {
+    pkg.licensesUrl
+    ? <a class="link link-primary" target="_blank" href={pkg.licensesUrl}>{licenseLabel}</a>
+    : licenseLabel
+  }
+</p>
+
+<h2 class="text-2xl font-bold">Author</h2>
+<p>
+{
+  pkg.author
+  ?
+    pkg.author.name
+  : "Undefined"
+}
+</p>

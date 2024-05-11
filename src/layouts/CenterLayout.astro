@@ -10,7 +10,7 @@ const {title} = Astro.props;
 <DrawerLayout title={title}>
   <div class="flex flex-row justify-stretch">
     <div class="hidden md:block flex-grow"></div>
-    <div class="w-full p-4 max-w-screen-xl"><slot /></div>
+    <div class="w-full lg:p-8 p-4 max-w-screen-xl"><slot /></div>
     <div class="hidden md:block flex-grow"></div>
   </div>
 </DrawerLayout>
