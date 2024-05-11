@@ -1,4 +1,5 @@
 ---
+import PackageCard from "~/components/PackageCard.astro";
 import Layout from "~/layouts/CenterLayout.astro";
 import { type VPMPackage, type VPMRepository, findLatestPackage, getAllPackages } from "~/utils/vpm";
 
@@ -6,7 +7,7 @@ const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
 const allReleasePackages = getAllPackages(allRepos).filter(p => !p.version.includes('-'));
 
 const allNames = Array.from(new Set(allReleasePackages.map(pkg => pkg.name)));
-const pkgs = allNames
+const packages = allNames
   .map(name => {
     return findLatestPackage(allReleasePackages.filter(p => p.name=== name));
   })
@@ -17,10 +18,12 @@ const pkgs = allNames
 const title = "Packages";
 ---
 <Layout title={title}>
-  <h1>{title}</h1>
-  {pkgs.map(pkg => (
-      <h2><a href={`/packages/${pkg.name}`}>{pkg.displayName}</a></h2>
-      <p>{pkg.description}</p>
-      <p>Version: {pkg.version}</p>
+  <h1 class="text-4xl mb-6">{title}</h1>
+  {packages.map(pkg => (
+    <div class="mb-2">
+      <a href={`/packages/${pkg.name}`}>
+      <PackageCard pkg={pkg} />
+      </a>
+    </div>
   ))}
 </Layout>

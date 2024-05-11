@@ -1,5 +1,6 @@
 ---
 import type { GetStaticPaths } from "astro";
+import PackageCard from "~/components/PackageCard.astro";
 import Layout from "~/layouts/CenterLayout.astro";
 import type { VPMPackage } from "~/utils/vpm";
 import { type VPMRepository, findLatestReleasePackage } from "~/utils/vpm";
@@ -25,15 +26,16 @@ const packages = Object.values(repo.packages)
 packages.sort((a, b) => a.displayName.localeCompare(b.displayName));
 ---
 <Layout title={repo.name}>
-  <h1>{repo.name}</h1>
+  <h1 class="text-4xl mb-6">{repo.name}</h1>
   <p>{repo.author}</p>
   <p>{repo.url}</p>
   <ul>
     {packages.map(pkg => (
-      <li>
-        <a href={`/packages/${pkg.name}`}>{pkg.displayName}</a>
-        {pkg.version}
-      </li>
+      <div class="mb-2">
+        <a href={`/packages/${pkg.name}`}>
+        <PackageCard pkg={pkg} />
+        </a>
+      </div>
     ))}
   </ul>
 </Layout>

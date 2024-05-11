@@ -1,0 +1,16 @@
+---
+import type { VPMPackage } from '~/utils/vpm'
+
+interface Props {
+  pkg: VPMPackage
+}
+
+const { pkg } = Astro.props;
+
+---
+<div class="card card-bordered md:card-normal card-compact bg-base-100 shadow-xl">
+  <div class="card-body">
+    <h2 class="card-title">{pkg.displayName}</h2>
+    <p>{pkg.description}</p>
+  </div>
+</div>
