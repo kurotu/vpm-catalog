@@ -1,0 +1,16 @@
+---
+import DrawerLayout from "./DrawerLayout.astro";
+
+interface Prop {
+  title: string;
+}
+
+const {title} = Astro.props;
+---
+<DrawerLayout title={title}>
+  <div class="flex flex-row justify-stretch">
+    <div class="hidden md:block flex-grow"></div>
+    <div class="w-full p-4 max-w-screen-xl"><slot /></div>
+    <div class="hidden md:block flex-grow"></div>
+  </div>
+</DrawerLayout>
