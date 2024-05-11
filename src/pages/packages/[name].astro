@@ -1,5 +1,8 @@
 ---
-import type { GetStaticPaths } from "astro";
+import type { GetStaticPaths, MarkdownInstance } from "astro";
+import Breadcrumbs from "~/components/Breadcrumbs.astro";
+import Head1 from "~/components/Head1.astro";
+import Prose from "~/components/Prose.astro";
 import Layout from "~/layouts/CenterLayout.astro";
 import { findLatestPackage, getAllPackages, type VPMPackage, type VPMRepository } from "~/utils/vpm";
 
@@ -7,44 +10,68 @@ export const getStaticPaths = (async () => {
   const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
   const allReleasePackages = getAllPackages(allRepos).filter(p => !p.version.includes('-'));
   const names = Array.from(new Set(allReleasePackages.map(pkg => pkg.name)));
+  const contents: MarkdownInstance<Record<string, any>>[] = await Astro.glob("~/content/readme/*.md")
+
   return names.map(name => {
     const pkg = findLatestPackage(allReleasePackages.filter(p => p.name === name)) as VPMPackage;
+    const readme = contents.find(c => c.file.includes(pkg.name))
     return {
       params: {
         name: name
       },
       props: {
-        pkg: pkg
+        pkg: pkg,
+        readme: readme
       }}
   });
 }) satisfies GetStaticPaths;
 
 const {pkg} = Astro.props;
+const {Content} = Astro.props.readme ?? { Content: undefined };
+
 ---
 <Layout title={pkg.displayName}>
-  <h1>{pkg.displayName}</h1>
-  <p>Name: {pkg.name}</p>
-  <p>Version: {pkg.version}</p>
-  <p>Description: {pkg.description}</p>
-  <p>Unity: {pkg.unity ? `${pkg.unity} or later` : 'Any version'}</p>
-  <p>Author: {pkg.author?.name}</p>
-  <p>ChangelogURL: <a target="_blank" href={pkg.changelogUrl}>{pkg.changelogUrl}</a></p>
-  <p>Dependencies: {pkg.dependencies ? Object.keys(pkg.dependencies).join(',') : null}</p>
-  <p>DocumentationURL: <a target="_blank" href={pkg.documentationUrl}>{pkg.documentationUrl}</a></p>
-  <p>HideInEditor: {pkg.hideInEditor}</p>
-  <p>Keywords: {pkg.keywords?.join(',')}</p>
-  <p>License: {pkg.license}</p>
-  <p>LicensesURL: <a target="_blank" href={pkg.licensesUrl}>{pkg.licensesUrl}</a></p>
+  <Breadcrumbs items={[
+    {label: "Home", href: "/"},
+    {label: "Packages", href: "/packages"},
+    {label: pkg.displayName}
+  ]}/>
+  <div class="flex md:flex-row flex-col">
+    <div class="flex-grow">
+      {
+        Content
+          ? <Prose><Content /></Prose>
+          : <div>
+              <Head1 text={pkg.displayName} />
+              <p>Name: {pkg.name}</p>
+              <p>Version: {pkg.version}</p>
+              <p>Description: {pkg.description}</p>
+              <p>Unity: {pkg.unity ? `${pkg.unity} or later` : 'Any version'}</p>
+              <p>Author: {pkg.author?.name}</p>
+              <p>ChangelogURL: <a target="_blank" href={pkg.changelogUrl}>{pkg.changelogUrl}</a></p>
+              <p>Dependencies: {pkg.dependencies ? Object.keys(pkg.dependencies).join(',') : null}</p>
+              <p>DocumentationURL: <a target="_blank" href={pkg.documentationUrl}>{pkg.documentationUrl}</a></p>
+              <p>HideInEditor: {pkg.hideInEditor}</p>
+              <p>Keywords: {pkg.keywords?.join(',')}</p>
+              <p>License: {pkg.license}</p>
+              <p>LicensesURL: <a target="_blank" href={pkg.licensesUrl}>{pkg.licensesUrl}</a></p>
 
-  <hr />
+              <hr />
 
-  <p>VPM Dependencies:</p>
-  <ul>
-    {pkg.vpmDependencies ? Object.keys(pkg.vpmDependencies).map(p => <li><a href={`/packages/${p}`}>{p}</a></li>) : null}
-  </ul>
-  <p>Legacy Packages:</p>
-  <ul>
-    {pkg.legacyPackages?.map(p => <li><a href={`/packages/${p}`}>{p}</a></li>)}
-  </ul>
-  <p>URL: {pkg.url}</p>
+              <p>VPM Dependencies:</p>
+              <ul>
+                {pkg.vpmDependencies ? Object.keys(pkg.vpmDependencies).map(p => <li><a href={`/packages/${p}`}>{p}</a></li>) : null}
+              </ul>
+              <p>Legacy Packages:</p>
+              <ul>
+                {pkg.legacyPackages?.map(p => <li><a href={`/packages/${p}`}>{p}</a></li>)}
+              </ul>
+              <p>URL: {pkg.url}</p>
+          </div>
+      }
+    </div>
+    <div class="w-96">
+      <p>aaaaaaaaa</p>
+    </div>
+  </div>
 </Layout>

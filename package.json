@@ -17,6 +17,7 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
     "@types/semver": "^7.5.8",
     "daisyui": "^4.11.1"
   }
