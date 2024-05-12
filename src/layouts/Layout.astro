@@ -5,12 +5,15 @@ interface Props {
 
 const {title} = Astro.props;
 ---
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content={`${title} | VPM Catalog`} />
+    <meta property="og:description" content="Known VPM packages and repositories for VCC." />
+    <meta property="og:type" content="website">
 		<title>{title} | VPM Catalog</title>
 	</head>
 	<body class="bg-base-200">
