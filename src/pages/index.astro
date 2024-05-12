@@ -1,8 +1,15 @@
 ---
+import Head1 from "~/components/Head1.astro";
 import Layout from "~/layouts/CenterLayout.astro";
 
 const title = "VPM Catalog";
 ---
 <Layout title={title}>
-  <h1>{title}</h1>
+  <div class="flex flex-col items-center gap-4">
+    <Head1>{title}</Head1>
+    <p>Well-known VPM packages and repositories.</p>
+    <p>(Under development)</p>
+    <a class="btn btn-lg btn-wide btn-neutral" href="/packages">Packages</a>
+    <a class="btn btn-lg btn-wide btn-neutral" href="/repositories">Repositories</a>
+  </div>
 </Layout>
