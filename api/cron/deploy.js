@@ -1,8 +1,5 @@
-import type { VercelRequest, VercelResponse } from "@vercel/node"
-
 export default async function handler(
-  request: VercelRequest,
-  response: VercelResponse,
+  request, response,
 ) {
   const authHeader = request.headers.authorization;
   if (!process.env.CRON_SECRET || authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
