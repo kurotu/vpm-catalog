@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
 ROOT="$(cd "$(dirname "$0")" && pwd)/.."
-DIR="$ROOT/repos"
+DIR="$ROOT/vpm/repos"
 
 function download() {
   local URL=$1

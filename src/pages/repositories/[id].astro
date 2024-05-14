@@ -8,7 +8,7 @@ import type { VPMPackage } from "~/utils/vpm";
 import { type VPMRepository, findLatestReleasePackage, vccAddRepoLink } from "~/utils/vpm";
 
 export const getStaticPaths = (async () => {
-  const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
+  const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
   return allRepos.map(repo => ({
     params: {
       id: repo.id

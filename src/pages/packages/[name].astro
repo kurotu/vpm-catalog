@@ -8,12 +8,12 @@ import Layout from "~/layouts/CenterLayout.astro";
 import { findLatestPackage, getAllPackages, type VPMPackage, type VPMRepository } from "~/utils/vpm";
 
 export const getStaticPaths = (async () => {
-  const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
+  const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
   const allReleasePackages = getAllPackages(allRepos).filter(p => !p.version.includes('-'));
   const names = Array.from(new Set(allReleasePackages.map(pkg => pkg.name)));
   let contents: MarkdownInstance<Record<string, any>>[];
   try {
-    contents = await Astro.glob("~/content/readme/*.md");
+    contents = await Astro.glob("~/../readme/*/README.md");
   } catch (e) {
     console.warn(e);
     contents = [];

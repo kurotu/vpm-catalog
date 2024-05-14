@@ -1,6 +1,6 @@
 {
-  "buildCommand": "./tasks/download-repos.sh && astro build",
-  "installCommand": "dnf -y install jq && npm install",
+  "buildCommand": "./tasks/vercel-build.sh",
+  "installCommand": "./tasks/vercel-install.sh",
   "crons": [
     {
       "path": "/api/cron/deploy",

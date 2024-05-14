@@ -1,6 +1,5 @@
 # vpm repositories
-repos/*.json
-src/content/readme
+vpm/
 
 # build output
 dist/
