@@ -1,4 +1,6 @@
 {
+  "buildCommand": "./tasks/download-repos.sh && astro build",
+  "installCommand": "dnf -y install jq && npm install",
   "crons": [
     {
       "path": "/api/cron/deploy",

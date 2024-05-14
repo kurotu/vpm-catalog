@@ -1,6 +1,7 @@
 #!/bin/bash
 set -eu
-DIR=$(cd "$(dirname "$0")" && pwd)
+ROOT="$(cd "$(dirname "$0")" && pwd)/.."
+DIR="$ROOT/repos"
 
 function download() {
   local URL=$1
@@ -11,6 +12,7 @@ function download() {
   echo "$CONTENT" > "$DIR/$ID.json"
 }
 
+mkdir -p "$DIR"
 while read -r URL; do
   download "$URL"
-done < "$DIR/repos.txt"
+done < "$ROOT/repositories.txt"
