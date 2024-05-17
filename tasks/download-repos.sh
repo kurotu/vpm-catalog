@@ -6,7 +6,7 @@ DIR="$ROOT/vpm/repos"
 function download() {
   local URL=$1
   local CONTENT
-  CONTENT=$(curl -s -L "$URL")
+  CONTENT=$(curl -s -L -H "User-Agent: VPM Catalog" "$URL")
   local ID
   ID=$(echo "$CONTENT" | jq -r '.id')
   echo "$CONTENT" > "$DIR/$ID.json"
@@ -14,5 +14,6 @@ function download() {
 
 mkdir -p "$DIR"
 while read -r URL; do
+  echo "Downloading $URL"
   download "$URL"
 done < "$ROOT/repositories.txt"
