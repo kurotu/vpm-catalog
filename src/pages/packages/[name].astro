@@ -13,7 +13,7 @@ export const getStaticPaths = (async () => {
   const names = Array.from(new Set(allReleasePackages.map(pkg => pkg.name)));
   let contents: MarkdownInstance<Record<string, any>>[];
   try {
-    contents = await Astro.glob("~/../readme/*/README.md");
+    contents = await Astro.glob("~/../vpm/packages/*/README.md");
   } catch (e) {
     console.warn(e);
     contents = [];

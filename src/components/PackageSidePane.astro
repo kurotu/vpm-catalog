@@ -7,7 +7,7 @@ interface Props {
 
 const {pkg} = Astro.props;
 
-const allRepos: VPMRepository[] = await Astro.glob("~/../repos/*.json");
+const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
 const pkgs = getAllPackages(allRepos);
 
 const repositories = allRepos.map((repo) => {
