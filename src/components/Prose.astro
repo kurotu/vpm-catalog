@@ -3,7 +3,10 @@
 <div
   class="prose dark:prose-invert
   prose-h1:text-4xl
-  prose-a:text-primary
+  prose-p:text-base-content
+  prose-a:link
+  prose-a:link-primary
+  prose-a:font-normal
   prose-img:inline
   prose-img:m-0
   ">
@@ -15,3 +18,11 @@
     max-width: calc(1280px - 24rem);
   }
 </style>
+
+<script>
+window.addEventListener('load', () => {
+  document.querySelectorAll('.prose a').forEach((a) => {
+    a.setAttribute('target', '_blank');
+  });
+});
+</script>

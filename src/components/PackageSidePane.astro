@@ -60,7 +60,7 @@ const licenseLabel = pkg.license ?? (pkg.licensesUrl ? "View license" : "Undefin
     repositories.map((repo) => (
       <li>
         <a class="link link-primary" href={`/repositories/${repo.repository.id}`}>{repo.repository.name}</a>
-        ({repo.count} {repo.count > 1 ? 'versions' : 'version'})
+        ({repo.count}&nbsp;{repo.count > 1 ? 'versions' : 'version'})
       </li>
     ))
   }
