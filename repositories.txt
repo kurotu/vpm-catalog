@@ -1,3 +1,4 @@
+https://An-Labo.github.io/An-Labo-NailTool/vpm.json
 https://azukimochi.github.io/vpm-repos/index.json
 https://cyanlaser.github.io/CyanTrigger/index.json
 https://enitimeago.github.io/vpm-repos/index.json
@@ -10,13 +11,15 @@ https://poiyomi.github.io/vpm/index.json
 https://raw.githubusercontent.com/Cayahuanca/Unity/main/vpm-packages.json
 https://rurre.github.io/vpm/index.json
 https://sayabeans.github.io/vpm/index.json
+https://skeb-inc.github.io/skeb-art-panel/index.json
 https://suzuryg.github.io/vpm-repos/vpm.json
 https://vpm.anatawa12.com/vpm.json
+https://vpm.dreadscripts.com/listings/main.json
+https://vpm.koyashiro.net/index.json
 https://vpm.mimylab.com/index.json
 https://vpm.nadena.dev/vpm.json
 https://vpm.narazaka.net/index.json
 https://vpm.niri.la/vpm.json
-https://vpm.rs64.net/vpm.json
 https://vpm.rs64.net/vpm.json
 https://vpm.ureishi.net/repos.json
 https://vrchat.github.io/packages/index.json

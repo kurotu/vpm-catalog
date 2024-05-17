@@ -7,6 +7,8 @@ function download() {
   local URL=$1
   local CONTENT
   CONTENT=$(curl -s -L -H "User-Agent: VPM Catalog" "$URL")
+  # remove bom from content
+  CONTENT=$(echo "$CONTENT" | sed '1s/^\xEF\xBB\xBF//')
   local ID
   ID=$(echo "$CONTENT" | jq -r '.id')
   echo "$CONTENT" > "$DIR/$ID.json"
