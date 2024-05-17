@@ -94,4 +94,10 @@ getAllPackageNames | while read -r PACKAGE_NAME; do
     mkdir -p "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/Runtime/Screenshots"
     cp "$DUMMY_PNG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/Runtime/Screenshots/a3_example.png"
   fi
+
+  if [ "$PACKAGE_NAME" == "com.vrmc.gltf" ]; then
+    echo "Patch missing files"
+    mkdir -p "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/doc"
+    cp "$DUMMY_PNG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/doc/pbr_to_standard.png"
+  fi
 done
