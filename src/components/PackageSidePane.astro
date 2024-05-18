@@ -99,7 +99,7 @@ const licenseLabel = pkg.license ?? (pkg.licensesUrl ? "View license" : "Undefin
   ? <ul>
     {
       Object.keys(pkg.dependencies).map((dep) => (
-        <li>{dep}</li>
+        <li><a class="link link-primary" href={`https://openupm.com/packages/${dep}/`} target="_blank">{dep}</a></li>
       ))
     }
   </ul>
