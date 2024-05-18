@@ -8,11 +8,13 @@ https://kurone-kito.github.io/vrc-ui/index.json
 https://kurotu.github.io/vpm-repos/vpm.json
 https://lilxyzw.github.io/vpm-repos/vpm.json
 https://poiyomi.github.io/vpm/index.json
+https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
 https://raw.githubusercontent.com/Cayahuanca/Unity/main/vpm-packages.json
 https://rurre.github.io/vpm/index.json
 https://sayabeans.github.io/vpm/index.json
 https://skeb-inc.github.io/skeb-art-panel/index.json
 https://suzuryg.github.io/vpm-repos/vpm.json
+https://vcc.vrcfury.com
 https://vpm.anatawa12.com/vpm.json
 https://vpm.dreadscripts.com/listings/main.json
 https://vpm.koyashiro.net/index.json
