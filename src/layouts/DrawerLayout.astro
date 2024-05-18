@@ -3,6 +3,7 @@ import Footer from "~/components/Footer.astro";
 import Layout from "./Layout.astro"
 import Search from "~/components/Search.astro";
 import SearchModal from "~/components/SearchModal.astro";
+import ThemeIcon from "~/components/ThemeIcon.astro";
 
 interface Props {
   title: string
@@ -36,6 +37,9 @@ const searchModalId = "search_modal";
             <li><a href="/packages">Packages</a></li>
             <li><a href="/repositories">Repositories</a></li>
           </ul>
+        </div>
+        <div class="mr-2">
+          <ThemeIcon />
         </div>
       </div>
       <!-- Page content here -->
