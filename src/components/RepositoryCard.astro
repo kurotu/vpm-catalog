@@ -10,12 +10,12 @@ const { repository } = Astro.props;
 
 ---
 <Card>
-  <div class="card-body flex-row">
+  <div class="card-body flex-row gap-2">
     <div class="flex-grow flex-col">
       <h2 class="card-title"><a class="link link-primary" href=`/repositories/${repository.id}`>{repository.name}</h2>
       <p>{repository.url}</p>
     </div>
-    <div class="card-actions flex-grow justify-end">
+    <div class="flex-shrink-0">
       <a href={vccAddRepoLink(repository.url)} class="btn btn-sm btn-neutral">Add to VCC</a>
     </div>
   </div>
