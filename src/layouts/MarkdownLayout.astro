@@ -1,0 +1,20 @@
+---
+import Prose from "~/components/Prose.astro";
+import CenterLayout from "./CenterLayout.astro";
+import Breadcrumbs from "~/components/Breadcrumbs.astro";
+import Head1 from "~/components/Head1.astro";
+
+const {frontmatter} = Astro.props;
+
+---
+<CenterLayout title={frontmatter.title}>
+  <Breadcrumbs items={[
+    {label: "Home", href: "/"},
+    {label: frontmatter.title},
+  ]}/>
+  <Head1>{frontmatter.title}</Head1>
+  <div class="mb-8" />
+  <Prose>
+    <slot />
+  </Prose>
+</CenterLayout>
