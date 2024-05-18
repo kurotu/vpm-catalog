@@ -28,6 +28,15 @@ const vpmDependencies = Object.keys(pkg.vpmDependencies ?? []).map((dep) => {
   return findLatestPackage(deps);
 }).filter((p): p is VPMPackage => p !== undefined);
 
+const legacyPackages = pkg.legacyPackages ?
+  pkg.legacyPackages.map((dep) => {
+    const deps = pkgs.filter((p) => p.name === dep)
+    return findLatestPackage(deps);
+  })
+  .filter((p): p is VPMPackage => p !== undefined)
+  .sort((a, b) => a.displayName.localeCompare(b.displayName))
+: [];
+
 const licenseLabel = pkg.license ?? (pkg.licensesUrl ? "View license" : "Undefined");
 
 ---
@@ -108,6 +117,19 @@ const licenseLabel = pkg.license ?? (pkg.licensesUrl ? "View license" : "Undefin
     }
   </ul>
   : <p>No dependencies</p>
+}
+
+<h2 class="text-2xl font-bold">Legacy Packages</h2>
+{
+  legacyPackages.length > 0
+  ? <ul>
+    {
+      legacyPackages.map((legacy) => (
+        <li><a class="link link-primary" href={`/packages/${legacy.name}`}>{legacy.displayName}</a></li>
+      ))
+    }
+  </ul>
+  : <p>No legacy packages</p>
 }
 
 <h2 class="text-2xl font-bold">License</h2>

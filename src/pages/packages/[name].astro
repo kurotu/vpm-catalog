@@ -5,7 +5,7 @@ import Head1 from "~/components/Head1.astro";
 import PackageSidePane from "~/components/PackageSidePane.astro";
 import Prose from "~/components/Prose.astro";
 import Layout from "~/layouts/CenterLayout.astro";
-import { findLatestPackage, getAllPackages, type VPMPackage, type VPMRepository } from "~/utils/vpm";
+import { findLatestPackage, getAllPackages, getDeprecatorPackages, type VPMPackage, type VPMRepository } from "~/utils/vpm";
 
 export const getStaticPaths = (async () => {
   const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
@@ -36,6 +36,9 @@ export const getStaticPaths = (async () => {
 const {pkg} = Astro.props;
 const {Content} = Astro.props.readme ?? { Content: undefined };
 
+const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
+const deprecators = getDeprecatorPackages(pkg, allRepos);
+
 ---
 <Layout title={pkg.displayName}>
   <Breadcrumbs items={[
@@ -45,6 +48,24 @@ const {Content} = Astro.props.readme ?? { Content: undefined };
   ]}/>
   <div class="flex md:flex-row flex-col">
     <div class="flex-grow md:pr-4">
+      {
+        deprecators.length > 0
+          ?
+            <div role="alert" class="alert alert-warning my-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+              <div>
+                <span>Warning: This package is deprecated by following packages:</span>
+                <ul class="mt-2">
+                  {
+                    deprecators.map(dep => (
+                      <li><a class="link link-neutral" href={`/packages/${dep.name}`}>{dep.displayName}</a></li>
+                    ))
+                  }
+                </ul>
+              </div>
+            </div>
+          : null
+      }
       {
         Content
           ? <Prose><Content /></Prose>

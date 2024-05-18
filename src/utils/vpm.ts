@@ -69,6 +69,13 @@ export const findLatestPackage = (packages: VPMPackage[]) => {
   return sorted[packages.length - 1];
 }
 
+export const getDeprecatorPackages = (pkg: VPMPackage, repositories: VPMRepository[]) => {
+  const allReleasePackages = repositories.flatMap(r => Object.values(r.packages)).map(findLatestReleasePackage)
+  return allReleasePackages
+    .filter((p): p is VPMPackage => p ? true : false)
+    .filter(p => p?.legacyPackages?.includes(pkg.name) ?? false);
+}
+
 export const vccAddRepoLink = (url: string) => {
   return `vcc://vpm/addRepo?url=${url}`;
 }
