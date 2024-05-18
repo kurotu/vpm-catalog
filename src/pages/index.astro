@@ -1,22 +1,45 @@
 ---
 import Head1 from "~/components/Head1.astro";
+import PackageCard from "~/components/PackageCard.astro";
 import Layout from "~/layouts/CenterLayout.astro";
-import { getAllPackages, type VPMRepository } from "~/utils/vpm";
+import { getAllPackages, type VPMPackage, type VPMRepository } from "~/utils/vpm";
 
 const title = "VPM Catalog";
 
 const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
 const allReleasePackages = getAllPackages(allRepos).filter(p => !p.version.includes('-'));
 const allNames = Array.from(new Set(allReleasePackages.map(pkg => pkg.name)));
+const shuffledNames = allNames.sort(() => Math.random() - 0.5);
+const shuffledPackages = shuffledNames
+  .map(name => allReleasePackages.find(pkg => pkg.name === name)).filter((pkg) : pkg is VPMPackage => pkg ? true : false);
 
 ---
 <Layout title={title}>
-  <div class="flex flex-col items-center gap-4">
-    <Head1>{title}</Head1>
-    <p>Known VPM packages and repositories.</p>
-    <p><span class="text-4xl">{allNames.length}</span> packages from <span class="text-4xl">{allRepos.length}</span> repositories available.</p>
-    <p>(Under development)</p>
-    <a class="btn btn-lg btn-wide btn-neutral" href="/packages">View Packages</a>
-    <a class="btn btn-lg btn-wide btn-neutral" href="/repositories">View Repositories</a>
+  <div class="hero bg-base-200">
+    <div class="hero-content text-center">
+      <div class="max-w-lg">
+        <h1 class="text-5xl font-bold">Place to browse curated community packages for VCC</h1>
+        <p class="py-6">VPM Catalog lists curated VPM packages and repositories which are usable in VCC. Discover favorite packages to improve your creation.</p>
+        <div class="pb-6 flex flex-col gap-2 items-center">
+          <p class="text-2xl"><span class="text-4xl">{allNames.length}</span> Packages</p>
+          <p class="text-2xl"><span class="text-4xl">{allRepos.length}</span> Repositories</p>
+        </div>
+        <div class="flex flex-col gap-4 items-center">
+          <a class="btn btn-lg btn-wide btn-primary" href="/packages">Browse Packages</a>
+          <a class="btn btn-lg btn-wide btn-neutral" href="/repositories">Browse Repositories</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <h2 class="text-4xl font-bold text-center my-8">Random Pickup</h2>
+  <div class="flex flex-row flex-wrap justify-center gap-4">
+  {
+    shuffledPackages.slice(0, 6).map(pkg => (
+      <div class=" w-96">
+        <PackageCard pkg={pkg} />
+      </div>
+    ))
+  }
   </div>
 </Layout>
