@@ -33,19 +33,25 @@ packages.sort((a, b) => a.displayName.localeCompare(b.displayName));
     {label: "Repositories", href: "/repositories"},
     {label: repo.name},
   ]}/>
-  <Head1>{repo.name}</Head1>
-  <div class="mb-2" />
-  <p>{repo.author}</p>
-  <p class="mb-4">{repo.url}</p>
-  <div>
-    <a href={vccAddRepoLink(repo.url)} class="btn btn-primary">Add to VCC</a>
-  </div>
-  <div class="mb-6" />
-  <ul>
-    {packages.map(pkg => (
-      <div class="mb-2">
-        <PackageCard pkg={pkg} />
+  <div class="flex md:flex-row flex-col">
+    <div class="flex-grow md:pr-4">
+      <Head1>{repo.name}</Head1>
+      <div class="mb-4" />
+      <div class="flex flex-col md:gap-4 gap-2">
+        {packages.map(pkg => (
+          <PackageCard pkg={pkg} />
+        ))}
       </div>
-    ))}
-  </ul>
+    </div>
+    <div class="divider md:divider-horizontal" />
+    <div class="md:w-72 md:pl-4 flex-shrink-0">
+      <h2 class="text-2xl font-bold mb-2">Author</h2>
+      <p class="mb-6">{repo.author}</p>
+      <h2 class="text-2xl font-bold mb-2">Repository URL</h2>
+      <p class="mb-6">{repo.url}</p>
+      <div>
+        <a href={vccAddRepoLink(repo.url)} class="btn btn-primary btn-wide">Add to VCC</a>
+      </div>
+    </div>
+  </div>
 </Layout>
