@@ -6,5 +6,8 @@
       "~/*": ["src/*"]
     }
   },
-  "exclude": ["vpm"]
+  "exclude": [
+    "dist",
+    "vpm",
+  ]
 }
