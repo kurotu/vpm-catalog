@@ -1,11 +1,13 @@
 ---
+import type { LicenseListItem } from "~/utils/license";
 import { findLatestPackage, getAllPackages, getPackages, type VPMPackage, type VPMRepository } from "~/utils/vpm";
 
 interface Props {
   pkg: VPMPackage;
+  license: LicenseListItem | undefined;
 }
 
-const {pkg} = Astro.props;
+const {pkg, license} = Astro.props;
 
 const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
 const pkgs = getAllPackages(allRepos);
@@ -38,7 +40,8 @@ const legacyPackages = pkg.legacyPackages ?
 : [];
 
 const licenseLabel = pkg.license ?? (pkg.licensesUrl ? "View license" : "Undefined");
-
+const licensesUrl = pkg.licensesUrl ?? license?.reference;
+console.log(licensesUrl)
 ---
 <style>
   h2 {
@@ -135,8 +138,8 @@ const licenseLabel = pkg.license ?? (pkg.licensesUrl ? "View license" : "Undefin
 <h2 class="text-2xl font-bold">License</h2>
 <p>
   {
-    pkg.licensesUrl
-    ? <a class="link link-primary" target="_blank" href={pkg.licensesUrl}>{licenseLabel}</a>
+    licensesUrl
+    ? <a class="link link-primary" target="_blank" href={licensesUrl}>{licenseLabel}</a>
     : licenseLabel
   }
 </p>
