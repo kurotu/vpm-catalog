@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "index": "pagefind --site dist --glob \"packages/*/**/*.{html}\""
   },
   "dependencies": {
     "@astrojs/check": "^0.6.0",
@@ -18,8 +19,10 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "@pagefind/default-ui": "^1.1.0",
     "@tailwindcss/typography": "^0.5.13",
     "@types/semver": "^7.5.8",
-    "daisyui": "^4.11.1"
+    "daisyui": "^4.11.1",
+    "pagefind": "^1.1.0"
   }
 }

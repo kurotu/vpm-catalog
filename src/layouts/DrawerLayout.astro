@@ -1,14 +1,19 @@
 ---
 import Footer from "~/components/Footer.astro";
 import Layout from "./Layout.astro"
+import Search from "~/components/Search.astro";
+import SearchModal from "~/components/SearchModal.astro";
 
 interface Props {
   title: string
 }
 
 const {title} = Astro.props;
+
+const searchModalId = "search_modal";
 ---
 <Layout title={title}>
+  <SearchModal id={searchModalId} />
   <div class="drawer">
     <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col">
@@ -19,7 +24,12 @@ const {title} = Astro.props;
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </label>
         </div>
-        <div class="flex-1"><a href="/" class="btn btn-ghost text-xl">VPM Catalog</a></div>
+        <div class="flex-1">
+          <a href="/" class="btn btn-ghost text-xl">VPM Catalog</a>
+          <span class="hidden ml-2 lg:block">
+            <Search modalId={searchModalId} />
+          </span>
+        </div>
         <div class="flex-none hidden lg:block">
           <ul class="menu menu-horizontal">
             <!-- Navbar menu content here -->
@@ -33,13 +43,18 @@ const {title} = Astro.props;
     </div>
     <div class="drawer-side z-20">
       <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
-      <ul class="menu p-4 w-80 min-h-full bg-base-200">
-        <!-- Sidebar content here -->
-        <li><a href="/packages/">Packages</a></li>
-        <li><a href="/repositories/">Repositories</a></li>
-        <li></li>
-        <li><a href="/about">About VPM Catalog</a></li>
-      </ul>
+      <div class="flex flex-col min-h-full bg-base-200">
+        <div class="p-4">
+          <Search modalId={searchModalId} />
+        </div>
+        <ul class="menu p-4 w-80 min-h-full bg-base-200">
+          <!-- Sidebar content here -->
+          <li><a href="/packages/">Packages</a></li>
+          <li><a href="/repositories/">Repositories</a></li>
+          <li></li>
+          <li><a href="/about">About VPM Catalog</a></li>
+        </ul>
+        </div>
     </div>
   </div>
   <Footer />

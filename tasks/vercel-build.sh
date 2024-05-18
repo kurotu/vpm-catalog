@@ -6,3 +6,4 @@ ROOT="$(cd "$(dirname "$0")" && pwd)/.."
 "$ROOT"/tasks/download-packages.sh
 
 astro build
+npm run index
