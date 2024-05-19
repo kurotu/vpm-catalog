@@ -81,7 +81,10 @@ getAllPackageNames | while read -r PACKAGE_NAME; do
   fi
   mkdir -p "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST"
   echo "Unzipping $DOWNLOAD_FILE to $PACKAGES_DIR/$PACKAGE_NAME-$LATEST"
-  unzip -UU -q -o "$DOWNLOAD_FILE" -d "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST"
+  if ! unzip -q -o "$DOWNLOAD_FILE" -d "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST"; then
+    echo "Failed to unzip $DOWNLOAD_FILE, retrying with -UU"
+    unzip -q -o -UU "$DOWNLOAD_FILE" -d "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST"
+  fi
 
   if [ "$PACKAGE_NAME" == "com.anatawa12.av3emulator" ]; then
     echo "Patch missing files"
