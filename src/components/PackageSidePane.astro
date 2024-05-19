@@ -28,7 +28,7 @@ repositories.sort((a, b) => {
 
 const dependencies = Object.entries(pkg.dependencies ?? {}).
   map(([name, version]) => {
-    const semver = new SemVer(version);
+    const semver = new SemVer(version.match(/\d+\.\d+\.\d+/)?.[0] ?? "0.0.0");
     return {
       name: name,
       version: version,
