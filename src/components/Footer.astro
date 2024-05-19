@@ -1,5 +1,20 @@
-<footer class="footer footer-center p-4 bg-base-300 text-base-content">
+---
+const current = new Date();
+const currentTimestamp = current.getTime();
+---
+<footer class="footer footer-center p-4 bg-base-300 text-base-content gap-y-4">
   <aside>
     <p>Copyright © 2024 - kurotu</p>
   </aside>
+  <p class="text-center text-gray-500">
+    <time id="updated_time" datetime={current.toISOString()}>Last update: {current.toISOString()}</span>
+  </p>
 </footer>
+
+<script define:vars={{currentTimestamp}}>
+window.addEventListener('load', () => {
+  const updatedTime = document.getElementById('updated_time');
+  const date = new Date(currentTimestamp);
+  updatedTime.textContent = `Last update: ${date.toLocaleString()} ${Intl.DateTimeFormat().resolvedOptions().timeZone}`;
+});
+</script>
