@@ -48,8 +48,17 @@ export const getAllPackages = (repositories: VPMRepository[]) => {
     .flatMap(group => getPackages(group));
 }
 
-export const findLatestReleasePackage = (group: VPMPackageGroup) => {
-  const packages = getPackages(group).filter(p => !p.version.includes('-'));
+/**
+ * Return the latest release package. If there are no release packages, return the latest package.
+ * @param packages
+ * @returns
+ */
+export const findLatestReleasePackage = (packages: VPMPackage[]) => {
+  const releasePackages = packages.filter(p => !p.version.includes('-'));
+  const latestStable = findLatestPackage(releasePackages);
+  if (latestStable) {
+    return latestStable;
+  }
   return findLatestPackage(packages);
 }
 
@@ -70,7 +79,9 @@ export const findLatestPackage = (packages: VPMPackage[]) => {
 }
 
 export const getDeprecatorPackages = (pkg: VPMPackage, repositories: VPMRepository[]) => {
-  const allReleasePackages = repositories.flatMap(r => Object.values(r.packages)).map(findLatestReleasePackage)
+  const allReleasePackages = repositories
+    .flatMap(r => Object.values(r.packages))
+    .map(group => findLatestReleasePackage(Object.values(group.versions)))
   return allReleasePackages
     .filter((p): p is VPMPackage => p ? true : false)
     .filter(p => p?.legacyPackages?.includes(pkg.name) ?? false);

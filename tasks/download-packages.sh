@@ -65,6 +65,9 @@ mkdir -p "$PACKAGES_DIR"
 getAllPackageNames | while read -r PACKAGE_NAME; do
   echo "Package: $PACKAGE_NAME"
   LATEST=$(getAllVersions "$PACKAGE_NAME" | grep -v '-' | tail -n 1)
+  if [ "$LATEST" == "" ]; then # if no stable version, use latest version
+    LATEST=$(getAllVersions "$PACKAGE_NAME" | tail -n 1)
+  fi
   echo "Latest version: $LATEST"
   LATEST_INFO=$(getPackageInfo "$PACKAGE_NAME" "$LATEST")
   ZIP_URL=$(echo "$LATEST_INFO" | crossJq -r '.url')

@@ -10,8 +10,8 @@ import { findLatestPackage, getAllPackages, getDeprecatorPackages, type VPMPacka
 
 export const getStaticPaths = (async () => {
   const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
-  const allReleasePackages = getAllPackages(allRepos).filter(p => !p.version.includes('-'));
-  const names = Array.from(new Set(allReleasePackages.map(pkg => pkg.name)));
+  const allPackages = getAllPackages(allRepos);
+  const names = Array.from(new Set(allPackages.map(pkg => pkg.name)));
   let contents: MarkdownInstance<Record<string, any>>[];
   try {
     contents = await Astro.glob("~/../vpm/packages/*/README.md");
@@ -22,7 +22,7 @@ export const getStaticPaths = (async () => {
   const licenses = await fetchLicenseData();
 
   return names.map(name => {
-    const pkg = findLatestPackage(allReleasePackages.filter(p => p.name === name)) as VPMPackage;
+    const pkg = findLatestPackage(allPackages.filter(p => p.name === name)) as VPMPackage;
     const readme = contents.find(c => c.file.includes(pkg.name));
     const license = pkg.license ? findLicense(pkg.license, licenses) : undefined;
     return {

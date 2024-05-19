@@ -22,7 +22,7 @@ export const getStaticPaths = (async () => {
 const {repo}: {repo: VPMRepository} = Astro.props;
 
 const packages = Object.values(repo.packages)
-  .map(findLatestReleasePackage)
+  .map(g => findLatestReleasePackage(Object.values(g.versions)))
   .filter((p): p is VPMPackage => p ? true : false)
 
 packages.sort((a, b) => a.displayName.localeCompare(b.displayName));
