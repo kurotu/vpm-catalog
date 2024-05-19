@@ -30,16 +30,18 @@ See the [registration form](https://docs.google.com/forms/d/e/1FAIpQLSc4nvnKJAbH
 ## Why do my packages have fewer information?
 
 The catalog fetches the package metadata from VPM repositories and fetches `README.md` file from the latest release zip files.
-It's based on Unity Package Manager (UPM) format, so you need to provide the metadata in the `package.json` file and embed them to your repository json.
+So if your repository does not have the metadata or `README.md` file, the catalog will show fewer information.
+
+### Include README.md to your package zip file
+
+`README.md` of your package's root folder will be used to create the catalog page.
+
+### Fill recommended fields of package.json and repository json
+
+Recommended fields are based on Unity Package Manager (UPM) format. You can provide the metadata in the `package.json` file and embed them to your repository json.
 See the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/Manual/upm-manifestPkg.html) for more information.
 
-### README.md
-
-Embed the `README.md` file to the root folder of your package before creating a release zip file.
-
-### package.json
-
-Following fields are recommended to be shown in the catalog page:
+Following `package.json` fields are recommended to be shown in the catalog page:
 
 | Field | Description |
 |---|---|
