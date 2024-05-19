@@ -75,7 +75,7 @@ getAllPackageNames | while read -r PACKAGE_NAME; do
   DOWNLOAD_FILE="$DOWNLOAD_DIR/$PACKAGE_NAME-$LATEST.zip"
   if [ ! -f "$DOWNLOAD_FILE" ]; then
     echo "Downloading $ZIP_URL to $DOWNLOAD_FILE"
-    curl -s -L "$ZIP_URL" > "$DOWNLOAD_FILE"
+    curl -s -L -H "User-Agent: VPM Catalog" "$ZIP_URL" > "$DOWNLOAD_FILE"
   else
     echo "File $DOWNLOAD_FILE already exists"
   fi
