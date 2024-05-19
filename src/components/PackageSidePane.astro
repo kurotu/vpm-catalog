@@ -1,6 +1,6 @@
 ---
 import type { LicenseListItem } from "~/utils/license";
-import { findLatestPackage, getAllPackages, getPackages, type VPMPackage, type VPMRepository } from "~/utils/vpm";
+import { findLatestPackage, getAllPackages, getPackages, urlToFileName, type VPMPackage, type VPMRepository } from "~/utils/vpm";
 
 interface Props {
   pkg: VPMPackage;
@@ -71,7 +71,7 @@ console.log(licensesUrl)
   {
     repositories.map((repo) => (
       <li>
-        <a class="link link-primary" href={`/repositories/${repo.repository.id}`}>{repo.repository.name}</a>
+        <a class="link link-primary" href={`/repositories/${urlToFileName(repo.repository.id)}`}>{repo.repository.name}</a>
         ({repo.count}&nbsp;{repo.count > 1 ? 'versions' : 'version'})
       </li>
     ))

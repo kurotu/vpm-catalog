@@ -11,6 +11,11 @@ function fixJson() {
   rm "$TEMP"
 }
 
+function urlToFileName() {
+  # replace '://', '.', '/' with '_'
+  sed -e 's/:\/\/\|[\.\/]/_/g'
+}
+
 function download() {
   local URL=$1
   local CONTENT
@@ -28,7 +33,12 @@ function download() {
   set -e
 
   local ID
-  ID=$(echo "$CONTENT" | jq -r '.id')
+  ID=$(echo "$CONTENT" | jq -r '.id // empty')
+  if [ -z "$ID" ]; then
+    echo "ID not found in $URL"
+    ID=$(urlToFileName <<< "$URL")
+    CONTENT="$(jq ". += {\"id\": \"$URL\"}" <<< "$CONTENT")"
+  fi
   echo "$CONTENT" > "$DIR/$ID.json"
 }
 

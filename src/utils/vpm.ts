@@ -90,3 +90,7 @@ export const getDeprecatorPackages = (pkg: VPMPackage, repositories: VPMReposito
 export const vccAddRepoLink = (url: string) => {
   return `vcc://vpm/addRepo?url=${url}`;
 }
+
+export const urlToFileName = (url: string) => {
+  return url.replaceAll('://', '_').replaceAll('/', '_').replaceAll('.', '_');
+}
