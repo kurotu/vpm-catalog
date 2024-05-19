@@ -25,10 +25,13 @@ repositories.sort((a, b) => {
   return b.count - a.count;
 }).reverse();
 
-const vpmDependencies = Object.keys(pkg.vpmDependencies ?? []).map((dep) => {
-  const deps = pkgs.filter((p) => p.name === dep)
-  return findLatestPackage(deps);
-}).filter((p): p is VPMPackage => p !== undefined);
+const vpmDependencies = Object.keys(pkg.vpmDependencies ?? []).
+  map((dep) => {
+    const deps = pkgs.filter((p) => p.name === dep)
+    return findLatestPackage(deps);
+  })
+  .filter((p): p is VPMPackage => p !== undefined)
+  .sort((a, b) => a.displayName.localeCompare(b.displayName));
 
 const legacyPackages = pkg.legacyPackages ?
   pkg.legacyPackages.map((dep) => {
@@ -100,7 +103,7 @@ const licensesUrl = pkg.licensesUrl ?? license?.reference;
   pkg.dependencies
   ? <ul>
     {
-      Object.keys(pkg.dependencies).map((dep) => (
+      Object.keys(pkg.dependencies).sort().map((dep) => (
         <li><a class="link link-primary" href={`https://openupm.com/packages/${dep}/`} target="_blank">{dep}</a></li>
       ))
     }
