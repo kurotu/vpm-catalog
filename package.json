@@ -22,6 +22,7 @@
     "@pagefind/default-ui": "^1.1.0",
     "@tailwindcss/typography": "^0.5.13",
     "@types/semver": "^7.5.8",
+    "any-json": "^3.1.0",
     "daisyui": "^4.11.1",
     "pagefind": "^1.1.0"
   }
