@@ -15,9 +15,9 @@ const shuffledPackages = shuffledNames
 ---
 <Layout title={title}>
   <div class="hero">
-    <div class="hero-content text-center">
-      <div class="max-w-lg">
-        <h1 class="text-5xl font-bold">Place to browse curated community packages for VCC</h1>
+    <div class="hero-content text-center flex-col">
+      <div class="md:max-w-lg max-w-xs">
+        <h1 class="md:text-5xl text-3xl font-bold">Place&nbsp;to&nbsp;browse curated&nbsp;packages for&nbsp;VCC</h1>
         <p class="py-6">VPM Catalog lists curated VPM packages and repositories which are usable in VCC. Discover favorite packages to improve your creation.</p>
         <div class="pb-6 flex flex-col gap-2 items-center">
           <p class="text-2xl"><span class="text-4xl">{allNames.length}</span> Packages</p>
@@ -28,10 +28,19 @@ const shuffledPackages = shuffledNames
           <a class="btn btn-lg btn-wide" href="/repositories">Browse Repositories</a>
         </div>
       </div>
+      <div class="divider my-8"></div>
+      <div class="md:max-w-lg max-w-xs">
+        <h2 class="text-4xl font-bold text-center">Submit Repository</h2>
+        <p class="py-6">Submit your repository to VPM Catalog to make your packages discoverable by VCC users.</p>
+      </div>
+      <div class="flex flex-col gap-4 items-center">
+        <a class="btn btn-lg btn-wide btn-primary" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSc4nvnKJAbHkvygU-CT3Ms0viUm3dv_i_66R7c22tQSZ-f1Ow/viewform?usp=sf_link">Submit Repository</a>
+        <a class="btn btn-lg btn-wide" href="/about">How to Beautify</a>
+      </div>
+      <div class="divider my-8"></div>
     </div>
   </div>
-  <div class="divider"></div>
-  <h2 class="text-4xl font-bold text-center my-8">Random Pickup</h2>
+  <h2 class="text-4xl font-bold text-center mb-8">Random Pickup</h2>
   <div class="flex flex-row flex-wrap justify-center gap-4">
   {
     shuffledPackages.slice(0, 6).map(pkg => (
