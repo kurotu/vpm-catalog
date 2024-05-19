@@ -59,7 +59,8 @@ function findReadme() {
 
 DOWNLOAD_DIR="$ROOT/vpm/zips"
 PACKAGES_DIR="$ROOT/vpm/packages"
-DUMMY_PNG="$ROOT/dummy.png"
+DUMMY_PNG="$ROOT/vpm/dummy/dummy.png"
+DUMMY_JPG="$ROOT/vpm/dummy/dummy.jpg"
 mkdir -p "$DOWNLOAD_DIR"
 mkdir -p "$PACKAGES_DIR"
 getAllPackageNames | while read -r PACKAGE_NAME; do
@@ -102,5 +103,12 @@ getAllPackageNames | while read -r PACKAGE_NAME; do
     echo "Patch missing files"
     mkdir -p "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/doc"
     cp "$DUMMY_PNG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/doc/pbr_to_standard.png"
+  fi
+
+  if [ "$PACKAGE_NAME" == "at.pimaker.ltcgi" ]; then
+    echo "Patch missing files"
+    mkdir -p "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/~Screenshots"
+    cp "$DUMMY_JPG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/~Screenshots/attribution.jpg"
+    cp "$DUMMY_JPG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/~Screenshots/demoapp.jpg"
   fi
 done

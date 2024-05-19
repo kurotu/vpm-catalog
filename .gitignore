@@ -1,5 +1,6 @@
 # vpm repositories
-vpm/
+vpm/*
+!vpm/dummy/
 
 # build output
 dist/
