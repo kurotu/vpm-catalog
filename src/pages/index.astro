@@ -17,7 +17,7 @@ const shuffledPackages = shuffledNames
   <div class="hero">
     <div class="hero-content text-center flex-col">
       <div class="md:max-w-lg max-w-xs">
-        <h1 class="md:text-5xl text-3xl font-bold">Place&nbsp;to&nbsp;browse curated&nbsp;packages for&nbsp;VCC</h1>
+        <h1 class="md:text-6xl text-3xl font-logo font-black md:leading-tight leading-tight">Place&nbsp;to&nbsp;browse curated&nbsp;packages for&nbsp;VCC</h1>
         <p class="py-6">VPM Catalog lists curated VPM packages and repositories which are usable in VCC. Discover favorite packages to improve your creation.</p>
         <div class="pb-6 flex flex-col gap-2 items-center">
           <p class="text-2xl"><span class="text-4xl">{allNames.length}</span> Packages</p>
@@ -30,7 +30,7 @@ const shuffledPackages = shuffledNames
       </div>
       <div class="divider my-8"></div>
       <div class="md:max-w-lg max-w-xs">
-        <h2 class="text-4xl font-bold text-center">Submit Repository</h2>
+        <h2 class="md:text-4xl text-3xl font-logo font-bold text-center">Submit Repository</h2>
         <p class="py-6">Submit your repository to VPM Catalog to make your packages discoverable by VCC users.</p>
       </div>
       <div class="flex flex-col gap-4 items-center">
@@ -40,7 +40,7 @@ const shuffledPackages = shuffledNames
       <div class="divider my-8"></div>
     </div>
   </div>
-  <h2 class="text-4xl font-bold text-center mb-8">Random Pickup</h2>
+  <h2 class="md:text-4xl text-3xl font-logo font-bold text-center mb-8">Random Pickup</h2>
   <div class="flex flex-row flex-wrap justify-center gap-4">
   {
     shuffledPackages.slice(0, 6).map(pkg => (
