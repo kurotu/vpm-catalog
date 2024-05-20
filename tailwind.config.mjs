@@ -9,6 +9,19 @@ export default {
     require('daisyui'),
   ],
   daisyui: {
-    themes: ["light", "dark"],
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          primary: "teal",
+        },
+      },
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          primary: "#00bb99",
+        },
+      },
+    ],
   },
 }
