@@ -11,7 +11,7 @@ const currentTimestamp = current.getTime();
   </p>
 </footer>
 
-<script define:vars={{currentTimestamp}}>
+<script is:inline define:vars={{currentTimestamp}}>
 window.addEventListener('load', () => {
   const updatedTime = document.getElementById('updated_time');
   const date = new Date(currentTimestamp);
