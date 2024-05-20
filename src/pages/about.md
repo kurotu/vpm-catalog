@@ -3,6 +3,8 @@ layout: ~/layouts/MarkdownLayout.astro
 title: About VPM Catalog
 ---
 
+## Contents
+
 ## What is VPM Catalog?
 
 VPM Catalog is a curated list of VPM packages and repositories which can be used with VCC.

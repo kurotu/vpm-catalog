@@ -24,6 +24,7 @@
     "@types/semver": "^7.5.8",
     "any-json": "^3.1.0",
     "daisyui": "^4.11.1",
-    "pagefind": "^1.1.0"
+    "pagefind": "^1.1.0",
+    "remark-toc": "^9.0.0"
   }
 }

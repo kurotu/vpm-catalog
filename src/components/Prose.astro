@@ -13,6 +13,12 @@
   prose-img:inline
   prose-img:m-0
   prose-pre:w-full
+  prose-h1:scroll-mt-20
+  prose-h2:scroll-mt-20
+  prose-h3:scroll-mt-20
+  prose-h4:scroll-mt-20
+  prose-h5:scroll-mt-20
+  prose-h6:scroll-mt-20
   ">
   <slot />
 </div>
@@ -26,6 +32,11 @@
 <script>
 window.addEventListener('load', () => {
   document.querySelectorAll('.prose a').forEach((a) => {
+    const href = a.getAttribute('href');
+    // Skip internal links
+    if (href?.startsWith('#') || href?.startsWith('/') || href?.startsWith('.') || href?.startsWith(window.location.origin)) {
+      return;
+    }
     a.setAttribute('target', '_blank');
   });
 });
