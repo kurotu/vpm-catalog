@@ -19,7 +19,7 @@ export default {
       {
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          primary: "#00bb99",
+          primary: "#00a090",
         },
       },
     ],
