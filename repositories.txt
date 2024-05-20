@@ -8,6 +8,7 @@ https://esperecyan.github.io/VRMConverterForVRChat/registry.json
 https://hai-vr.github.io/vpm-listing/index.json
 https://hfcRed.github.io/VPM-Listing/index.json
 https://hotaru86.github.io/VPM/index.json
+https://JeTeeS.github.io/TES-VPM-Package-Listing/index.json
 https://k4584587.github.io/Modular-Auto-Toggle/index.json
 https://kakunpc.github.io/kakunpc_vpm/index.json
 https://kurone-kito.github.io/vrc-ui/index.json
@@ -30,7 +31,9 @@ https://timiz0r.github.io/EZUtils/index.json
 https://tp-jp.github.io/vpm-repos/index.json
 https://vcc.vrcfury.com
 https://vpm.anatawa12.com/vpm.json
+https://vpm.bluwizard.net/index.json
 https://vpm.dreadscripts.com/listings/main.json
+https://vpm.gatosyocora.net/index.json
 https://vpm.kaikoga.net/index.json
 https://vpm.koyashiro.net/index.json
 https://vpm.mimylab.com/index.json
@@ -39,9 +42,12 @@ https://vpm.narazaka.net/index.json
 https://vpm.nekomimi.studio/index.json
 https://vpm.niri.la/vpm.json
 https://vpm.pimaker.at/index.json
+https://vpm.razgriz.one/index.json
 https://vpm.rs64.net/vpm.json
 https://vpm.techanon.dev/index.json
+https://vpm.thry.dev/index.json
 https://vpm.ureishi.net/repos.json
+https://vpm.vrsl.dev/index.json
 https://vrchat.github.io/packages/index.json
 https://vrchat-community.github.io/vpm-listing-curated/index.json
 https://waya0125.com/vpm
