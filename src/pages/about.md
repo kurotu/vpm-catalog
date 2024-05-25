@@ -55,3 +55,10 @@ Following `package.json` fields are recommended to be shown in the catalog page:
 | `documentationUrl` | Custom location for this package’s documentation specified as a URL. |
 | `license` | Identifier for an OSS license using the [SPDX identifier format](https://spdx.org/licenses/), or a string such as "See LICENSE.md file". |
 | `licenseUrl` | Custom location for this package’s license information specified as a URL. |
+
+## How to remove my packages or repositories?
+
+Please contact to the website author.
+
+- GitHub Repo: [kurotu/vpm-catalog](https://github.com/kurotu/vpm-catalog)
+- X: [@kurotu](https://x.com/kurotu)
