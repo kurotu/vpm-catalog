@@ -3,7 +3,7 @@ import { getAllPackages, type VPMPackageGroup, type VPMRepository } from "~/util
 
 export const GET: APIRoute = async ({params, request}) => {
   const allRepos = await glob();
-  const allPackages = getAllPackages(allRepos);
+  const allPackages = getAllPackages(allRepos.filter(repo => !repo.id.startsWith('com.vrchat.')));
   const packages: Record<string, VPMPackageGroup> = {};
   for(const pkg of allPackages) {
     if (!packages[pkg.name]) {
