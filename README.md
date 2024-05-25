@@ -1,47 +1,56 @@
-# Astro Starter Kit: Minimal
+# VPM Catalog
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Place to browse community packages for VCC.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+https://vpm-catalog.vercel.app/
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## What is VPM Catalog?
 
-## 🚀 Project Structure
+VPM Catalog is a curated list of VPM packages and repositories which can be used with VCC.
+You can browse the catalog to find packages that you can use in your VRChat avatar of world projects.
 
-Inside of your Astro project, you'll see the following folders and files:
+### What is VCC?
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+VRChat Creator Companion (VCC) is a tool which is officially provided by VRChat to help creators manage their projects.
+It can be used to import useful tools as VPM packages, manage dependencies, and more.
+See the [VCC documentation](https://vcc.docs.vrchat.com/) for more information.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### What is VPM?
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+VRChat Package Manager (VPM) is a package format used by VCC and other compatible tools.
+You can distribute your assets as VPM packages, and import them into your projects easily with VCC.
+See the [VCC documentation](https://vcc.docs.vrchat.com/vpm/) for more information.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## How to list my packages?
 
-## 🧞 Commands
+To list your packages in the catalog, you need to submit your VPM repository URL.
+Once your repository is listed, the catalog will automatically fetch the package list from your repository.
 
-All commands are run from the root of the project, from a terminal:
+See the [registration form](https://docs.google.com/forms/d/e/1FAIpQLSc4nvnKJAbHkvygU-CT3Ms0viUm3dv_i_66R7c22tQSZ-f1Ow/viewform?usp=sf_link) to submit your repository.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Why do my packages have fewer information?
 
-## 👀 Want to learn more?
+The catalog fetches the package metadata from VPM repositories and fetches `README.md` file from the latest release zip files.
+So if your repository does not have the metadata or `README.md` file, the catalog will show fewer information.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Include README.md to your package zip file
+
+`README.md` of your package's root folder will be used to create the catalog page.
+
+### Fill recommended fields of package.json and repository json
+
+Recommended fields are based on Unity Package Manager (UPM) format. You can provide the metadata in the `package.json` file and embed them to your repository json.
+See the [Unity documentation](https://docs.unity3d.com/2022.3/Documentation/Manual/upm-manifestPkg.html) for more information.
+
+Following `package.json` fields are recommended to be shown in the catalog page:
+
+| Field | Description |
+|---|---|
+| `description` | A brief description of the package. |
+| `displayName` | A user-friendly name to appear in the Unity Editor. |
+| `unity` | Indicates the lowest Unity version the package is compatible with. |
+| `author` | The author of the package. |
+| `changelogUrl` | Custom location for this package’s changelog specified as a URL. |
+| `documentationUrl` | Custom location for this package’s documentation specified as a URL. |
+| `license` | Identifier for an OSS license using the [SPDX identifier format](https://spdx.org/licenses/), or a string such as "See LICENSE.md file". |
+| `licenseUrl` | Custom location for this package’s license information specified as a URL. |
