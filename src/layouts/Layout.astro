@@ -4,6 +4,7 @@ interface Props {
 }
 
 const {title} = Astro.props;
+const ogpImageUrl = new URL('/images/vpm-catalog-ogp.png', Astro.site || Astro.url.origin);
 ---
 <html lang="en" prefix="og: https://ogp.me/ns#">
 	<head>
@@ -12,7 +13,8 @@ const {title} = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
     <meta property="og:title" content={`${title} | VPM Catalog`} />
-    <meta property="og:description" content="Place to browse community packages for VCC." />
+    <meta property="og:description" content="Place to browse community packages for VCC. Discover favorite packages to improve your creation." />
+    <meta property="og:image" content={ogpImageUrl} />
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
