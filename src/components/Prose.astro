@@ -37,6 +37,9 @@ window.addEventListener('load', () => {
     if (href?.startsWith('#') || href?.startsWith('/') || href?.startsWith('.') || href?.startsWith(window.location.origin)) {
       return;
     }
+    if (href?.startsWith('vcc://')) {
+      return;
+    }
     a.setAttribute('target', '_blank');
   });
 });

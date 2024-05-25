@@ -1,0 +1,20 @@
+---
+layout: ~/layouts/MarkdownLayout.astro
+title: All-in-one Repository
+---
+import { site } from '~/../astro.config.mjs';
+import { vccAddRepoLink } from '~/utils/vpm';
+export const repoURL = `${new URL('/index.json', site || 'http://localhost:4321')}`
+export const addToVCCURL = vccAddRepoLink(repoURL);
+
+A VPM repository which contains all the packages listed in the VPM Catalog.
+
+This repository is provided as is, without warranty of any kind.
+
+## Repository Information
+
+<pre>
+{repoURL}
+</pre>
+
+<a href={addToVCCURL} class="!btn !btn-lg !btn-wide !btn-primary">Add to VCC</a>

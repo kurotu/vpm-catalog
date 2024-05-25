@@ -1,14 +1,14 @@
 import { defineConfig } from 'astro/config';
 import remarkToc from 'remark-toc';
 import tailwind from "@astrojs/tailwind";
-
-let site = process.env['VERCEL'] ? `https://${process.env['VERCEL_PROJECT_PRODUCTION_URL']}` : undefined;
+import mdx from "@astrojs/mdx";
+export const site = process.env['VERCEL'] ? `https://${process.env['VERCEL_PROJECT_PRODUCTION_URL']}` : undefined;
 
 // https://astro.build/config
 export default defineConfig({
   site: site,
-  integrations: [tailwind()],
+  integrations: [tailwind(), mdx()],
   markdown: {
-    remarkPlugins: [remarkToc],
-  },
+    remarkPlugins: [remarkToc]
+  }
 });
