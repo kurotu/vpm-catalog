@@ -17,7 +17,6 @@ https://lilxyzw.github.io/vpm-repos/vpm.json
 https://page.853lab.com/vpm.json
 https://poiyomi.github.io/vpm/index.json
 https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
-https://raw.githubusercontent.com/Cayahuanca/Unity/main/vpm-packages.json
 https://repo.buddyworks.wtf/index.json
 https://ribeKim.github.io/vpm/index.json
 https://rurre.github.io/vpm/index.json
