@@ -18,6 +18,8 @@ export interface VPMPackage extends UPMPackage {
   legacyFolders: { [key: string]: string; } | undefined,
   legacyFiles: { [key: string]: string; } | undefined,
   legacyPackages: string[] | undefined,
+  // vrc-get extension for yank support
+  'vrc-get'? : { yanked?: boolean | string; }
 }
 
 export interface UPMPackage {
@@ -48,22 +50,30 @@ export const getAllPackages = (repositories: VPMRepository[]) => {
     .flatMap(group => getPackages(group));
 }
 
+export const isYanked = (pkg: VPMPackage) => {
+  const yank = pkg['vrc-get']?.['yanked'];
+  const yanked = typeof yank === 'string' || yank === true;
+  return yanked;
+}
+
 /**
  * Return the latest release package. If there are no release packages, return the latest package.
  * @param packages
  * @returns
  */
 export const findLatestReleasePackage = (packages: VPMPackage[]) => {
-  const releasePackages = packages.filter(p => !p.version.includes('-'));
+  const publishingPackages = packages.filter(p => !isYanked(p));
+  const releasePackages = publishingPackages.filter(p => !p.version.includes('-'));
   const latestStable = findLatestPackage(releasePackages);
   if (latestStable) {
     return latestStable;
   }
-  return findLatestPackage(packages);
+  return findLatestPackage(publishingPackages);
 }
 
 export const getPackages = (group: VPMPackageGroup) => {
-  return Object.values(group.versions);
+  return Object.values(group.versions)
+    .filter(p => !isYanked(p))
 }
 
 export const findLatestPackage = (packages: VPMPackage[]) => {
