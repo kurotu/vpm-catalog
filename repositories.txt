@@ -11,13 +11,14 @@ https://hotaru86.github.io/VPM/index.json
 https://JeTeeS.github.io/TES-VPM-Package-Listing/index.json
 https://k4584587.github.io/Modular-Auto-Toggle/index.json
 https://kakunpc.github.io/kakunpc_vpm/index.json
-https://kurone-kito.github.io/vrc-ui/index.json
+https://kurone-kito.github.io/vpm/index.json
 https://kurotu.github.io/vpm-repos/vpm.json
 https://lilxyzw.github.io/vpm-repos/vpm.json
 https://page.853lab.com/vpm.json
 https://poiyomi.github.io/vpm/index.json
 https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
 https://raw.githubusercontent.com/Cayahuanca/Unity/main/vpm-packages.json
+https://repo.buddyworks.wtf/index.json
 https://ribeKim.github.io/vpm/index.json
 https://rurre.github.io/vpm/index.json
 https://sanaehururu1200.github.io/ma-suimin_system/index.json
