@@ -6,7 +6,7 @@ import PackageSidePane from "~/components/PackageSidePane.astro";
 import Prose from "~/components/Prose.astro";
 import Layout from "~/layouts/CenterLayout.astro";
 import { fetchLicenseData, findLicense } from "~/utils/license";
-import { findLatestPackage, getAllPackages, getDeprecatorPackages, type VPMPackage, type VPMRepository } from "~/utils/vpm";
+import { findLatestPackage, getAllPackages, type VPMPackage, type VPMRepository } from "~/utils/vpm";
 
 export const getStaticPaths = (async () => {
   const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
@@ -39,8 +39,6 @@ export const getStaticPaths = (async () => {
 
 const {pkg, license} = Astro.props;
 const {Content} = Astro.props.readme ?? { Content: undefined };
-
-const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
 
 ---
 <Layout title={pkg.displayName}>

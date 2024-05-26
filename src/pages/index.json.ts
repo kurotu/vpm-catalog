@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import { getAllPackages, type VPMPackageGroup, type VPMRepository } from "~/utils/vpm";
 
-export const GET: APIRoute = async ({params, request}) => {
+export const GET: APIRoute = async ({request}) => {
   const allRepos = await glob();
   const allPackages = getAllPackages(allRepos.filter(repo => !repo.id.startsWith('com.vrchat.')));
   const packages: Record<string, VPMPackageGroup> = {};

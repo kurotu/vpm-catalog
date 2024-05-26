@@ -1,5 +1,5 @@
 ---
-import { getDeprecatorPackages, type VPMPackage, type VPMRepository } from '~/utils/vpm'
+import { type VPMPackage } from '~/utils/vpm'
 import Card from './Card.astro';
 
 interface Props {
@@ -7,7 +7,6 @@ interface Props {
 }
 
 const { pkg } = Astro.props;
-const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
 
 ---
 <Card>
