@@ -1,7 +1,7 @@
 ---
 import { SemVer } from "semver";
 import type { LicenseListItem } from "~/utils/license";
-import { findLatestPackage, getAllPackages, getPackages, urlToFileName, type VPMPackage, type VPMRepository } from "~/utils/vpm";
+import { findLatestPackage, getAllPackages, getDeprecatorPackages, getPackages, urlToFileName, type VPMPackage, type VPMRepository } from "~/utils/vpm";
 
 interface Props {
   pkg: VPMPackage;
@@ -58,14 +58,26 @@ const legacyPackages = pkg.legacyPackages ?
 
 const licenseLabel = pkg.license ?? (pkg.licensesUrl ? "View license" : "Undefined");
 const licensesUrl = pkg.licensesUrl ?? license?.reference;
+
+const deprecators = getDeprecatorPackages(pkg, allRepos);
+const showNotes = deprecators.length > 0;
+
 ---
 <style>
   h2 {
     margin-bottom: 0.5rem;
   }
 
-  h2 + * {
-    margin-bottom: 1.5rem;
+  h2 {
+    margin-top: 1.5rem;
+  }
+
+  h2:first-of-type {
+    margin-top: 0;
+  }
+
+  p + ul {
+    margin-top: 0.5rem;
   }
 
   li {
@@ -168,4 +180,21 @@ const licensesUrl = pkg.licensesUrl ?? license?.reference;
     pkg.author.name
   : "Undefined"
 }
-</p>
+
+{
+  showNotes
+    ? <h2 class="text-2xl font-bold">Notes</h2>
+    : null
+}
+{
+  deprecators.length > 0
+  ? <p>This package is removed when using following packages.</p>
+    <ul>
+      {
+        deprecators.map((dep) => (
+          <li><a class="link link-primary" href={`/packages/${dep.name}`}>{dep.displayName}</a></li>
+        ))
+      }
+    </ul>
+  : null
+}
