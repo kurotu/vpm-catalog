@@ -64,115 +64,123 @@ const showNotes = deprecators.length > 0;
 
 ---
 <style>
-  h2 {
-    margin-bottom: 0.5rem;
+  h2 + * {
+    @apply mt-2;
   }
 
   h2 {
-    margin-top: 1.5rem;
+    @apply text-2xl font-bold mt-6;
   }
 
   h2:first-of-type {
-    margin-top: 0;
+    @apply mt-0;
   }
 
   p + ul {
-    margin-top: 0.5rem;
+    @apply mt-2;
   }
 
   li {
-    margin-bottom: 0.5rem;
+    @apply mb-2;
+  }
+
+  a {
+    @apply link link-primary;
+  }
+
+  .divider + * {
+    @apply mt-0;
   }
 </style>
 
-<h2 class="text-2xl font-bold">Documentation</h2>
+<h2>Documentation</h2>
 <p>
   {
     pkg.documentationUrl
-    ? <a class="link link-primary" target="_blank" href={pkg.documentationUrl}>View documentation</a>
+    ? <a target="_blank" href={pkg.documentationUrl}>View documentation</a>
     : "No documentation URL"
   }
 </p>
 
-<h2 class="text-2xl font-bold">Repositories</h2>
+<h2>Repositories</h2>
 <ul>
   {
     repositories.map((repo) => (
       <li>
-        <a class="link link-primary" href={`/repositories/${urlToFileName(repo.repository.id)}`}>{repo.repository.name}</a>
+        <a href={`/repositories/${urlToFileName(repo.repository.id)}`}>{repo.repository.name}</a>
         ({repo.count}&nbsp;{repo.count > 1 ? 'versions' : 'version'})
       </li>
     ))
   }
 </ul>
 
-<h2 class="text-2xl font-bold">Version</h2>
+<h2>Version</h2>
 <p>
   {pkg.version}
   {
     pkg.changelogUrl
-    ? <span>(<a class="link link-primary" target="_blank" href={pkg.changelogUrl}>Changelog</a>)</span>
+    ? <span>(<a target="_blank" href={pkg.changelogUrl}>Changelog</a>)</span>
     : null
   }
 </p>
 </div>
 
-<h2 class="text-2xl font-bold">Unity version</h2>
+<h2>Unity version</h2>
 {
   pkg.unity
   ? <p>{pkg.unity} or later</p>
   : <p>Any</p>
 }
 
-<h2 class="text-2xl font-bold">Dependencies</h2>
+<h2>Dependencies</h2>
 {
   dependencies.length > 0
   ? <ul>
     {
       dependencies.map((dep) => (
-        <li><a class="link link-primary" href={dep.url} target="_blank">{dep.name}</a></li>
+        <li><a href={dep.url} target="_blank">{dep.name}</a></li>
       ))
     }
   </ul>
   : <p>No dependencies</p>
 }
 
-<h2 class="text-2xl font-bold">VPM Dependencies</h2>
+<h2>VPM Dependencies</h2>
 {
   vpmDependencies.length > 0
   ? <ul>
     {
       vpmDependencies.map((dep) => (
-        <li><a class="link link-primary" href={`/packages/${dep.name}`}>{dep.displayName}</a></li>
+        <li><a href={`/packages/${dep.name}`}>{dep.displayName}</a></li>
       ))
     }
   </ul>
   : <p>No dependencies</p>
 }
 
-<h2 class="text-2xl font-bold">Legacy Packages</h2>
+<h2>Legacy Packages</h2>
 {
   legacyPackages.length > 0
   ? <ul>
     {
       legacyPackages.map((legacy) => (
-        <li><a class="link link-primary" href={`/packages/${legacy.name}`}>{legacy.displayName}</a></li>
+        <li><a href={`/packages/${legacy.name}`}>{legacy.displayName}</a></li>
       ))
     }
   </ul>
   : <p>No legacy packages</p>
 }
 
-<h2 class="text-2xl font-bold">License</h2>
+<h2>License</h2>
 <p>
   {
     licensesUrl
-    ? <a class="link link-primary" target="_blank" href={licensesUrl}>{licenseLabel}</a>
+    ? <a target="_blank" href={licensesUrl}>{licenseLabel}</a>
     : licenseLabel
   }
 </p>
 
-<h2 class="text-2xl font-bold">Author</h2>
+<h2>Author</h2>
 <p>
 {
   pkg.author
@@ -183,7 +191,9 @@ const showNotes = deprecators.length > 0;
 
 {
   showNotes
-    ? <h2 class="text-2xl font-bold">Notes</h2>
+    ?
+      <div class="divider"></div>
+      <h2>Notes</h2>
     : null
 }
 {
@@ -192,7 +202,7 @@ const showNotes = deprecators.length > 0;
     <ul>
       {
         deprecators.map((dep) => (
-          <li><a class="link link-primary" href={`/packages/${dep.name}`}>{dep.displayName}</a></li>
+          <li><a href={`/packages/${dep.name}`}>{dep.displayName}</a></li>
         ))
       }
     </ul>
