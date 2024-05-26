@@ -91,6 +91,13 @@ export const vccAddRepoLink = (url: string) => {
   return `vcc://vpm/addRepo?url=${url}`;
 }
 
-export const urlToFileName = (url: string) => {
+export const idToFileName = (id: string) => {
+  if (id.match(/^https?:\/\//)) {
+    return urlToFileName(id);
+  }
+  return id;
+}
+
+const urlToFileName = (url: string) => {
   return url.replaceAll('://', '_').replaceAll('/', '_').replaceAll('.', '_');
 }

@@ -1,7 +1,7 @@
 ---
 import { SemVer } from "semver";
 import type { LicenseListItem } from "~/utils/license";
-import { findLatestPackage, getAllPackages, getDeprecatorPackages, getPackages, urlToFileName, type VPMPackage, type VPMRepository } from "~/utils/vpm";
+import { findLatestPackage, getAllPackages, getDeprecatorPackages, getPackages, idToFileName, type VPMPackage, type VPMRepository } from "~/utils/vpm";
 
 interface Props {
   pkg: VPMPackage;
@@ -107,7 +107,7 @@ const showNotes = deprecators.length > 0;
   {
     repositories.map((repo) => (
       <li>
-        <a href={`/repositories/${urlToFileName(repo.repository.id)}`}>{repo.repository.name}</a>
+        <a href={`/repositories/${idToFileName(repo.repository.id)}`}>{repo.repository.name}</a>
         ({repo.count}&nbsp;{repo.count > 1 ? 'versions' : 'version'})
       </li>
     ))

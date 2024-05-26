@@ -5,13 +5,13 @@ import Head1 from "~/components/Head1.astro";
 import PackageCard from "~/components/PackageCard.astro";
 import Layout from "~/layouts/CenterLayout.astro";
 import type { VPMPackage } from "~/utils/vpm";
-import { type VPMRepository, findLatestReleasePackage, vccAddRepoLink, urlToFileName } from "~/utils/vpm";
+import { type VPMRepository, findLatestReleasePackage, vccAddRepoLink, idToFileName } from "~/utils/vpm";
 
 export const getStaticPaths = (async () => {
   const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
   return allRepos.map(repo => ({
     params: {
-      id: urlToFileName(repo.id)
+      id: idToFileName(repo.id)
     },
     props: {
         repo: repo

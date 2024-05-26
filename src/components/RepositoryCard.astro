@@ -1,5 +1,5 @@
 ---
-import { urlToFileName, vccAddRepoLink, type VPMRepository } from '~/utils/vpm'
+import { idToFileName, vccAddRepoLink, type VPMRepository } from '~/utils/vpm'
 import Card from './Card.astro';
 
 interface Props {
@@ -12,7 +12,7 @@ const { repository } = Astro.props;
 <Card>
   <div class="card-body flex-row gap-2">
     <div class="flex-grow flex-col">
-      <h2 class="card-title"><a class="link link-primary" href=`/repositories/${urlToFileName(repository.id)}`>{repository.name}</h2>
+      <h2 class="card-title"><a class="link link-primary" href=`/repositories/${idToFileName(repository.id)}`>{repository.name}</h2>
       <p>{repository.url}</p>
     </div>
     <div class="flex-shrink-0">
