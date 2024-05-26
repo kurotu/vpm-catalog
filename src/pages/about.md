@@ -58,7 +58,23 @@ Following `package.json` fields are recommended to be shown in the catalog page:
 
 ## How to remove my packages or repositories?
 
-Please contact to the website author.
+There are two options to remove your packages or repositories from the catalog.
+
+### 1. Use `'vrc-get'.yanked` field in package metadata
+
+`'vrc-get'.yanked` is defined by [vrc-get](https://github.com/vrc-get/vrc-get) and [ALCOM](https://github.com/vrc-get/vrc-get/blob/master/vrc-get-gui/README.md) to hide discontinued packages.
+VPM Catalog also hides packages when their `'vrc-get'.yanked` is a string or `true`.
+
+```json
+{
+  "name": "com.example.package",
+  "vrc-get": {
+    "yanked": "This package is discontinued."
+  }
+}
+```
+
+### 2. Contact to the website author
 
 - GitHub Repo: [kurotu/vpm-catalog](https://github.com/kurotu/vpm-catalog)
 - X: [@kurotu](https://x.com/kurotu)
