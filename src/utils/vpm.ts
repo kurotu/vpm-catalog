@@ -51,11 +51,9 @@ export const getAllPackages = (repositories: VPMRepository[]) => {
 }
 
 export const isYanked = (pkg: VPMPackage) => {
-  console.log(`Checking yanked for ${pkg.name}@${pkg.version}`)
   const yank = pkg['vrc-get']?.['yanked'];
   const yanked = typeof yank === 'string' || yank === true;
-  console.log(`Yanked: ${yanked}`)
-  return typeof yank === 'string' || yank === true;
+  return yanked;
 }
 
 /**
