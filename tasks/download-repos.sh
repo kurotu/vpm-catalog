@@ -37,7 +37,6 @@ function download() {
   if [ -z "$ID" ]; then
     echo "ID not found in $URL"
     ID=$(urlToFileName <<< "$URL")
-    CONTENT="$(jq ". += {\"id\": \"$URL\"}" <<< "$CONTENT")"
   fi
   echo "$CONTENT" > "$DIR/$ID.json"
 }

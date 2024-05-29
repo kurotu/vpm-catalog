@@ -2,7 +2,7 @@ import { SemVer } from "semver";
 
 export interface VPMRepository {
   name: string,
-  id: string,
+  id?: string,
   author: string,
   url: string,
   packages: {[key: string]: VPMPackageGroup},

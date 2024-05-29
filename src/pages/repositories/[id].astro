@@ -11,7 +11,7 @@ export const getStaticPaths = (async () => {
   const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
   return allRepos.map(repo => ({
     params: {
-      id: idToFileName(repo.id)
+      id: idToFileName(repo.id ?? repo.url)
     },
     props: {
         repo: repo

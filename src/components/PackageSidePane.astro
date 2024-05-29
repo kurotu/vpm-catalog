@@ -110,7 +110,7 @@ const showNotes = deprecators.length > 0;
   {
     repositories.map((repo) => (
       <li>
-        <a href={`/repositories/${idToFileName(repo.repository.id)}`}>{repo.repository.name}</a>
+        <a href={`/repositories/${idToFileName(repo.repository.id ?? repo.repository.url)}`}>{repo.repository.name}</a>
         ({repo.count}&nbsp;{repo.count > 1 ? 'versions' : 'version'})
       </li>
     ))
