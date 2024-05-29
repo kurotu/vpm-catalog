@@ -45,6 +45,8 @@ packages.sort((a, b) => a.displayName.localeCompare(b.displayName));
     </div>
     <div class="divider md:divider-horizontal" />
     <div class="md:w-72 md:pl-4 flex-shrink-0">
+      <h2 class="text-2xl font-bold mb-2">Repository ID</h2>
+      <p class="mb-6">{repo.id || 'Undefined'}</p>
       <h2 class="text-2xl font-bold mb-2">Author</h2>
       <p class="mb-6">{repo.author}</p>
       <h2 class="text-2xl font-bold mb-2">Repository URL</h2>
