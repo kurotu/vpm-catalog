@@ -8,9 +8,18 @@ const title = "VPM Catalog";
 const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
 const allReleasePackages = getAllPackages(allRepos).filter(p => !p.version.includes('-'));
 const allNames = Array.from(new Set(allReleasePackages.map(pkg => pkg.name)));
-const shuffledNames = allNames.sort(() => Math.random() - 0.5);
+const shuffledNames = shuffleArray(allNames);
 const shuffledPackages = shuffledNames
   .map(name => allReleasePackages.find(pkg => pkg.name === name)).filter((pkg) : pkg is VPMPackage => pkg ? true : false);
+
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
 
 ---
 <Layout title={title}>
