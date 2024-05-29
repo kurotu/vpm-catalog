@@ -77,3 +77,7 @@ VPM Catalog also hides packages when their `'vrc-get'.yanked` is a string or `tr
 
 - GitHub Repo: [kurotu/vpm-catalog](https://github.com/kurotu/vpm-catalog)
 - X: [@kurotu](https://x.com/kurotu)
+
+## How to develop VPM Catalog?
+
+See the [DEVELOPMENT.md](DEVELOPMENT.md) for more information.
