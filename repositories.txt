@@ -11,6 +11,7 @@ https://hotaru86.github.io/VPM/index.json
 https://JeTeeS.github.io/TES-VPM-Package-Listing/index.json
 https://k4584587.github.io/Modular-Auto-Toggle/index.json
 https://kakunpc.github.io/kakunpc_vpm/index.json
+https://kb10uy.github.io/vrc-repository/index.json
 https://kurone-kito.github.io/vpm/index.json
 https://kurotu.github.io/vpm-repos/vpm.json
 https://lilxyzw.github.io/vpm-repos/vpm.json
