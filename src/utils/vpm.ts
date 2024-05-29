@@ -109,5 +109,5 @@ export const idToFileName = (id: string) => {
 }
 
 const urlToFileName = (url: string) => {
-  return url.replaceAll('://', '_').replaceAll('/', '_').replaceAll('.', '_');
+  return url.replaceAll('://', '_').replaceAll('/', '_');
 }

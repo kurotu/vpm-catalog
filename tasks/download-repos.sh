@@ -12,8 +12,8 @@ function fixJson() {
 }
 
 function urlToFileName() {
-  # replace '://', '.', '/' with '_'
-  sed -e 's/:\/\/\|[\.\/]/_/g'
+  # replace '://', '/' with '_'
+  sed -e 's/:\/\/\|[\/]/_/g'
 }
 
 function download() {
