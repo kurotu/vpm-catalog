@@ -12,8 +12,9 @@ const { pkg } = Astro.props;
 <Card>
   <div class="card-body flex-row">
     <div class="flex-grow flex-col">
-      <div class="card-title flex flex-row gap-2">
+      <div class="card-title flex flex-col items-start md:gap-1 gap-0">
         <h2><a class="link link-primary" href=`/packages/${pkg.name}`>{pkg.displayName}</h2>
+        <p class="text-sm font-light text-base-content">{pkg.name}</p>
       </div>
       <p>{pkg.description}</p>
     </div>
