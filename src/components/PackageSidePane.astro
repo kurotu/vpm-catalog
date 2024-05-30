@@ -13,6 +13,8 @@ const {pkg, license} = Astro.props;
 const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
 const pkgs = getAllPackages(allRepos);
 
+const authorLabel =  pkg.author ? pkg.author.name : "Undefined";
+
 const repositories = allRepos.map((repo) => {
   return {
     repository: repo,
@@ -186,11 +188,11 @@ const showNotes = deprecators.length > 0;
 <h2>Author</h2>
 <p>
 {
-  pkg.author
-  ?
-    pkg.author.name
-  : "Undefined"
+  pkg.author?.url
+  ? <a target="_blank" href={pkg.author.url}>{authorLabel}</a>
+  : authorLabel
 }
+</p>
 
 {
   showNotes
