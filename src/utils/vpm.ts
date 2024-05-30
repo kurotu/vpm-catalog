@@ -36,6 +36,7 @@ export interface UPMPackage {
   keywords: string[] | undefined,
   license: string | undefined,
   licensesUrl: string | undefined,
+  unityRelease?: string,
 }
 
 export interface People {
