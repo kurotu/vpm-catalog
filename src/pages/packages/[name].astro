@@ -54,7 +54,7 @@ const {Content} = Astro.props.readme ?? { Content: undefined };
           ? <Prose><Content /></Prose>
           : <div>
               <Head1>{pkg.displayName}</Head1>
-              <p class="mt-4 text-lg">{pkg.description}</p>
+              <p class="mt-4 text-lg vpm-description">{pkg.description}</p>
           </div>
       }
     </div>
@@ -64,3 +64,17 @@ const {Content} = Astro.props.readme ?? { Content: undefined };
     </div>
   </div>
 </Layout>
+
+<script is:inline>
+window.addEventListener('DOMContentLoaded', ()=>{
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const paragraphs = document.getElementsByClassName('vpm-description');
+
+  for (var i = 0; i < paragraphs.length; i++) {
+    const paragraph = paragraphs[i];
+    paragraph.innerHTML = paragraph.innerHTML.replace(urlRegex, (url) => {
+      return '<a href="' + url + '" class="link link-primary link-hover" target="_blank">' + url + '</a>';
+    });
+  }
+});
+</script>
