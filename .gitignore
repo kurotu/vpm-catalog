@@ -1,6 +1,7 @@
 # vpm repositories
 vpm/*
 !vpm/dummy/
+*.tar.gz
 
 # build output
 dist/

@@ -7,3 +7,5 @@ ROOT="$(cd "$(dirname "$0")" && pwd)/.."
 
 astro build
 npm run index
+
+"$ROOT"/tasks/vercel-cache-upload.sh vpm/zips
