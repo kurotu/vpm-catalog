@@ -49,6 +49,7 @@ https://vpm.narazaka.net/index.json
 https://vpm.nekomimi.studio/index.json
 https://vpm.niri.la/vpm.json
 https://vpm.pimaker.at/index.json
+https://vpm.raitichan.net/vpm.json
 https://vpm.razgriz.one/index.json
 https://vpm.rs64.net/vpm.json
 https://vpm.techanon.dev/index.json
