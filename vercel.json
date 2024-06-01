@@ -1,4 +1,5 @@
 {
+  "framework": "astro",
   "buildCommand": "./tasks/vercel-build.sh",
   "installCommand": "./tasks/vercel-install.sh",
   "crons": [
