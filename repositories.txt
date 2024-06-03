@@ -5,6 +5,8 @@ https://cyanlaser.github.io/CyanTrigger/index.json
 https://dolphiiiin.github.io/vpm-repos/index.json
 https://enitimeago.github.io/vpm-repos/index.json
 https://esperecyan.github.io/VRMConverterForVRChat/registry.json
+https://facs01-01.github.io/FACS-VPM-Listing/index.json
+https://Guribo.github.io/TLP/index.json
 https://hai-vr.github.io/vpm-listing/index.json
 https://hfcRed.github.io/VPM-Listing/index.json
 https://hotaru86.github.io/VPM/index.json
