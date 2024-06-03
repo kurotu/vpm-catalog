@@ -7,7 +7,7 @@ const title = "VPM Catalog";
 
 const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
 const allReleasePackages = getAllPackages(allRepos).filter(p => !p.version.includes('-'));
-const allNames = Array.from(new Set(allReleasePackages.map(pkg => pkg.name)));
+const allNames = Array.from(new Set(allReleasePackages.map(pkg => pkg.name))).toSorted();
 const shuffledNames = shuffleArray(allNames);
 const shuffledPackages = shuffledNames
   .map(name => allReleasePackages.find(pkg => pkg.name === name)).filter((pkg) : pkg is VPMPackage => pkg ? true : false);
