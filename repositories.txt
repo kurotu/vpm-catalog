@@ -17,6 +17,7 @@ https://kb10uy.github.io/vrc-repository/index.json
 https://kurone-kito.github.io/vpm/index.json
 https://kurotu.github.io/vpm-repos/vpm.json
 https://lilxyzw.github.io/vpm-repos/vpm.json
+https://meronmks.github.io/vpm-repos/vpm.json
 https://page.853lab.com/vpm.json
 https://poiyomi.github.io/vpm/index.json
 https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
@@ -31,6 +32,7 @@ https://sayabeans.github.io/vpm/index.json
 https://sh0ou.github.io/vpm-repos/vpm.json
 https://skeb-inc.github.io/skeb-art-panel/index.json
 https://SleetCat123.github.io/vpm-packages/index.json
+https://sophiebluevr.github.io/vpm/index.json
 https://suzuryg.github.io/vpm-repos/vpm.json
 https://timiz0r.github.io/EZUtils/index.json
 https://tliks.github.io/vpm-repos/index.json
