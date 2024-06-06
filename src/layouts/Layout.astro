@@ -6,7 +6,7 @@ interface Props {
 const {title} = Astro.props;
 const siteName = 'VPM Catalog';
 const htmlTitle = title === siteName
-  ? `${siteName}`
+  ? `${siteName} | Place to browse community packages for VCC`
   : `${title} | ${siteName}`;
 
 const ogpImageUrl = new URL('/images/vpm-catalog-ogp.png', Astro.site || Astro.url.origin);
