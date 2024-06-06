@@ -79,39 +79,45 @@ getAllPackageNames | while read -r PACKAGE_NAME; do
   else
     echo "File $DOWNLOAD_FILE already exists"
   fi
-  mkdir -p "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST"
-  echo "Unzipping $DOWNLOAD_FILE to $PACKAGES_DIR/$PACKAGE_NAME-$LATEST"
-  if ! unzip -q -o "$DOWNLOAD_FILE" -d "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST"; then
-    echo "Failed to unzip $DOWNLOAD_FILE, retrying with -UU"
-    unzip -q -o -UU "$DOWNLOAD_FILE" -d "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST"
+
+  UNZIP_DIR="$PACKAGES_DIR/$PACKAGE_NAME-$LATEST"
+  if [ ! -d "$UNZIP_DIR" ]; then
+    mkdir -p "$UNZIP_DIR"
+    echo "Unzipping $DOWNLOAD_FILE to $UNZIP_DIR"
+    if ! unzip -q -o "$DOWNLOAD_FILE" -d "$UNZIP_DIR"; then
+      echo "Failed to unzip $DOWNLOAD_FILE, retrying with -UU"
+      unzip -q -o -UU "$DOWNLOAD_FILE" -d "$UNZIP_DIR"
+    fi
+  else
+    echo "Directory $UNZIP_DIR already exists"
   fi
 
   if [ "$PACKAGE_NAME" == "com.anatawa12.av3emulator" ]; then
     echo "Patch missing files"
-    mkdir -p "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/.readme"
-    cp "$DUMMY_PNG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/.readme/a3_example.png"
-    cp "$DUMMY_PNG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/.readme/av3_radial_menu.png"
-    cp "$DUMMY_PNG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/.readme/avatar3emu_tutorial.png"
-    cp "$DUMMY_PNG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/.readme/lock_inspector_tutorial.png"
-    cp "$DUMMY_PNG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/.readme/write_defaults_off.png"
+    mkdir -p "$UNZIP_DIR/.readme"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/.readme/a3_example.png"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/.readme/av3_radial_menu.png"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/.readme/avatar3emu_tutorial.png"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/.readme/lock_inspector_tutorial.png"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/.readme/write_defaults_off.png"
   fi
 
   if [ "$PACKAGE_NAME" == "lyuma.av3emulator" ]; then
     echo "Patch missing files"
-    mkdir -p "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/Runtime/Screenshots"
-    cp "$DUMMY_PNG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/Runtime/Screenshots/a3_example.png"
+    mkdir -p "$UNZIP_DIR/Runtime/Screenshots"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/Runtime/Screenshots/a3_example.png"
   fi
 
   if [ "$PACKAGE_NAME" == "com.vrmc.gltf" ]; then
     echo "Patch missing files"
-    mkdir -p "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/doc"
-    cp "$DUMMY_PNG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/doc/pbr_to_standard.png"
+    mkdir -p "$UNZIP_DIR/doc"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/doc/pbr_to_standard.png"
   fi
 
   if [ "$PACKAGE_NAME" == "at.pimaker.ltcgi" ]; then
     echo "Patch missing files"
-    mkdir -p "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/~Screenshots"
-    cp "$DUMMY_JPG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/~Screenshots/attribution.jpg"
-    cp "$DUMMY_JPG" "$PACKAGES_DIR/$PACKAGE_NAME-$LATEST/~Screenshots/demoapp.jpg"
+    mkdir -p "$UNZIP_DIR/~Screenshots"
+    cp "$DUMMY_JPG" "$UNZIP_DIR/~Screenshots/attribution.jpg"
+    cp "$DUMMY_JPG" "$UNZIP_DIR/~Screenshots/demoapp.jpg"
   fi
 done
