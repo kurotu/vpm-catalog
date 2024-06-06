@@ -120,4 +120,14 @@ getAllPackageNames | while read -r PACKAGE_NAME; do
     cp "$DUMMY_JPG" "$UNZIP_DIR/~Screenshots/attribution.jpg"
     cp "$DUMMY_JPG" "$UNZIP_DIR/~Screenshots/demoapp.jpg"
   fi
+
+  if [ "$PACKAGE_NAME" == "dev.magmamc.permissionmanager" ]; then
+    echo "Patch missing files"
+    mkdir -p "$UNZIP_DIR/~Guide"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/~Guide/1.png"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/~Guide/2.png"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/~Guide/3.png"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/~Guide/4.png"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/~Guide/5.png"
+  fi
 done
