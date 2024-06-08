@@ -15,6 +15,7 @@ https://drblackrat.github.io/vpm-listing/index.json
 https://enitimeago.github.io/vpm-repos/index.json
 https://esperecyan.github.io/VRMConverterForVRChat/registry.json
 https://facs01-01.github.io/FACS-VPM-Listing/index.json
+https://gomorroth.github.io/vpm-repos/index.json
 https://Guribo.github.io/TLP/index.json
 https://hai-vr.github.io/vpm-listing/index.json
 https://hfcRed.github.io/VPM-Listing/index.json
@@ -63,9 +64,11 @@ https://vpm.bluwizard.net/index.json
 https://vpm.chocopoi.com/index.json
 https://vpm.dreadscripts.com/listings/main.json
 https://vpm.gatosyocora.net/index.json
+https://vpm.gyoku.tech/vpm.json
 https://vpm.iwa.si/vpm.json
 https://vpm.kaikoga.net/index.json
 https://vpm.koyashiro.net/index.json
+https://vpm.logilabo.dev/avatars.json
 https://vpm.mimylab.com/index.json
 https://vpm.nadena.dev/vpm.json
 https://vpm.nadena.dev/vpm-prerelease.json
