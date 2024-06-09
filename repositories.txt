@@ -1,21 +1,21 @@
-# https://fivezett.github.io/AvatarLightingTuner/repo.json # private repository
 https://An-Labo.github.io/An-Labo-NailTool/vpm.json
 https://api.vrlabs.dev/listings/category/Components
 https://api.vrlabs.dev/listings/category/Dependencies
 https://api.vrlabs.dev/listings/category/Essentials
 https://api.vrlabs.dev/listings/category/Systems
 https://azukimochi.github.io/vpm-repos/index.json
+https://c-colloid.github.io/PBReplacer-VPM/index.json
 https://Centauri2442.github.io/VRCMasterFailureCheck/index.json
 https://Centauri2442.github.io/VRCNetworkDebugger/index.json
 https://codec-xyz.github.io/photo_frame_manager/index.json
 https://cyanlaser.github.io/CyanPlayerObjectPool/index.json
 https://cyanlaser.github.io/CyanTrigger/index.json
+https://d4rkc0d3r.github.io/vpm-repos/main.json
 https://dolphiiiin.github.io/vpm-repos/index.json
 https://drblackrat.github.io/vpm-listing/index.json
 https://enitimeago.github.io/vpm-repos/index.json
 https://esperecyan.github.io/VRMConverterForVRChat/registry.json
 https://facs01-01.github.io/FACS-VPM-Listing/index.json
-https://gomorroth.github.io/vpm-repos/index.json
 https://Guribo.github.io/TLP/index.json
 https://hai-vr.github.io/vpm-listing/index.json
 https://hfcRed.github.io/VPM-Listing/index.json
