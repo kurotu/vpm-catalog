@@ -130,4 +130,13 @@ getAllPackageNames | while read -r PACKAGE_NAME; do
     cp "$DUMMY_PNG" "$UNZIP_DIR/~Guide/4.png"
     cp "$DUMMY_PNG" "$UNZIP_DIR/~Guide/5.png"
   fi
+
+  if [ "$PACKAGE_NAME" == "dev.architech.protv.extras" ]; then
+    echo "Patch missing files"
+    mkdir -p "$UNZIP_DIR/.README~"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/.README~/BluUI.png"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/.README~/RiskiPlayer.png"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/.README~/CyberBlue.png"
+    cp "$DUMMY_PNG" "$UNZIP_DIR/.README~/CyberRed.png"
+  fi
 done
