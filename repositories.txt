@@ -19,6 +19,7 @@ https://facs01-01.github.io/FACS-VPM-Listing/index.json
 https://Guribo.github.io/TLP/index.json
 https://hai-vr.github.io/vpm-listing/index.json
 https://hfcRed.github.io/VPM-Listing/index.json
+https://hoke946.github.io/Trigger2to3_VPM/index.json
 https://hotaru86.github.io/VPM/index.json
 https://JeTeeS.github.io/TES-VPM-Package-Listing/index.json
 https://k4584587.github.io/Modular-Auto-Toggle/index.json
