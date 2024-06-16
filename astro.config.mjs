@@ -3,6 +3,7 @@ import remarkToc from 'remark-toc';
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import vercel from '@astrojs/vercel/static';
+import customRemarkPlugin from './src/remark/customRemarkPlugin';
 
 export const site = process.env['VERCEL'] ? `https://${process.env['VERCEL_PROJECT_PRODUCTION_URL']}` : undefined;
 
@@ -11,7 +12,7 @@ export default defineConfig({
   site: site,
   integrations: [tailwind(), mdx()],
   markdown: {
-    remarkPlugins: [remarkToc]
+    remarkPlugins: [remarkToc, customRemarkPlugin]
   },
   adapter: vercel({
     webAnalytics: { enabled: true }

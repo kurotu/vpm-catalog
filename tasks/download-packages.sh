@@ -47,20 +47,8 @@ function getPackageInfo() {
     | head -n 1
 }
 
-function findReadme() {
-  local FILE="$1"
-  unzip -l "$FILE" \
-  | grep -v '.meta' \
-  | awk '{print $4}' \
-  | grep -i '^readme' \
-  | grep -i '.md' \
-  | head -n 1
-}
-
 DOWNLOAD_DIR="$ROOT/vpm/zips"
 PACKAGES_DIR="$ROOT/vpm/packages"
-DUMMY_PNG="$ROOT/vpm/dummy/dummy.png"
-DUMMY_JPG="$ROOT/vpm/dummy/dummy.jpg"
 mkdir -p "$DOWNLOAD_DIR"
 mkdir -p "$PACKAGES_DIR"
 getAllPackageNames | while read -r PACKAGE_NAME; do
@@ -90,53 +78,5 @@ getAllPackageNames | while read -r PACKAGE_NAME; do
     fi
   else
     echo "Directory $UNZIP_DIR already exists"
-  fi
-
-  if [ "$PACKAGE_NAME" == "com.anatawa12.av3emulator" ]; then
-    echo "Patch missing files"
-    mkdir -p "$UNZIP_DIR/.readme"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/.readme/a3_example.png"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/.readme/av3_radial_menu.png"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/.readme/avatar3emu_tutorial.png"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/.readme/lock_inspector_tutorial.png"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/.readme/write_defaults_off.png"
-  fi
-
-  if [ "$PACKAGE_NAME" == "lyuma.av3emulator" ]; then
-    echo "Patch missing files"
-    mkdir -p "$UNZIP_DIR/Runtime/Screenshots"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/Runtime/Screenshots/a3_example.png"
-  fi
-
-  if [ "$PACKAGE_NAME" == "com.vrmc.gltf" ]; then
-    echo "Patch missing files"
-    mkdir -p "$UNZIP_DIR/doc"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/doc/pbr_to_standard.png"
-  fi
-
-  if [ "$PACKAGE_NAME" == "at.pimaker.ltcgi" ]; then
-    echo "Patch missing files"
-    mkdir -p "$UNZIP_DIR/~Screenshots"
-    cp "$DUMMY_JPG" "$UNZIP_DIR/~Screenshots/attribution.jpg"
-    cp "$DUMMY_JPG" "$UNZIP_DIR/~Screenshots/demoapp.jpg"
-  fi
-
-  if [ "$PACKAGE_NAME" == "dev.magmamc.permissionmanager" ]; then
-    echo "Patch missing files"
-    mkdir -p "$UNZIP_DIR/~Guide"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/~Guide/1.png"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/~Guide/2.png"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/~Guide/3.png"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/~Guide/4.png"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/~Guide/5.png"
-  fi
-
-  if [ "$PACKAGE_NAME" == "dev.architech.protv.extras" ]; then
-    echo "Patch missing files"
-    mkdir -p "$UNZIP_DIR/.README~"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/.README~/BluUI.png"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/.README~/RiskiPlayer.png"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/.README~/CyberBlue.png"
-    cp "$DUMMY_PNG" "$UNZIP_DIR/.README~/CyberRed.png"
   fi
 done
