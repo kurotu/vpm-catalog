@@ -48,7 +48,8 @@ export interface People {
 export const getAllPackages = (repositories: VPMRepository[]) => {
   return repositories
     .flatMap(r => Object.values(r.packages))
-    .flatMap(group => getPackages(group));
+    .flatMap(group => getPackages(group))
+    .filter(p => !p.displayName.toLowerCase().includes('deprecated'));
 }
 
 export const isYanked = (pkg: VPMPackage) => {
