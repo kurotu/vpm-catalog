@@ -30,6 +30,7 @@ https://KitKat4191.github.io/JetSim-VCC-Listing/index.json
 https://kurone-kito.github.io/vpm/index.json
 https://kurotu.github.io/vpm-repos/vpm.json
 https://labthe3rd.github.io/PZCameraSystem/index.json
+https://lazyoptimiser.euan.net/index.json
 https://lilxyzw.github.io/vpm-repos/vpm.json
 https://magmamcnet.github.io/VPM/index.json
 https://mattshark89.github.io/OpenFlight-VRC/index.json
