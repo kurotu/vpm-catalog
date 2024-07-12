@@ -62,6 +62,7 @@ https://timiz0r.github.io/EZUtils/index.json
 https://tliks.github.io/vpm-repos/index.json
 https://toh-csecb.github.io/package-listing/index.json
 https://tp-jp.github.io/vpm-repos/index.json
+https://Tr1turbo.github.io/BlendShare/index.json
 https://vcc.vrcfury.com
 https://vpm.anatawa12.com/vpm.json
 https://vpm.bluwizard.net/index.json
@@ -73,6 +74,7 @@ https://vpm.gyoku.tech/vpm.json
 https://vpm.iwa.si/vpm.json
 https://vpm.kaikoga.net/index.json
 https://vpm.koyashiro.net/index.json
+https://vpm.kwxxw.net/index.json
 https://vpm.logilabo.dev/avatars.json
 https://vpm.mimylab.com/index.json
 https://vpm.nadena.dev/vpm.json
