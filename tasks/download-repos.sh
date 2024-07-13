@@ -20,7 +20,12 @@ function download() {
   local URL=$1
   local CONTENT
 
-  CONTENT=$(curl -s -L -H "User-Agent: VPM Catalog" "$URL")
+  CONTENT=$(curl -f -s -L -H "User-Agent: VPM Catalog" "$URL" || echo "FAILED")
+  if [ "$CONTENT" == "FAILED" ]; then
+    echo "Failed to download $URL" 1>&2
+    return
+  fi
+
   # remove bom from content
   CONTENT=$(echo "$CONTENT" | sed '1s/^\xEF\xBB\xBF//')
   # remove trailing commas
