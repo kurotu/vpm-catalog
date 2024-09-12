@@ -34,11 +34,12 @@ https://lazyoptimiser.euan.net/index.json
 https://lilxyzw.github.io/vpm-repos/vpm.json
 https://magmamcnet.github.io/VPM/index.json
 https://mattshark89.github.io/OpenFlight-VRC/index.json
-https://meronmks.github.io/vpm-repos/vpm.json
+https://meronmks.github.io/vpm/index.json
 https://miner28.github.io/MinerPackages/index.json
 https://mmmaellon.github.io/MMMaellonVCCListing/index.json
 https://nidonocu.github.io/virtual-gryphon-packages/index.json
 https://page.853lab.com/vpm.json
+https://pandrabox.github.io/vpm/index.json
 https://poiyomi.github.io/vpm/index.json
 https://pokeyi.dev/vpm-packages/index.json
 https://prismic247.github.io/ScaledColliderSystem/index.json
