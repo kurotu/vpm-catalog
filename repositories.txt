@@ -44,6 +44,7 @@ https://poiyomi.github.io/vpm/index.json
 https://pokeyi.dev/vpm-packages/index.json
 https://prismic247.github.io/ScaledColliderSystem/index.json
 https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
+https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
 https://repo.buddyworks.wtf/index.json
 https://ribeKim.github.io/vpm/index.json
 https://rurre.github.io/vpm/index.json
