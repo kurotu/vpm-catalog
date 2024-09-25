@@ -1,4 +1,5 @@
 https://An-Labo.github.io/An-Labo-NailTool/vpm.json
+https://AnosionV.github.io/vpm/index.json
 https://api.vrlabs.dev/listings/category/Components
 https://api.vrlabs.dev/listings/category/Dependencies
 https://api.vrlabs.dev/listings/category/Essentials
@@ -77,11 +78,13 @@ https://vpm.iwa.si/vpm.json
 https://vpm.kaikoga.net/index.json
 https://vpm.koyashiro.net/index.json
 https://vpm.kwxxw.net/index.json
+https://vpm.kyre.moe/vpm.json
 https://vpm.logilabo.dev/avatars.json
 https://vpm.mimylab.com/index.json
 https://vpm.nadena.dev/vpm.json
 https://vpm.nadena.dev/vpm-prerelease.json
 https://vpm.narazaka.net/index.json
+https://vpm.nekobako.net/index.json
 https://vpm.nekomimi.studio/index.json
 https://vpm.niri.la/vpm.json
 https://vpm.pimaker.at/index.json
