@@ -29,6 +29,10 @@ const ogpImageUrl = new URL('/images/vpm-catalog-ogp.png', Astro.site || Astro.u
 	</head>
 	<body>
     <slot />
+    <div itemscope itemtype="https://schema.org/WebSite">
+      <link itemprop="url" href={Astro.site || Astro.url.origin} />
+      <meta itemprop="name" content={siteName} />
+    </div>
 	</body>
 </html>
 
