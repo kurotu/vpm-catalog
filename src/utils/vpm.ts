@@ -58,6 +58,11 @@ export const isYanked = (pkg: VPMPackage) => {
   return yanked;
 }
 
+export const isDeprecated = (pkg: VPMPackage) => {
+  const lowerName = pkg.displayName.toLowerCase();
+  return lowerName.includes('deprecated') || lowerName.includes('depricated');
+}
+
 /**
  * Return the latest release package. If there are no release packages, return the latest package.
  * @param packages
@@ -76,6 +81,7 @@ export const findLatestReleasePackage = (packages: VPMPackage[]) => {
 export const getPackages = (group: VPMPackageGroup) => {
   return Object.values(group.versions)
     .filter(p => !isYanked(p))
+    .filter(p => !isDeprecated(p));
 }
 
 export const findLatestPackage = (packages: VPMPackage[]) => {
@@ -87,7 +93,11 @@ export const findLatestPackage = (packages: VPMPackage[]) => {
     const bVersion = new SemVer(b.version);
     return aVersion.compare(bVersion);
   });
-  return sorted[packages.length - 1];
+  const latest = sorted[sorted.length - 1];
+  if (isDeprecated(latest)) {
+    return undefined;
+  }
+  return latest;
 }
 
 export const getDeprecatorPackages = (pkg: VPMPackage, repositories: VPMRepository[]) => {
