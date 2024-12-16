@@ -28,11 +28,13 @@ const ogpImageUrl = new URL('/images/vpm-catalog-ogp.png', Astro.site || Astro.u
     <title>{htmlTitle}</title>
 	</head>
 	<body>
-    <slot />
-    <div itemscope itemtype="https://schema.org/WebSite">
-      <link itemprop="url" href={Astro.site || Astro.url.origin} />
-      <meta itemprop="name" content={siteName} />
-    </div>
+		<div class="wrapper min-h-screen relative box-border">
+			<slot />
+			<div itemscope itemtype="https://schema.org/WebSite">
+				<link itemprop="url" href={Astro.site || Astro.url.origin} />
+				<meta itemprop="name" content={siteName} />
+			</div>
+		</div>
 	</body>
 </html>
 
@@ -45,5 +47,9 @@ const ogpImageUrl = new URL('/images/vpm-catalog-ogp.png', Astro.site || Astro.u
     font-family: "Figtree", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+  }
+
+  .wrapper {
+    padding-bottom: 180px; /* Footer height */
   }
 </style>
