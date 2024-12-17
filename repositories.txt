@@ -1,3 +1,4 @@
+https://amehuri.github.io/amehuri_tools/index.json
 https://An-Labo.github.io/An-Labo-NailTool/vpm.json
 https://AnosionV.github.io/vpm/index.json
 https://api.vrlabs.dev/listings/category/Components
@@ -19,9 +20,11 @@ https://enitimeago.github.io/vpm-repos/index.json
 https://esperecyan.github.io/VRMConverterForVRChat/registry.json
 https://facs01-01.github.io/FACS-VPM-Listing/index.json
 https://foxscore.dev/vpm/index.json
+https://guraril.github.io/vpm-repo/vpm.json
 https://Guribo.github.io/TLP/index.json
 https://hai-vr.github.io/vpm-listing/index.json
 https://hfcRed.github.io/VPM-Listing/index.json
+https://hisacat.github.io/VCCListing/index.json
 https://hoke946.github.io/Trigger2to3_VPM/index.json
 https://hotaru86.github.io/VPM/index.json
 https://JeTeeS.github.io/TES-VPM-Package-Listing/index.json
@@ -41,6 +44,7 @@ https://meronmks.github.io/vpm/index.json
 https://miner28.github.io/MinerPackages/index.json
 https://mmmaellon.github.io/MMMaellonVCCListing/index.json
 https://nidonocu.github.io/virtual-gryphon-packages/index.json
+https://nuruwo8.github.io/nuruwo-vpm-list/index.json
 https://page.853lab.com/vpm-repos/vpm.json
 https://pandrabox.github.io/vpm/index.json
 https://poiyomi.github.io/vpm/index.json
@@ -48,6 +52,7 @@ https://pokeyi.dev/vpm-packages/index.json
 https://prismic247.github.io/ScaledColliderSystem/index.json
 https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
+https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
 https://repo.buddyworks.wtf/index.json
 https://ribeKim.github.io/vpm/index.json
 https://rurre.github.io/vpm/index.json
@@ -80,6 +85,7 @@ https://vpm.gatosyocora.net/index.json
 https://vpm.gyoku.tech/vpm.json
 https://vpm.iwa.si/vpm.json
 https://vpm.kaikoga.net/index.json
+https://vpm.kesera2.dev/index.json
 https://vpm.koyashiro.net/index.json
 https://vpm.kwxxw.net/index.json
 https://vpm.kyre.moe/vpm.json
