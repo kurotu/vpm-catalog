@@ -74,7 +74,16 @@ getAllPackageNames | while read -r PACKAGE_NAME; do
     echo "Unzipping $DOWNLOAD_FILE to $UNZIP_DIR"
     if ! unzip -q -o "$DOWNLOAD_FILE" -d "$UNZIP_DIR"; then
       echo "Failed to unzip $DOWNLOAD_FILE, retrying with -UU"
-      unzip -q -o -UU "$DOWNLOAD_FILE" -d "$UNZIP_DIR"
+      unzip -q -o -UU "$DOWNLOAD_FILE" -d "$UNZIP_DIR" && true
+      CODE=$?
+      if [ $CODE -eq 0 ]; then
+        echo "unzip exited with code 0"
+      elif [ $CODE -eq 1 ]; then
+        echo "unzip exited with code 1"
+      else
+        echo "unzip exited with code $CODE"
+        exit 1
+      fi
     fi
   else
     echo "Directory $UNZIP_DIR already exists"
