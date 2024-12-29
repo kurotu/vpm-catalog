@@ -1,6 +1,9 @@
 ---
 import { type VPMPackage } from '~/utils/vpm'
 import Card from './Card.astro';
+import type { Language } from '~/i18n/ui';
+import { useTranslations } from '~/i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 interface Props {
   pkg: VPMPackage
@@ -8,12 +11,16 @@ interface Props {
 
 const { pkg } = Astro.props;
 
+const currentLocale = Astro.currentLocale as Language;
+const t = useTranslations(currentLocale);
+const packageURL = getRelativeLocaleUrl(currentLocale, `packages/${pkg.name}`);
+
 ---
 <Card>
   <div class="card-body flex-row">
     <div class="flex-grow flex-col">
       <div class="card-title flex flex-col items-start md:gap-1 gap-0">
-        <h2><a class="link link-primary link-hover" href=`/packages/${pkg.name}`>{pkg.displayName}</h2>
+        <h2><a class="link link-primary link-hover" href={packageURL}>{pkg.displayName}</h2>
         <p class="text-sm font-light text-base-content">{pkg.name}</p>
       </div>
       <p>{pkg.description}</p>

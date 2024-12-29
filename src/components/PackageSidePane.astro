@@ -1,5 +1,8 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import { SemVer } from "semver";
+import type { Language } from "~/i18n/ui";
+import { useTranslations } from "~/i18n/utils";
 import type { LicenseListItem } from "~/utils/license";
 import { findLatestPackage, getAllPackages, getDeprecatorPackages, getPackages, idToFileName, type VPMPackage, type VPMRepository } from "~/utils/vpm";
 
@@ -9,11 +12,13 @@ interface Props {
 }
 
 const {pkg, license} = Astro.props;
+const currentLocale = Astro.currentLocale as Language;
+const t = useTranslations(currentLocale);
 
 const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
 const pkgs = getAllPackages(allRepos);
 
-const authorLabel =  pkg.author ? pkg.author.name : "Undefined";
+const authorLabel =  pkg.author ? pkg.author.name : t('component.package-side-pane.undefined');
 
 const repositories = allRepos.map((repo) => {
   return {
@@ -61,7 +66,7 @@ const missingLegacyPackages = pkg.legacyPackages ?
   pkg.legacyPackages.filter((dep) => !pkgs.find((p) => p.name === dep))
 : [];
 
-const licenseLabel = pkg.license ?? (pkg.licensesUrl ? "View license" : "Undefined");
+const licenseLabel = pkg.license ?? pkg.licensesUrl ?? t('component.package-side-pane.undefined');
 const licensesUrl = pkg.licensesUrl ?? license?.reference;
 
 const deprecators = getDeprecatorPackages(pkg, allRepos);
@@ -98,49 +103,49 @@ const showNotes = deprecators.length > 0;
   }
 </style>
 
-<h2>Package Name</h2>
+<h2>{t('component.package-side-pane.package-name')}</h2>
 <p>{pkg.name}</p>
 
-<h2>Documentation</h2>
+<h2>{t('component.package-side-pane.documentation')}</h2>
 <p>
   {
     pkg.documentationUrl
-    ? <a target="_blank" href={pkg.documentationUrl}>View documentation</a>
-    : "No documentation URL"
+    ? <a target="_blank" href={pkg.documentationUrl}>{pkg.documentationUrl}</a>
+    : t('component.package-side-pane.undefined')
   }
 </p>
 
-<h2>Repositories</h2>
+<h2>{t('component.package-side-pane.repositories')}</h2>
 <ul>
   {
     repositories.map((repo) => (
       <li>
-        <a href={`/repositories/${idToFileName(repo.repository.id ?? repo.repository.url)}`}>{repo.repository.name}</a>
-        ({repo.count}&nbsp;{repo.count > 1 ? 'versions' : 'version'})
+        <a href={getRelativeLocaleUrl(currentLocale, `repositories/${idToFileName(repo.repository.id ?? repo.repository.url)}`)}>{repo.repository.name}</a>
+        ({repo.count}&nbsp;{repo.count > 1 ? t('component.package-side-pane.version-unit-multiple') : t('component.package-side-pane.version-unit-single')})
       </li>
     ))
   }
 </ul>
 
-<h2>Version</h2>
+<h2>{t('component.package-side-pane.version')}</h2>
 <p>
   {pkg.version}
   {
     pkg.changelogUrl
-    ? <span>(<a target="_blank" href={pkg.changelogUrl}>Changelog</a>)</span>
+    ? <span>(<a target="_blank" href={pkg.changelogUrl}>{t('component.package-side-pane.changelog')}</a>)</span>
     : null
   }
 </p>
 </div>
 
-<h2>Unity version</h2>
+<h2>{t('component.package-side-pane.unity-version')}</h2>
 {
   pkg.unity
-  ? <p>{pkg.unity}{pkg.unityRelease ? `.${pkg.unityRelease}` : ''} or later</p>
-  : <p>Any</p>
+  ? <p>{pkg.unity}{pkg.unityRelease ? `.${pkg.unityRelease}` : ''} {t('component.package-side-pane.or-later')}</p>
+  : <p>{t('component.package-side-pane.undefined')}</p>
 }
 
-<h2>Dependencies</h2>
+<h2>{t('component.package-side-pane.dependencies')}</h2>
 {
   dependencies.length > 0
   ? <ul>
@@ -150,23 +155,23 @@ const showNotes = deprecators.length > 0;
       ))
     }
   </ul>
-  : <p>No dependencies</p>
+  : <p>{t('component.package-side-pane.no-dependencies')}</p>
 }
 
-<h2>VPM Dependencies</h2>
+<h2>{t('component.package-side-pane.vpm-dependencies')}</h2>
 {
   vpmDependencies.length > 0
   ? <ul>
     {
       vpmDependencies.map((dep) => (
-        <li><a href={`/packages/${dep.name}`}>{dep.displayName}</a></li>
+        <li><a href={getRelativeLocaleUrl(currentLocale, `packages/${dep.name}`)}>{dep.displayName}</a></li>
       ))
     }
   </ul>
-  : <p>No dependencies</p>
+  : <p>{t('component.package-side-pane.no-dependencies')}</p>
 }
 
-<h2>Legacy Packages</h2>
+<h2>{t('component.package-side-pane.legacy-packages')}</h2>
 {
   legacyPackages.length > 0 || missingLegacyPackages.length > 0
   ? <ul>
@@ -181,10 +186,10 @@ const showNotes = deprecators.length > 0;
       ))
     }
   </ul>
-  : <p>No legacy packages</p>
+  : <p>{t('component.package-side-pane.no-legacy-packages')}</p>
 }
 
-<h2>License</h2>
+<h2>{t('component.package-side-pane.license')}</h2>
 <p>
   {
     licensesUrl
@@ -193,7 +198,7 @@ const showNotes = deprecators.length > 0;
   }
 </p>
 
-<h2>Author</h2>
+<h2>{t('component.package-side-pane.author')}</h2>
 <p>
 {
   pkg.author?.url
@@ -206,16 +211,16 @@ const showNotes = deprecators.length > 0;
   showNotes
     ?
       <div class="divider"></div>
-      <h2>Notes</h2>
+      <h2>{t('component.package-side-pane.notes')}</h2>
     : null
 }
 {
   deprecators.length > 0
-  ? <p>This package is removed when using following packages.</p>
+  ? <p>{t('component.package-side-pane.notes-detail')}</p>
     <ul>
       {
         deprecators.map((dep) => (
-          <li><a href={`/packages/${dep.name}`}>{dep.displayName}</a></li>
+          <li><a href={getRelativeLocaleUrl(currentLocale, `packages/${dep.name}`)}>{dep.displayName}</a></li>
         ))
       }
     </ul>
@@ -224,18 +229,18 @@ const showNotes = deprecators.length > 0;
 
 <div class="divider"></div>
 
-<button class="btn btn-outline btn-block " onclick="json_dialog.showModal()">View Package JSON</button>
+<button class="btn btn-outline btn-block " onclick="json_dialog.showModal()">{t('button.view-packahe-json')}</button>
 <dialog id="json_dialog" class="modal">
   <div class="modal-box w-11/12 max-w-screen-xl">
-    <h3 class="font-bold text-lg mb-2">Package JSON from Repository</h3>
+    <h3 class="font-bold text-lg mb-2">{t('component.package-side-pane.package-json-from-repository')}</h3>
     <pre class="bg-base-200 overflow-auto p-4">{JSON.stringify(pkg, null, 2)}</pre>
     <div class="modal-action">
       <form method="dialog">
-        <button class="btn">Close</button>
+        <button class="btn">{t('button.close')}</button>
       </form>
     </div>
   </div>
   <form method="dialog" class="modal-backdrop">
-    <button>Close</button>
+    <button>{t('button.close')}</button>
   </form>
 </dialog>

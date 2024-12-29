@@ -4,12 +4,21 @@ import Layout from "./Layout.astro"
 import Search from "~/components/Search.astro";
 import SearchModal from "~/components/SearchModal.astro";
 import ThemeIcon from "~/components/ThemeIcon.astro";
+import type { Language } from "~/i18n/ui";
+import { useTranslations } from "~/i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 interface Props {
   title: string
 }
 
 const {title} = Astro.props;
+const currentLocale = Astro.currentLocale as Language;
+const t = useTranslations(currentLocale);
+const homeURL = getRelativeLocaleUrl(currentLocale, "");
+const packagesURL = getRelativeLocaleUrl(currentLocale, "packages");
+const repositoriesURL = getRelativeLocaleUrl(currentLocale, "repositories");
+const aboutURL = getRelativeLocaleUrl(currentLocale, "about");
 
 const searchModalId = "search_modal";
 ---
@@ -26,7 +35,7 @@ const searchModalId = "search_modal";
           </label>
         </div>
         <div class="flex-1">
-          <a href="/" class="btn btn-ghost text-2xl font-logo font-semibold">
+          <a href={homeURL} class="btn btn-ghost text-2xl font-logo font-semibold">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 text-primary">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
             </svg>
@@ -39,8 +48,8 @@ const searchModalId = "search_modal";
         <div class="flex-none hidden lg:block">
           <ul class="menu menu-horizontal">
             <!-- Navbar menu content here -->
-            <li><a href="/packages">Packages</a></li>
-            <li><a href="/repositories">Repositories</a></li>
+            <li><a href={packagesURL}>{t('nav.packages')}</a></li>
+            <li><a href={repositoriesURL}>{t('nav.repositories')}</a></li>
           </ul>
         </div>
         <div class="mr-2">
@@ -58,10 +67,10 @@ const searchModalId = "search_modal";
         </div>
         <ul class="menu p-4 w-80 min-h-full">
           <!-- Sidebar content here -->
-          <li><a href="/packages/">Packages</a></li>
-          <li><a href="/repositories/">Repositories</a></li>
+          <li><a href={packagesURL}>{t('nav.packages')}</a></li>
+          <li><a href={repositoriesURL}>{t('nav.repositories')}</a></li>
           <li></li>
-          <li><a href="/about">About VPM Catalog</a></li>
+          <li><a href={aboutURL}>{t('nav.about')}</a></li>
         </ul>
         </div>
     </div>
