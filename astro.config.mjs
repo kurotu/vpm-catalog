@@ -10,6 +10,16 @@ export const site = process.env['VERCEL'] ? `https://${process.env['VERCEL_PROJE
 // https://astro.build/config
 export default defineConfig({
   site: site,
+  i18n: {
+    locales: ['en', 'ja'],
+    defaultLocale: 'en',
+    fallback: {
+      ja: 'en',
+    },
+    routing: {
+      fallbackType: 'rewrite',
+    }
+  },
   integrations: [tailwind(), mdx()],
   markdown: {
     remarkPlugins: [remarkToc, customRemarkPlugin]
