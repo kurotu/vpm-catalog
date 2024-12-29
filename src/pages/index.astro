@@ -1,7 +1,13 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import PackageCard from "~/components/PackageCard.astro";
+import type { Language } from "~/i18n/ui";
+import { useTranslations } from "~/i18n/utils";
 import Layout from "~/layouts/CenterLayout.astro";
 import { getAllPackages, type VPMPackage, type VPMRepository } from "~/utils/vpm";
+
+const currentLocale = Astro.currentLocale as Language;
+const t = useTranslations(currentLocale);
 
 const title = "VPM Catalog";
 
@@ -29,29 +35,29 @@ function shuffleArray<T>(array: T[]): T[] {
         Place&nbsp;to&nbsp;browse community&nbsp;packages for&nbsp;VCC
       </h1>
       <div class="md:max-w-lg max-w-xs">
-        <p class="py-6">VPM Catalog lists community VPM packages and repositories which are usable in VCC. Discover favorite packages to improve your creation.</p>
+        <p class="py-6">{t('page.home.description')}</p>
         <div class="pb-6 flex flex-col gap-2 items-center">
-          <p class="text-2xl"><span class="text-4xl">{allNames.length}</span> Packages</p>
-          <p class="text-2xl"><span class="text-4xl">{allRepos.length}</span> Repositories</p>
+          <p class="text-2xl"><span class="text-4xl">{allNames.length}</span> {t('page.home.packages')}</p>
+          <p class="text-2xl"><span class="text-4xl">{allRepos.length}</span> {t('page.home.repositories')}</p>
         </div>
         <div class="flex flex-col gap-4 items-center">
-          <a class="btn btn-lg btn-wide btn-primary" href="/packages">Browse Packages</a>
-          <a class="btn btn-lg btn-wide" href="/repositories">Browse Repositories</a>
+          <a class="btn btn-lg btn-wide btn-primary" href={getRelativeLocaleUrl(currentLocale, 'packages')}>{t('page.home.browse-packages')}</a>
+          <a class="btn btn-lg btn-wide" href={getRelativeLocaleUrl(currentLocale, 'repositories')}>{t('page.home.browse-repositories')}</a>
         </div>
       </div>
       <div class="divider my-8"></div>
       <div class="md:max-w-lg max-w-xs">
-        <h2 class="md:text-4xl text-3xl font-logo font-bold text-center">Submit Repository</h2>
-        <p class="py-6">Submit your repository to VPM Catalog to make your packages discoverable by VCC users.</p>
+        <h2 class="md:text-4xl text-3xl font-logo font-bold text-center">{t('page.home.submit-repository')}</h2>
+        <p class="py-6">{t('page.home.submit-repository-description')}</p>
       </div>
       <div class="flex flex-col gap-4 items-center">
         <a class="btn btn-lg btn-wide btn-primary" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSc4nvnKJAbHkvygU-CT3Ms0viUm3dv_i_66R7c22tQSZ-f1Ow/viewform?usp=sf_link">Submit Repository</a>
-        <a class="btn btn-lg btn-wide" href="/about">About</a>
+        <a class="btn btn-lg btn-wide" href={getRelativeLocaleUrl(currentLocale, 'about')}>{t('nav.about')}</a>
       </div>
       <div class="divider my-8"></div>
     </div>
   </div>
-  <h2 class="md:text-4xl text-3xl font-logo font-bold text-center mb-8">Random Pickup</h2>
+  <h2 class="md:text-4xl text-3xl font-logo font-bold text-center mb-8">{t('page.home.random-pickup')}</h2>
   <div class="flex flex-row flex-wrap justify-center gap-4">
   {
     shuffledPackages.slice(0, 6).map(pkg => (
