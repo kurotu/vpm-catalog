@@ -11,7 +11,7 @@ const htmlTitle = title === siteName
 
 const ogpImageUrl = new URL('/images/vpm-catalog-ogp.png', Astro.site || Astro.url.origin);
 ---
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang={Astro.currentLocale} prefix="og: https://ogp.me/ns#">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
