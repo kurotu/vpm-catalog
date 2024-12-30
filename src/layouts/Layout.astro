@@ -1,4 +1,8 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { languages, type Language } from '~/i18n/ui';
+import { getRelativePath } from '~/i18n/utils';
+
 interface Props {
   title: string;
 }
@@ -10,6 +14,8 @@ const htmlTitle = title === siteName
   : `${title} | ${siteName}`;
 
 const ogpImageUrl = new URL('/images/vpm-catalog-ogp.png', Astro.site || Astro.url.origin);
+const currentLocale = Astro.currentLocale as Language;
+const relativePath = getRelativePath(currentLocale, Astro.url.pathname);
 ---
 <html lang={Astro.currentLocale} prefix="og: https://ogp.me/ns#">
 	<head>
@@ -25,6 +31,11 @@ const ogpImageUrl = new URL('/images/vpm-catalog-ogp.png', Astro.site || Astro.u
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    {
+      Object.keys(languages).map(locale => (
+        <link rel="alternate" href={Astro.url.origin + getRelativeLocaleUrl(locale, relativePath)} hreflang={locale} />
+      ))
+    }
     <title>{htmlTitle}</title>
 	</head>
 	<body>

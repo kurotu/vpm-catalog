@@ -4,8 +4,8 @@ import Layout from "./Layout.astro"
 import Search from "~/components/Search.astro";
 import SearchModal from "~/components/SearchModal.astro";
 import ThemeIcon from "~/components/ThemeIcon.astro";
-import { defaultLang, languages, type Language } from "~/i18n/ui";
-import { useTranslations } from "~/i18n/utils";
+import { languages, type Language } from "~/i18n/ui";
+import { getRelativePath, useTranslations } from "~/i18n/utils";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 interface Props {
@@ -22,9 +22,7 @@ const aboutURL = getRelativeLocaleUrl(currentLocale, "about");
 
 const searchModalId = "search_modal";
 
-const localePath = currentLocale === defaultLang ? '/' : `/${currentLocale}/`;
-const currentLocaleRelativePath = Astro.url.pathname.replace(localePath, '').replace(/\/$/, '');
-
+const currentLocaleRelativePath = getRelativePath(currentLocale, Astro.url.pathname);
 ---
 <Layout title={title}>
   <SearchModal id={searchModalId} />
