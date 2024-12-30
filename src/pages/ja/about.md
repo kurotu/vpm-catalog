@@ -63,7 +63,7 @@ VPM Catalogからパッケージやリポジトリを削除する方法は2つ�
 
 ### 1. パッケージメタデータの`'vrc-get'.yanked`フィールドを使用する
 
-`'vrc-get'.yanked`は[vrc-get](https://github.com/vrc-get/vrc-get)と[ALCOM](https://github.com/vrc-get/vrc-get/blob/master/vrc-get-gui/README.md)で定義されている、廃止されたパッケージを非表示にするためのフィールドです。
+`'vrc-get'.yanked`は[vrc-get](https://vrc-get.anatawa12.com/ja/cli/)と[ALCOM](https://vrc-get.anatawa12.com/ja/alcom/)で定義されている、廃止されたパッケージを非表示にするためのフィールドです。
 VPM Catalogも`'vrc-get'.yanked`が文字列または`true`の場合にパッケージを非表示にします。
 
 ```json
