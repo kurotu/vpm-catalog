@@ -103,8 +103,8 @@ const showNotes = deprecators.length > 0;
   }
 </style>
 
-<h2>{t('component.package-side-pane.package-name')}</h2>
-<p>{pkg.name}</p>
+<h2 data-pagefind-body>{t('component.package-side-pane.package-name')}</h2>
+<p data-pagefind-body>{pkg.name}</p>
 
 <h2>{t('component.package-side-pane.documentation')}</h2>
 <p>
@@ -171,10 +171,10 @@ const showNotes = deprecators.length > 0;
   : <p>{t('component.package-side-pane.no-dependencies')}</p>
 }
 
-<h2>{t('component.package-side-pane.legacy-packages')}</h2>
+<h2 data-pagefind-body>{t('component.package-side-pane.legacy-packages')}</h2>
 {
   legacyPackages.length > 0 || missingLegacyPackages.length > 0
-  ? <ul>
+  ? <ul data-pagefind-body>
     {
       legacyPackages.map((legacy) => (
         <li><a href={`/packages/${legacy.name}`}>{legacy.displayName}</a></li>
@@ -189,8 +189,8 @@ const showNotes = deprecators.length > 0;
   : <p>{t('component.package-side-pane.no-legacy-packages')}</p>
 }
 
-<h2>{t('component.package-side-pane.license')}</h2>
-<p>
+<h2 data-pagefind-body>{t('component.package-side-pane.license')}</h2>
+<p data-pagefind-body>
   {
     licensesUrl
     ? <a target="_blank" href={licensesUrl}>{licenseLabel}</a>
@@ -198,8 +198,8 @@ const showNotes = deprecators.length > 0;
   }
 </p>
 
-<h2>{t('component.package-side-pane.author')}</h2>
-<p>
+<h2 data-pagefind-body>{t('component.package-side-pane.author')}</h2>
+<p data-pagefind-body>
 {
   pkg.author?.url
   ? <a target="_blank" href={pkg.author.url}>{authorLabel}</a>
