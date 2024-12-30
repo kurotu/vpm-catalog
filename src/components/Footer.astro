@@ -1,6 +1,13 @@
 ---
+import type { Language } from "~/i18n/ui";
+import { useTranslations } from "~/i18n/utils";
+
 const current = new Date();
 const currentTimestamp = current.getTime();
+
+const currentLocale = Astro.currentLocale as Language;
+const t = useTranslations(currentLocale);
+const lastUpdateLabel = t('component.footer.last-update');
 ---
 <footer class="footer footer-center absolute bottom-0 p-4 bg-base-300 text-base-content gap-y-4">
   <aside>
@@ -12,18 +19,17 @@ const currentTimestamp = current.getTime();
     <a class="link link-hover" href="https://x.com/kurotu">X</a>
   </nav>
   <p class="max-w-sm">
-    Package contents are licensed under the respective licenses.
-    This website never provides any warranty for each package.
+    {t('component.footer.disclaimer')}
   </p>
   <p class="text-center text-gray-500">
-    <time id="updated_time" datetime={current.toISOString()}>Last update: {current.toISOString()}</span>
+    <time id="updated_time" datetime={current.toISOString()}>{lastUpdateLabel}: {current.toISOString()}</span>
   </p>
 </footer>
 
-<script is:inline define:vars={{currentTimestamp}}>
+<script is:inline define:vars={{currentTimestamp, lastUpdateLabel}}>
 window.addEventListener('load', () => {
   const updatedTime = document.getElementById('updated_time');
   const date = new Date(currentTimestamp);
-  updatedTime.textContent = `Last update: ${date.toLocaleString()} ${Intl.DateTimeFormat().resolvedOptions().timeZone}`;
+  updatedTime.textContent = `${lastUpdateLabel}: ${date.toLocaleString()} ${Intl.DateTimeFormat().resolvedOptions().timeZone}`;
 });
 </script>

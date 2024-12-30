@@ -1,8 +1,11 @@
 ---
 import type { GetStaticPaths } from "astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Breadcrumbs from "~/components/Breadcrumbs.astro";
 import Head1 from "~/components/Head1.astro";
 import PackageCard from "~/components/PackageCard.astro";
+import type { Language } from "~/i18n/ui";
+import { useTranslations } from "~/i18n/utils";
 import Layout from "~/layouts/CenterLayout.astro";
 import type { VPMPackage } from "~/utils/vpm";
 import { type VPMRepository, findLatestReleasePackage, vccAddRepoLink, idToFileName } from "~/utils/vpm";
@@ -26,11 +29,17 @@ const packages = Object.values(repo.packages)
   .filter((p): p is VPMPackage => p ? true : false)
 
 packages.sort((a, b) => a.displayName.localeCompare(b.displayName));
+
+const currentLocale = Astro.currentLocale as Language;
+const t = useTranslations(currentLocale);
+const homeURL = getRelativeLocaleUrl(currentLocale, "");
+const repositoriesURL = getRelativeLocaleUrl(currentLocale, "repositories");
+
 ---
 <Layout title={repo.name}>
   <Breadcrumbs items={[
-    {label: "Home", href: "/"},
-    {label: "Repositories", href: "/repositories"},
+    {label: t('nav.home'), href: homeURL},
+    {label: t('page.repositories.title'), href: repositoriesURL},
     {label: repo.name},
   ]}/>
   <div class="flex md:flex-row flex-col">
@@ -45,14 +54,14 @@ packages.sort((a, b) => a.displayName.localeCompare(b.displayName));
     </div>
     <div class="divider md:divider-horizontal" />
     <div class="md:w-72 md:pl-4 flex-shrink-0">
-      <h2 class="text-2xl font-bold mb-2">Repository ID</h2>
+      <h2 class="text-2xl font-bold mb-2">{t('page.repository.repository-id')}</h2>
       <p class="mb-6">{repo.id || 'Undefined'}</p>
-      <h2 class="text-2xl font-bold mb-2">Author</h2>
+      <h2 class="text-2xl font-bold mb-2">{t('page.repository.author')}</h2>
       <p class="mb-6">{repo.author}</p>
-      <h2 class="text-2xl font-bold mb-2">Repository URL</h2>
+      <h2 class="text-2xl font-bold mb-2">{t('page.repository.repository-url')}</h2>
       <p class="mb-6"><a class="link link-primary link-hover" target="_blank" href={repo.url}>{repo.url}</a></p>
       <div>
-        <a href={vccAddRepoLink(repo.url)} class="btn btn-primary btn-block">Add to VCC</a>
+        <a href={vccAddRepoLink(repo.url)} class="btn btn-primary btn-block">{t('button.add-to-vcc')}</a>
       </div>
     </div>
   </div>

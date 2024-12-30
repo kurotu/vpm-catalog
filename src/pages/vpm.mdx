@@ -1,13 +1,13 @@
 ---
 layout: ~/layouts/MarkdownLayout.astro
-title: All-in-one Repository
+title: VPM Catalog Repository
 ---
 import { site } from '~/../astro.config.mjs';
 import { vccAddRepoLink } from '~/utils/vpm';
 export const repoURL = `${new URL('/index.json', site || 'http://localhost:4321')}`
 export const addToVCCURL = vccAddRepoLink(repoURL);
 
-A VPM repository which contains all the packages listed in the VPM Catalog excepting [Official](/repositories/com_vrchat_repos_official) and [Curated](/repositories/com_vrchat_repos_curated) repositories.
+A VPM repository which contains all the packages listed in the VPM Catalog excepting [Official](/repositories/com.vrchat.repos.official) and [Curated](/repositories/com.vrchat.repos.curated) repositories.
 
 This repository is provided as is, without warranty of any kind.
 

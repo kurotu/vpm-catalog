@@ -1,6 +1,9 @@
 ---
 import { idToFileName, vccAddRepoLink, type VPMRepository } from '~/utils/vpm'
 import Card from './Card.astro';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import type { Language } from '~/i18n/ui';
+import { useTranslations } from '~/i18n/utils';
 
 interface Props {
   repository: VPMRepository
@@ -8,15 +11,19 @@ interface Props {
 
 const { repository } = Astro.props;
 
+const currentLocale = Astro.currentLocale as Language;
+const t = useTranslations(currentLocale);
+const repositoryURL = getRelativeLocaleUrl(currentLocale, `repositories/${idToFileName(repository.id ?? repository.url)}`);
+
 ---
 <Card>
   <div class="card-body flex-row gap-2">
     <div class="flex-grow flex-col">
-      <h2 class="card-title"><a class="link link-primary link-hover" href=`/repositories/${idToFileName(repository.id ?? repository.url)}`>{repository.name}</h2>
+      <h2 class="card-title"><a class="link link-primary link-hover" href={repositoryURL}>{repository.name}</h2>
       <p>{repository.url}</p>
     </div>
     <div class="flex-shrink-0">
-      <a href={vccAddRepoLink(repository.url)} class="btn btn-sm">Add to VCC</a>
+      <a href={vccAddRepoLink(repository.url)} class="btn btn-sm">{t('button.add-to-vcc')}</a>
     </div>
   </div>
 </Card>

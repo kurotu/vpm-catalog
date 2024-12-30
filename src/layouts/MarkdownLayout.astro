@@ -3,13 +3,20 @@ import Prose from "~/components/Prose.astro";
 import CenterLayout from "./CenterLayout.astro";
 import Breadcrumbs from "~/components/Breadcrumbs.astro";
 import Head1 from "~/components/Head1.astro";
+import type { Language } from "~/i18n/ui";
+import { useTranslations } from "~/i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const {frontmatter} = Astro.props;
+
+const currentLocale = Astro.currentLocale as Language;
+const t = useTranslations(currentLocale);
+const homeURL = getRelativeLocaleUrl(currentLocale, "");
 
 ---
 <CenterLayout title={frontmatter.title}>
   <Breadcrumbs items={[
-    {label: "Home", href: "/"},
+    {label: t('nav.home'), href: homeURL},
     {label: frontmatter.title},
   ]}/>
   <Head1>{frontmatter.title}</Head1>

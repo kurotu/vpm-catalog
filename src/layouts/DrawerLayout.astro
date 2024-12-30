@@ -4,14 +4,27 @@ import Layout from "./Layout.astro"
 import Search from "~/components/Search.astro";
 import SearchModal from "~/components/SearchModal.astro";
 import ThemeIcon from "~/components/ThemeIcon.astro";
+import { defaultLang, languages, type Language } from "~/i18n/ui";
+import { useTranslations } from "~/i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 interface Props {
   title: string
 }
 
 const {title} = Astro.props;
+const currentLocale = Astro.currentLocale as Language;
+const t = useTranslations(currentLocale);
+const homeURL = getRelativeLocaleUrl(currentLocale, "");
+const packagesURL = getRelativeLocaleUrl(currentLocale, "packages");
+const repositoriesURL = getRelativeLocaleUrl(currentLocale, "repositories");
+const aboutURL = getRelativeLocaleUrl(currentLocale, "about");
 
 const searchModalId = "search_modal";
+
+const localePath = currentLocale === defaultLang ? '/' : `/${currentLocale}/`;
+const currentLocaleRelativePath = Astro.url.pathname.replace(localePath, '').replace(/\/$/, '');
+
 ---
 <Layout title={title}>
   <SearchModal id={searchModalId} />
@@ -26,7 +39,7 @@ const searchModalId = "search_modal";
           </label>
         </div>
         <div class="flex-1">
-          <a href="/" class="btn btn-ghost text-2xl font-logo font-semibold">
+          <a href={homeURL} class="btn btn-ghost text-2xl font-logo font-semibold">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 text-primary">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
             </svg>
@@ -36,12 +49,31 @@ const searchModalId = "search_modal";
             <Search modalId={searchModalId} />
           </span>
         </div>
-        <div class="flex-none hidden lg:block">
-          <ul class="menu menu-horizontal">
-            <!-- Navbar menu content here -->
-            <li><a href="/packages">Packages</a></li>
-            <li><a href="/repositories">Repositories</a></li>
-          </ul>
+        <div class="flex flex-1 justify-end px-2">
+          <div class="flex items-stretch">
+            <a class="btn btn-ghost rounded-btn hidden lg:flex" href={packagesURL}>{t('nav.packages')}</a>
+            <a class="btn btn-ghost rounded-btn hidden lg:flex" href={repositoriesURL}>{t('nav.repositories')}</a>
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn btn-ghost" aria-label="Language">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4"><path fill-rule="evenodd" d="M11 5a.75.75 0 0 1 .688.452l3.25 7.5a.75.75 0 1 1-1.376.596L12.89 12H9.109l-.67 1.548a.75.75 0 1 1-1.377-.596l3.25-7.5A.75.75 0 0 1 11 5Zm-1.24 5.5h2.48L11 7.636 9.76 10.5ZM5 1a.75.75 0 0 1 .75.75v1.261a25.27 25.27 0 0 1 2.598.211.75.75 0 1 1-.2 1.487c-.22-.03-.44-.056-.662-.08A12.939 12.939 0 0 1 5.92 8.058c.237.304.488.595.752.873a.75.75 0 0 1-1.086 1.035A13.075 13.075 0 0 1 5 9.307a13.068 13.068 0 0 1-2.841 2.546.75.75 0 0 1-.827-1.252A11.566 11.566 0 0 0 4.08 8.057a12.991 12.991 0 0 1-.554-.938.75.75 0 1 1 1.323-.707c.049.09.099.181.15.271.388-.68.708-1.405.952-2.164a23.941 23.941 0 0 0-4.1.19.75.75 0 0 1-.2-1.487c.853-.114 1.72-.185 2.598-.211V1.75A.75.75 0 0 1 5 1Z" clip-rule="evenodd"></path></svg>
+                <span class="hidden sm:block">{languages[currentLocale]}</span>
+                <svg width="12px" height="12px" class="hidden h-2 w-2 fill-current opacity-60 sm:inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048"><path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path></svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow">
+                {
+                  Object.entries(languages).map(([lang, label]) => {
+                    return (
+                      <li>
+                        <a href={getRelativeLocaleUrl(lang, currentLocaleRelativePath)}>{label}</a>
+                      </li>
+                    );
+                  })
+                }
+            </ul>
+            </div>
+          </div>
         </div>
         <div class="mr-2">
           <ThemeIcon />
@@ -58,10 +90,10 @@ const searchModalId = "search_modal";
         </div>
         <ul class="menu p-4 w-80 min-h-full">
           <!-- Sidebar content here -->
-          <li><a href="/packages/">Packages</a></li>
-          <li><a href="/repositories/">Repositories</a></li>
+          <li><a href={packagesURL}>{t('nav.packages')}</a></li>
+          <li><a href={repositoriesURL}>{t('nav.repositories')}</a></li>
           <li></li>
-          <li><a href="/about">About VPM Catalog</a></li>
+          <li><a href={aboutURL}>{t('nav.about')}</a></li>
         </ul>
         </div>
     </div>

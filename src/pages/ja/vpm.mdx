@@ -1,0 +1,20 @@
+---
+layout: ~/layouts/MarkdownLayout.astro
+title: VPM Catalog リポジトリ
+---
+import { site } from '~/../astro.config.mjs';
+import { vccAddRepoLink } from '~/utils/vpm';
+export const repoURL = `${new URL('/index.json', site || 'http://localhost:4321')}`
+export const addToVCCURL = vccAddRepoLink(repoURL);
+
+VPM Catalogに掲載されている、[Official](/ja/repositories/com.vrchat.repos.official)と[Curated](/ja/repositories/com.vrchat.repos.curated)リポジトリを除くすべてのパッケージを含むVPMリポジトリです。
+
+このリポジトリは現状のまま提供され、いかなる保証もありません。
+
+## リポジトリ情報
+
+<pre>
+{repoURL}
+</pre>
+
+<a href={addToVCCURL} class="!btn !btn-lg !btn-wide !btn-primary">VCCに追加</a>

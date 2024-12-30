@@ -1,19 +1,26 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Breadcrumbs from "~/components/Breadcrumbs.astro";
 import Head1 from "~/components/Head1.astro";
 import RepositoryCard from "~/components/RepositoryCard.astro";
+import type { Language } from "~/i18n/ui";
+import { useTranslations } from "~/i18n/utils";
 import Layout from "~/layouts/CenterLayout.astro";
 import type { VPMRepository } from "~/utils/vpm";
+
+const currentLocale = Astro.currentLocale as Language;
+const t = useTranslations(currentLocale);
+const homeURL = getRelativeLocaleUrl(currentLocale, "");
 
 const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
 allRepos.sort((a, b) => a.name.localeCompare(b.name));
 
-const title = "Repositories";
+const title = t('page.repositories.title');
 ---
 <Layout title={title}>
   <Breadcrumbs items={[
-    {label: "Home", href: "/"},
-    {label: "Repositories", href: "/repositories"},
+    {label: t('nav.home'), href: homeURL},
+    {label: title},
   ]}/>
   <Head1>{title}</Head1>
   <div class="mb-6" />
