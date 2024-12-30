@@ -29,7 +29,7 @@ export const ja = {
   'nav.packages': 'パッケージ',
   'nav.repositories': 'リポジトリ',
   'nav.about': 'VPM Catalogについて',
-  'page.home.description': 'VPM Catalogは、VCCで使用可能なコミュニティVPMパッケージとリポジトリの一覧を掲載しています。気に入ったパッケージを見つけて制作を改善しましょう。',
+  'page.home.description': 'VPM Catalogは、VCCで使用可能なコミュニティVPMパッケージとリポジトリを掲載しています。気に入ったパッケージを見つけて制作に役立てましょう。',
   'page.home.packages': 'パッケージ',
   'page.home.repositories': 'リポジトリ',
   'page.home.browse-packages': 'パッケージを見る',
