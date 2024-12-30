@@ -3,7 +3,7 @@ layout: ~/layouts/MarkdownLayout.astro
 title: VPM Catalogについて
 ---
 
-## コンテンツ
+## Contents
 
 ## VPM Catalogとは？
 
