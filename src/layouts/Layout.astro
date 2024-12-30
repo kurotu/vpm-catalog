@@ -1,5 +1,6 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import { ViewTransitions } from 'astro:transitions';
 import { languages, type Language } from '~/i18n/ui';
 import { getRelativePath } from '~/i18n/utils';
 
@@ -36,6 +37,7 @@ const relativePath = getRelativePath(currentLocale, Astro.url.pathname);
         <link rel="alternate" href={Astro.url.origin + getRelativeLocaleUrl(locale, relativePath)} hreflang={locale} />
       ))
     }
+    <ViewTransitions />
     <title>{htmlTitle}</title>
 	</head>
 	<body>
