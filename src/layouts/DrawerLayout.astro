@@ -22,7 +22,8 @@ const aboutURL = getRelativeLocaleUrl(currentLocale, "about");
 
 const searchModalId = "search_modal";
 
-const currentLocaleRelativePath = Astro.url.pathname.replace(currentLocale === defaultLang ? '' : currentLocale, '');
+const localePath = currentLocale === defaultLang ? '/' : `/${currentLocale}/`;
+const currentLocaleRelativePath = Astro.url.pathname.replace(localePath, '').replace(/\/$/, '');
 
 ---
 <Layout title={title}>
