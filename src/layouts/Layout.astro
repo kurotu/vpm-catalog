@@ -16,7 +16,6 @@ const htmlTitle = title === siteName
 const ogpImageUrl = new URL('/images/vpm-catalog-ogp.png', Astro.site || Astro.url.origin);
 const currentLocale = Astro.currentLocale as Language;
 const relativePath = getRelativePath(currentLocale, Astro.url.pathname);
-const GA_MEASUREMENT_ID = import.meta.env.GA_MEASUREMENT_ID;
 ---
 <html lang={Astro.currentLocale} prefix="og: https://ogp.me/ns#">
 	<head>
@@ -39,15 +38,15 @@ const GA_MEASUREMENT_ID = import.meta.env.GA_MEASUREMENT_ID;
     }
     <title data-pagefind-meta={`title:${title}`}>{htmlTitle}</title>
     <!-- Google tag (gtag.js) -->
-    { import.meta.env.MODE === 'production' && GA_MEASUREMENT_ID ?
+    { import.meta.env.MODE === 'production' ?
       (
-        <script type="text/partytown" is:inline src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
-        <script type="text/partytown" is:inline define:vars={{GA_MEASUREMENT_ID}}>
+        <script type="text/partytown" is:inline src="https://www.googletagmanager.com/gtag/js?id=G-1GK9Z4R92E"></script>
+        <script type="text/partytown" is:inline>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', GA_MEASUREMENT_ID);
+          gtag('config', 'G-1GK9Z4R92E');
         </script>
       ) : null
     }
