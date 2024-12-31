@@ -58,10 +58,12 @@ const packagesURL = getRelativeLocaleUrl(currentLocale, "packages");
   <div class="flex md:flex-row flex-col">
     <div class="flex-grow md:pr-4" data-pagefind-body>
       {
+        // HACK: make the highest weight for display name
         Content
-          ? <Prose><Content /></Prose>
+          ? <span class="hidden" aria-hidden="true" data-pagefind-weight="8">{pkg.displayName}</span>
+            <Prose><Content /></Prose>
           : <div>
-              <Head1>{pkg.displayName}</Head1>
+              <Head1 data-pagefind-weight="8">{pkg.displayName}</Head1>
               <p class="mt-4 text-lg vpm-description">{pkg.description}</p>
           </div>
       }
