@@ -2,8 +2,9 @@ import { defineConfig } from 'astro/config';
 import remarkToc from 'remark-toc';
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
-import vercel from '@astrojs/vercel/static';
 import customRemarkPlugin from './src/remark/customRemarkPlugin';
+
+import partytown from '@astrojs/partytown';
 
 export const site = process.env['VERCEL'] ? `https://${process.env['VERCEL_PROJECT_PRODUCTION_URL']}` : undefined;
 
@@ -20,11 +21,16 @@ export default defineConfig({
       fallbackType: 'rewrite',
     }
   },
-  integrations: [tailwind(), mdx()],
+  integrations: [
+    tailwind(),
+    mdx(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    })
+  ],
   markdown: {
     remarkPlugins: [remarkToc, customRemarkPlugin]
   },
-  adapter: vercel({
-    webAnalytics: { enabled: true }
-  }),
 });
