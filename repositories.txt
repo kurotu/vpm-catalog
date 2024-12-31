@@ -53,6 +53,7 @@ https://prismic247.github.io/ScaledColliderSystem/index.json
 https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
+https://raw.githubusercontent.com/Tsukina-7mochi/qvpen-safe-delete/main/vpm.json
 https://repo.buddyworks.wtf/index.json
 https://ribeKim.github.io/vpm/index.json
 https://rurre.github.io/vpm/index.json
