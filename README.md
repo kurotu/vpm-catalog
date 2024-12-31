@@ -2,7 +2,8 @@
 
 Place to browse community packages for VCC.
 
-https://vpm-catalog.vercel.app/
+- https://vpm-catalog.vercel.app/
+- https://vpm-catalog.vercel.app/ja/ (日本語)
 
 ## What is VPM Catalog?
 
@@ -61,7 +62,7 @@ There are two options to remove your packages or repositories from the catalog.
 
 ### 1. Use `'vrc-get'.yanked` field in package metadata
 
-`'vrc-get'.yanked` is defined by [vrc-get](https://github.com/vrc-get/vrc-get) and [ALCOM](https://github.com/vrc-get/vrc-get/blob/master/vrc-get-gui/README.md) to hide discontinued packages.
+`'vrc-get'.yanked` is defined by [vrc-get](https://vrc-get.anatawa12.com/en/cli/) and [ALCOM](https://vrc-get.anatawa12.com/en/alcom/) to hide discontinued packages.
 VPM Catalog also hides packages when their `'vrc-get'.yanked` is a string or `true`.
 
 ```json
