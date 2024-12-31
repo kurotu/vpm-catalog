@@ -38,7 +38,7 @@ const relativePath = getRelativePath(currentLocale, Astro.url.pathname);
       ))
     }
     <ViewTransitions />
-    <title>{htmlTitle}</title>
+    <title data-pagefind-meta={`title:${title}`}>{htmlTitle}</title>
 	</head>
 	<body>
 		<div class="wrapper min-h-screen relative box-border">

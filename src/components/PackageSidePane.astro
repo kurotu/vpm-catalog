@@ -177,7 +177,10 @@ const showNotes = deprecators.length > 0;
   ? <ul data-pagefind-body>
     {
       legacyPackages.map((legacy) => (
-        <li><a href={`/packages/${legacy.name}`}>{legacy.displayName}</a></li>
+        <li>
+          <a href={`/packages/${legacy.name}`}>{legacy.displayName}</a>
+          <span class="hidden" aria-hidden="true">{legacy.name}</span>
+        </li>
       ))
     }
     {
