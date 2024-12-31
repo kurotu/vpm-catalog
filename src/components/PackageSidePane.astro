@@ -103,10 +103,10 @@ const showNotes = deprecators.length > 0;
   }
 </style>
 
-<h2 data-pagefind-body>{t('component.package-side-pane.package-name')}</h2>
+<h2 id="vpm-catalog-package-name" data-pagefind-body>{t('component.package-side-pane.package-name')}</h2>
 <p data-pagefind-body>{pkg.name}</p>
 
-<h2>{t('component.package-side-pane.documentation')}</h2>
+<h2 id="vpm-catalog-package-documentation">{t('component.package-side-pane.documentation')}</h2>
 <p>
   {
     pkg.documentationUrl
@@ -115,7 +115,7 @@ const showNotes = deprecators.length > 0;
   }
 </p>
 
-<h2>{t('component.package-side-pane.repositories')}</h2>
+<h2 id="vpm-catalog-package-repositories">{t('component.package-side-pane.repositories')}</h2>
 <ul>
   {
     repositories.map((repo) => (
@@ -127,7 +127,7 @@ const showNotes = deprecators.length > 0;
   }
 </ul>
 
-<h2>{t('component.package-side-pane.version')}</h2>
+<h2 id="vpm-catalog-package-version">{t('component.package-side-pane.version')}</h2>
 <p>
   {pkg.version}
   {
@@ -138,14 +138,14 @@ const showNotes = deprecators.length > 0;
 </p>
 </div>
 
-<h2>{t('component.package-side-pane.unity-version')}</h2>
+<h2 id="vpm-catalog-package-unity-version">{t('component.package-side-pane.unity-version')}</h2>
 {
   pkg.unity
   ? <p>{pkg.unity}{pkg.unityRelease ? `.${pkg.unityRelease}` : ''} {t('component.package-side-pane.or-later')}</p>
   : <p>{t('component.package-side-pane.undefined')}</p>
 }
 
-<h2>{t('component.package-side-pane.dependencies')}</h2>
+<h2 id="vpm-catalog-package-dependencies">{t('component.package-side-pane.dependencies')}</h2>
 {
   dependencies.length > 0
   ? <ul>
@@ -158,7 +158,7 @@ const showNotes = deprecators.length > 0;
   : <p>{t('component.package-side-pane.no-dependencies')}</p>
 }
 
-<h2>{t('component.package-side-pane.vpm-dependencies')}</h2>
+<h2 id="vpm-catalog-package-vpm-dependencies">{t('component.package-side-pane.vpm-dependencies')}</h2>
 {
   vpmDependencies.length > 0
   ? <ul>
@@ -171,13 +171,16 @@ const showNotes = deprecators.length > 0;
   : <p>{t('component.package-side-pane.no-dependencies')}</p>
 }
 
-<h2 data-pagefind-body>{t('component.package-side-pane.legacy-packages')}</h2>
+<h2 id="vpm-catalog-package-legacy-packages" data-pagefind-body>{t('component.package-side-pane.legacy-packages')}</h2>
 {
   legacyPackages.length > 0 || missingLegacyPackages.length > 0
   ? <ul data-pagefind-body>
     {
       legacyPackages.map((legacy) => (
-        <li><a href={`/packages/${legacy.name}`}>{legacy.displayName}</a></li>
+        <li>
+          <a href={`/packages/${legacy.name}`}>{legacy.displayName}</a>
+          <span class="hidden" aria-hidden="true">{legacy.name}</span>
+        </li>
       ))
     }
     {
@@ -189,7 +192,7 @@ const showNotes = deprecators.length > 0;
   : <p>{t('component.package-side-pane.no-legacy-packages')}</p>
 }
 
-<h2 data-pagefind-body>{t('component.package-side-pane.license')}</h2>
+<h2 id="vpm-catalog-package-license" data-pagefind-body>{t('component.package-side-pane.license')}</h2>
 <p data-pagefind-body>
   {
     licensesUrl
@@ -198,7 +201,7 @@ const showNotes = deprecators.length > 0;
   }
 </p>
 
-<h2 data-pagefind-body>{t('component.package-side-pane.author')}</h2>
+<h2 id="vpm-catalog-package-author" data-pagefind-body>{t('component.package-side-pane.author')}</h2>
 <p data-pagefind-body>
 {
   pkg.author?.url
@@ -211,7 +214,7 @@ const showNotes = deprecators.length > 0;
   showNotes
     ?
       <div class="divider"></div>
-      <h2>{t('component.package-side-pane.notes')}</h2>
+      <h2 id="vpm-catalog-package-notes">{t('component.package-side-pane.notes')}</h2>
     : null
 }
 {
