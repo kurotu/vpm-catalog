@@ -84,6 +84,7 @@ https://vpm.chocopoi.com/index.json
 https://vpm.dreadscripts.com/listings/main.json
 https://vpm.gatosyocora.net/index.json
 https://vpm.gyoku.tech/vpm.json
+https://vpm.hoshinolabs.com/vpm.json
 https://vpm.iwa.si/vpm.json
 https://vpm.kaikoga.net/index.json
 https://vpm.kesera2.dev/index.json
