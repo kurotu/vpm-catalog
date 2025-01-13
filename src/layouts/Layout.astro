@@ -36,6 +36,7 @@ const relativePath = getRelativePath(currentLocale, Astro.url.pathname);
         <link rel="alternate" href={Astro.url.origin + getRelativeLocaleUrl(locale, relativePath)} hreflang={locale} />
       ))
     }
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <title data-pagefind-meta={`title:${title}`}>{htmlTitle}</title>
     <!-- Google tag (gtag.js) -->
     { import.meta.env.MODE === 'production' ?

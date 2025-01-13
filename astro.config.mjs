@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import remarkToc from 'remark-toc';
+import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import customRemarkPlugin from './src/remark/customRemarkPlugin';
@@ -23,6 +24,15 @@ export default defineConfig({
   },
   integrations: [
     tailwind(),
+    sitemap({
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          en: 'en-US',
+          ja: 'ja-JP',
+        }
+      },
+    }),
     mdx(),
     partytown({
       config: {
