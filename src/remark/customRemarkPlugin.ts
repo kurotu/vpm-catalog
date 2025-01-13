@@ -22,6 +22,13 @@ const customRemarkPlugin: Plugin = () => {
             node.url = `./${dummyFile}`;
           }
         }
+
+        if (node.url.match('^https://github.com/[^/]+/[^/]+/blob/')) {
+          const url = new URL(node.url);
+          url.searchParams.delete('raw');
+          url.searchParams.append('raw', 'true');
+          node.url = url.toString();
+        }
       });
     }
   };
