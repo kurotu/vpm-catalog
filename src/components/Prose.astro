@@ -28,19 +28,3 @@
     min-width: 100%;
   }
 </style>
-
-<script>
-window.addEventListener('load', () => {
-  document.querySelectorAll('.prose a').forEach((a) => {
-    const href = a.getAttribute('href');
-    // Skip internal links
-    if (href?.startsWith('#') || href?.startsWith('/') || href?.startsWith('.') || href?.startsWith(window.location.origin)) {
-      return;
-    }
-    if (href?.startsWith('vcc://')) {
-      return;
-    }
-    a.setAttribute('target', '_blank');
-  });
-});
-</script>

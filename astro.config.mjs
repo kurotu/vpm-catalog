@@ -6,6 +6,7 @@ import mdx from "@astrojs/mdx";
 import customRemarkPlugin from './src/remark/customRemarkPlugin';
 
 import partytown from '@astrojs/partytown';
+import rehypeExternalLinks from 'rehype-external-links';
 
 export const site = process.env['VERCEL'] ? `https://${process.env['VERCEL_PROJECT_PRODUCTION_URL']}` : undefined;
 
@@ -41,6 +42,7 @@ export default defineConfig({
     })
   ],
   markdown: {
-    remarkPlugins: [remarkToc, customRemarkPlugin]
+    remarkPlugins: [remarkToc, customRemarkPlugin],
+    rehypePlugins: [[rehypeExternalLinks, {target: '_blank', ref: 'nofollow'}]],
   },
 });
