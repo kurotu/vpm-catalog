@@ -6,6 +6,7 @@ https://api.vrlabs.dev/listings/category/Dependencies
 https://api.vrlabs.dev/listings/category/Essentials
 https://api.vrlabs.dev/listings/category/Systems
 https://azukimochi.github.io/vpm-repos/index.json
+https://befuddledlabs.github.io/LinuxVRChatSDKPatch/index.json
 https://BlueAmulet.github.io/UdonSharpOptimizer/index.json
 https://c-colloid.github.io/PBReplacer-VPM/index.json
 https://Centauri2442.github.io/VRCMasterFailureCheck/index.json
@@ -63,6 +64,7 @@ https://SaturnianJP.github.io/NailSetupTool/index.json
 https://SaturnianJP.github.io/NewKiseteneExVPM/index.json
 https://sayabeans.github.io/vpm/index.json
 https://sh0ou.github.io/vpm-repos/vpm.json
+https://sigmal00.github.io/UzumoreShaderVPM/index.json
 https://sinkunvv.github.io/BlendMaestro/index.json
 https://skeb-inc.github.io/skeb-art-panel/index.json
 https://SleetCat123.github.io/vpm-packages/index.json
