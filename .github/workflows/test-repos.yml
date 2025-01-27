@@ -1,0 +1,22 @@
+name: "Test Repos"
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Run download script
+        run: |
+          set -e
+          bash ./tasks/download-repos.sh 2>&1 | tee /tmp/log.txt
+          if grep -q "Failed to download" /tmp/log.txt; then
+            echo "Download failed."
+            grep "Failed to download" /tmp/log.txt
+            exit 1
+          fi
