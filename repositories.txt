@@ -17,6 +17,7 @@ https://cyanlaser.github.io/CyanTrigger/index.json
 https://d4rkc0d3r.github.io/vpm-repos/main.json
 https://dolphiiiin.github.io/vpm-repos/index.json
 https://drblackrat.github.io/vpm-listing/index.json
+https://eauploader.github.io/EAUploader-for-VRChat/registry.json
 https://enitimeago.github.io/vpm-repos/index.json
 https://esperecyan.github.io/VRMConverterForVRChat/registry.json
 https://facs01-01.github.io/FACS-VPM-Listing/index.json
@@ -26,6 +27,7 @@ https://Guribo.github.io/TLP/index.json
 https://hai-vr.github.io/vpm-listing/index.json
 https://hfcRed.github.io/VPM-Listing/index.json
 https://hisacat.github.io/VCCListing/index.json
+https://hkrn.github.io/vpm.json
 https://hoke946.github.io/Trigger2to3_VPM/index.json
 https://hotaru86.github.io/VPM/index.json
 https://JeTeeS.github.io/TES-VPM-Package-Listing/index.json
@@ -51,7 +53,6 @@ https://pandrabox.github.io/vpm/index.json
 https://poiyomi.github.io/vpm/index.json
 https://pokeyi.dev/vpm-packages/index.json
 https://prismic247.github.io/ScaledColliderSystem/index.json
-https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
 https://raw.githubusercontent.com/Tsukina-7mochi/qvpen-safe-delete/main/vpm.json
