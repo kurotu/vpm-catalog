@@ -57,6 +57,7 @@ https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
 https://raw.githubusercontent.com/Tsukina-7mochi/qvpen-safe-delete/main/vpm.json
 https://repo.buddyworks.wtf/index.json
+https://rerigferl.github.io/vpm/vpm.json
 https://ribeKim.github.io/vpm/index.json
 https://rurre.github.io/vpm/index.json
 https://sanaehururu1200.github.io/ma-suimin_system/index.json
@@ -78,6 +79,7 @@ https://tmyt.github.io/vpm/index.json
 https://toh-csecb.github.io/package-listing/index.json
 https://tp-jp.github.io/vpm-repos/index.json
 https://Tr1turbo.github.io/BlendShare/index.json
+https://vcc.pawlygon.net/index.json
 https://vcc.vrcfury.com
 https://vpm.anatawa12.com/vpm.json
 https://vpm.azuretek.org/azuretek/vpm.json
@@ -115,5 +117,6 @@ https://vrchat.github.io/packages/index.json
 https://vrchat-community.github.io/vpm-listing-curated/index.json
 https://waya0125.com/vpm
 https://whiteflare.github.io/vpm-repos/vpm.json
+https://www.matthewherber.com/Happys-VRC-tools/index.json
 https://www.negura-karasu.net/vpm/
 https://xtlcdn.github.io/vpm/index.json
