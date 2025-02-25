@@ -30,6 +30,7 @@ https://hisacat.github.io/VCCListing/index.json
 https://hkrn.github.io/vpm.json
 https://hoke946.github.io/Trigger2to3_VPM/index.json
 https://hotaru86.github.io/VPM/index.json
+https://illusive-isc.github.io/vpm-repos/index.json
 https://JeTeeS.github.io/TES-VPM-Package-Listing/index.json
 https://k4584587.github.io/Modular-Auto-Toggle/index.json
 https://kakunpc.github.io/kakunpc_vpm/index.json
@@ -121,3 +122,4 @@ https://whiteflare.github.io/vpm-repos/vpm.json
 https://www.matthewherber.com/Happys-VRC-tools/index.json
 https://www.negura-karasu.net/vpm/
 https://xtlcdn.github.io/vpm/index.json
+https://yueby.github.io/vpm-listing/index.json
