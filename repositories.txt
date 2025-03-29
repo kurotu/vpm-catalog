@@ -39,6 +39,7 @@ https://kemocade.github.io/Kemocade.Vrc.Data.Extensions/index.json
 https://KitKat4191.github.io/JetSim-VCC-Listing/index.json
 https://kurone-kito.github.io/vpm/index.json
 https://kurotu.github.io/vpm-repos/vpm.json
+https://kxn4t.github.io/vpm-repos/index.json
 https://kyure-a.github.io/vpm-repos/vpm.json
 https://labthe3rd.github.io/PZCameraSystem/index.json
 https://lazyoptimiser.euan.net/index.json
@@ -55,6 +56,7 @@ https://pandrabox.github.io/vpm/index.json
 https://poiyomi.github.io/vpm/index.json
 https://pokeyi.dev/vpm-packages/index.json
 https://prismic247.github.io/ScaledColliderSystem/index.json
+https://ramtype0.github.io/VpmRepository/index.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
 https://raw.githubusercontent.com/Tsukina-7mochi/qvpen-safe-delete/main/vpm.json
