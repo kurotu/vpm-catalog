@@ -12,6 +12,7 @@ https://c-colloid.github.io/PBReplacer-VPM/index.json
 https://Centauri2442.github.io/VRCMasterFailureCheck/index.json
 https://Centauri2442.github.io/VRCNetworkDebugger/index.json
 https://codec-xyz.github.io/photo_frame_manager/index.json
+https://cstria0106.github.io/vpm-repos/index.json
 https://cyanlaser.github.io/CyanPlayerObjectPool/index.json
 https://cyanlaser.github.io/CyanTrigger/index.json
 https://d4rkc0d3r.github.io/vpm-repos/main.json
@@ -48,6 +49,7 @@ https://magmamcnet.github.io/VPM/index.json
 https://mattshark89.github.io/OpenFlight-VRC/index.json
 https://meronmks.github.io/vpm/index.json
 https://miner28.github.io/MinerPackages/index.json
+https://minminmean.github.io/minminmart/index.json
 https://mmmaellon.github.io/MMMaellonVCCListing/index.json
 https://nidonocu.github.io/virtual-gryphon-packages/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
@@ -112,6 +114,7 @@ https://vpm.pimaker.at/index.json
 https://vpm.raitichan.net/vpm.json
 https://vpm.razgriz.one/index.json
 https://vpm.rs64.net/vpm.json
+https://vpm.smisann.net/vpm.json
 https://vpm.techanon.dev/index.json
 https://vpm.thry.dev/index.json
 https://vpm.ureishi.net/repos.json
