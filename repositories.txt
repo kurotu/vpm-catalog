@@ -60,6 +60,7 @@ https://minminmean.github.io/minminmart/index.json
 https://mmmaellon.github.io/MMMaellonVCCListing/index.json
 https://nidonocu.github.io/virtual-gryphon-packages/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
+https://orels1.github.io/orels-Unity-Shaders/index.json
 https://page.853lab.com/vpm-repos/vpm.json
 https://pandrabox.github.io/vpm/index.json
 https://poiyomi.github.io/vpm/index.json
@@ -70,6 +71,7 @@ https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
 https://raw.githubusercontent.com/Tsukina-7mochi/qvpen-safe-delete/main/vpm.json
 https://reava.github.io/VPM-Listings/index.json
+https://redsim.github.io/vpmlisting/index.json
 https://repo.buddyworks.wtf/index.json
 https://rerigferl.github.io/vpm/vpm.json
 https://ribeKim.github.io/vpm/index.json
@@ -108,6 +110,7 @@ https://vpm.dreadscripts.com/listings/main.json
 https://vpm.gatosyocora.net/index.json
 https://vpm.gyoku.tech/vpm.json
 https://vpm.hackebein.dev/index.json
+https://vpm.hinasense.jp/vpm.json
 https://vpm.hoshinolabs.com/vpm.json
 https://vpm.iwa.si/vpm.json
 https://vpm.kaikoga.net/index.json
@@ -144,3 +147,4 @@ https://www.matthewherber.com/PhysboneConstraints/index.json
 https://www.negura-karasu.net/vpm/
 https://xtlcdn.github.io/vpm/index.json
 https://yueby.github.io/vpm-listing/index.json
+https://z3y.github.io/vpm-package-listing/index.json
