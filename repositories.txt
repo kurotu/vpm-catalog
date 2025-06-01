@@ -26,6 +26,7 @@ https://esperecyan.github.io/VRMConverterForVRChat/registry.json
 https://ess-ka.github.io/EsskaPackageListing/index.json
 https://facs01-01.github.io/FACS-VPM-Listing/index.json
 https://foxscore.dev/vpm/index.json
+https://furality.github.io/vcc-packages/index.json
 https://gabsith.github.io/GabSith-VCC-Listing/index.json
 https://GotoFinal.github.io/GotoScriptsVRC/index.json
 https://guraril.github.io/vpm-repo/vpm.json
