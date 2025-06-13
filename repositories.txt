@@ -77,7 +77,9 @@ https://redsim.github.io/vpmlisting/index.json
 https://repo.buddyworks.wtf/index.json
 https://rerigferl.github.io/vpm/vpm.json
 https://ribeKim.github.io/vpm/index.json
+https://rlist.arch-linux.pro/index.json
 https://rurre.github.io/vpm/index.json
+https://sack-kazu.github.io/vpm-repository/index.json
 https://sanaehururu1200.github.io/ma-suimin_system/index.json
 https://saphiblue.github.io/vcc-listing/index.json
 https://SaturnianJP.github.io/AutoSaveScript-for-Unity/index.json
