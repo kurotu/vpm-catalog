@@ -59,7 +59,9 @@ https://mattshark89.github.io/OpenFlight-VRC/index.json
 https://meronmks.github.io/vpm/index.json
 https://miner28.github.io/MinerPackages/index.json
 https://minminmean.github.io/minminmart/index.json
+https://miya-kan.github.io/vpm-repository/index.json
 https://mmmaellon.github.io/MMMaellonVCCListing/index.json
+https://neuru5278.github.io/main-vpm-repos/index.json
 https://nidonocu.github.io/virtual-gryphon-packages/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
 https://orels1.github.io/orels-Unity-Shaders/index.json
@@ -72,6 +74,7 @@ https://ramtype0.github.io/VpmRepository/index.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
 https://raw.githubusercontent.com/Tsukina-7mochi/qvpen-safe-delete/main/vpm.json
+https://r-delta-c.github.io/vpm_repository/index.json
 https://reava.github.io/VPM-Listings/index.json
 https://redsim.github.io/vpmlisting/index.json
 https://repo.buddyworks.wtf/index.json
@@ -124,6 +127,7 @@ https://vpm.kwxxw.net/index.json
 https://vpm.kyre.moe/vpm.json
 https://vpm.logilabo.dev/avatars.json
 https://vpm.magmamc.dev/index.json
+https://vpm.matcha-soft.com/repos.json
 https://vpm.mimylab.com/index.json
 https://vpm.nadena.dev/vpm.json
 https://vpm.nadena.dev/vpm-prerelease.json
@@ -131,7 +135,9 @@ https://vpm.narazaka.net/index.json
 https://vpm.nekobako.net/index.json
 https://vpm.nekomimi.studio/index.json
 https://vpm.niri.la/vpm.json
+https://vpm.paltee.dev/index.json
 https://vpm.pimaker.at/index.json
+https://vpm.pukosrv.net/
 https://vpm.raitichan.net/vpm.json
 https://vpm.razgriz.one/index.json
 https://vpm.rerac.dev/index.json
