@@ -20,9 +20,9 @@ function download() {
   local URL=$1
   local CONTENT
 
-  CONTENT=$(curl -f -s -L -H "User-Agent: VPM Catalog" "$URL" || echo "FAILED")
+  CONTENT=$(curl -f -sS -L -H "User-Agent: VPM Catalog" "$URL" || echo "FAILED")
   if [ "$CONTENT" == "FAILED" ]; then
-    echo "Failed to download $URL" 1>&2
+    echo "Failed to download $URL"
     return
   fi
 

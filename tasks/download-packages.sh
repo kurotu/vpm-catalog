@@ -63,7 +63,7 @@ getAllPackageNames | while read -r PACKAGE_NAME; do
   DOWNLOAD_FILE="$DOWNLOAD_DIR/$PACKAGE_NAME-$LATEST.zip"
   if [ ! -f "$DOWNLOAD_FILE" ]; then
     echo "Downloading $ZIP_URL to $DOWNLOAD_FILE"
-    if ! curl -s -L --fail -H "User-Agent: VPM Catalog" "$ZIP_URL" > "$DOWNLOAD_FILE"; then
+    if ! curl -sS -L --fail -H "User-Agent: VPM Catalog" "$ZIP_URL" > "$DOWNLOAD_FILE"; then
       echo "Failed to download $ZIP_URL (HTTP error or network issue), skipping $PACKAGE_NAME-$LATEST"
       rm -f "$DOWNLOAD_FILE"  # Remove partially downloaded file
       continue
