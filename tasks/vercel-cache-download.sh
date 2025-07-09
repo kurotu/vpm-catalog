@@ -2,12 +2,11 @@
 set -eu
 
 KEY=$("$(dirname "$0")/generate-cache-key.sh")
-CACHE_FILE="${KEY}.tar.gz"
+CACHE_DIR="vpm-catalog/caches/$KEY"
 
-echo downloading "$CACHE_FILE"
-if aws s3 cp --endpoint-url="$S3_ENDPOINT_URL" --quiet "s3://vpm-catalog/caches/$CACHE_FILE" .; then
-  echo extracting "$CACHE_FILE"
-  tar xf "$CACHE_FILE"
+echo "Syncing files from s3://$CACHE_DIR/"
+if aws s3 sync --endpoint-url="$S3_ENDPOINT_URL" --no-progress "s3://$CACHE_DIR/" "$1"; then
+  echo "Cache downloaded successfully"
 else
   echo "cache not found"
 fi
