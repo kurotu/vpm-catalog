@@ -8,4 +8,4 @@ echo creating "$CACHE_FILE" with "$@"
 tar zcf "$CACHE_FILE" "$@"
 
 echo uploading "$CACHE_FILE"
-aws s3 cp --quiet "$CACHE_FILE" "s3://vpm-catalog/caches/$CACHE_FILE"
+aws s3 cp --endpoint-url="$S3_ENDPOINT_URL" --quiet "$CACHE_FILE" "s3://vpm-catalog/caches/$CACHE_FILE"
