@@ -28,6 +28,7 @@ https://facs01-01.github.io/FACS-VPM-Listing/index.json
 https://foxscore.dev/vpm/index.json
 https://furality.github.io/vcc-packages/index.json
 https://gabsith.github.io/GabSith-VCC-Listing/index.json
+https://GlinTFraulein.github.io/vpm/index.json
 https://GotoFinal.github.io/GotoScriptsVRC/index.json
 https://guraril.github.io/vpm-repo/vpm.json
 https://Guribo.github.io/TLP/index.json
@@ -65,6 +66,7 @@ https://neuru5278.github.io/main-vpm-repos/index.json
 https://nidonocu.github.io/virtual-gryphon-packages/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
 https://orels1.github.io/orels-Unity-Shaders/index.json
+https://o-tr.github.io/vpm/vpm.json
 https://page.853lab.com/vpm-repos/vpm.json
 https://pandrabox.github.io/vpm/index.json
 https://poiyomi.github.io/vpm/index.json
