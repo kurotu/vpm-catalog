@@ -28,3 +28,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# pnpm store
+.pnpm-store/
