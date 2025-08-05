@@ -11,7 +11,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const dummyPath = join(__dirname, dummyFile);
 
 const customRemarkPlugin: Plugin = () => {
-  console.log(dummyPath);
   return (tree, file) => {
     if (file.basename === 'README.md') {
       visit(tree, 'image', (node: Image) => {
