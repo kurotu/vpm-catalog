@@ -13,6 +13,15 @@ export const site = process.env['VERCEL'] ? `https://${process.env['VERCEL_PROJE
 // https://astro.build/config
 export default defineConfig({
   site: site,
+  vite:{
+    build: {
+      rollupOptions: {
+        external: [
+          "fsevents"
+        ]
+      }
+    }
+  },
   i18n: {
     locales: ['en', 'ja'],
     defaultLocale: 'en',

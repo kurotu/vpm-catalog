@@ -25,10 +25,16 @@
   "devDependencies": {
     "@pagefind/default-ui": "^1.1.0",
     "@tailwindcss/typography": "^0.5.13",
+    "@types/mdast": "^4.0.4",
     "@types/semver": "^7.5.8",
     "any-json": "^3.1.0",
     "daisyui": "^4.11.1",
+    "mdast": "^3.0.0",
     "pagefind": "^1.1.0",
-    "remark-toc": "^9.0.0"
+    "remark-toc": "^9.0.0",
+    "semver": "^7.7.2",
+    "sharp": "^0.34.3",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.0.0"
   }
 }
