@@ -10,6 +10,6 @@ ROOT="$(cd "$(dirname "$0")" && pwd)/.."
 "$ROOT"/tasks/download-packages.sh
 
 astro build
-npm run index
+pnpm run index
 
 "$ROOT"/tasks/vercel-cache-upload.sh "$ZIP_DIR"
