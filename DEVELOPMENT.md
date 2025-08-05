@@ -11,7 +11,7 @@
 ### 1. Install npm dependencies.
 
 ```shell
-npm install
+pnpm install
 ```
 
 ### 2. Choose necessary VPM repositories.
@@ -39,7 +39,7 @@ Package zip files will be saved in `vpm/zips` directory. And extracted files wil
 ### 5. Run the development server.
 
 ```shell
-npm run dev
+pnpm run dev
 ```
 
 The development server will be available at `http://localhost:4321`.

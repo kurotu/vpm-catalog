@@ -2,10 +2,10 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "npm",
-			"script": "dev",
+			"type": "shell",
+      "command": "pnpm run dev",
 			"problemMatcher": [],
-			"label": "npm: dev",
+			"label": "pnpm: dev",
 			"detail": "astro dev"
 		}
 	]
