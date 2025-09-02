@@ -65,6 +65,7 @@ https://mmmaellon.github.io/MMMaellonVCCListing/index.json
 https://neuru5278.github.io/main-vpm-repos/index.json
 https://nidonocu.github.io/virtual-gryphon-packages/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
+https://nyakomechan.github.io/vpm-repository/index.json
 https://orels1.github.io/orels-Unity-Shaders/index.json
 https://o-tr.github.io/vpm/vpm.json
 https://page.853lab.com/vpm-repos/vpm.json
@@ -110,6 +111,7 @@ https://uslashdeleted.github.io/vcc-listing/index.json
 https://valenvrc.com/index.json
 https://vcc.pawlygon.net/index.json
 https://vcc.vrcfury.com
+https://vpm.32ba.net/index.json
 https://vpm.anatawa12.com/vpm.json
 https://vpm.azuretek.org/azuretek/vpm.json
 https://vpm.bluwizard.net/index.json
@@ -147,6 +149,7 @@ https://vpm.rs64.net/vpm.json
 https://vpm.smisann.net/vpm.json
 https://vpm.techanon.dev/index.json
 https://vpm.thry.dev/index.json
+https://vpm.udon.zip/index.json
 https://vpm.ureishi.net/repos.json
 https://vpm.vrsl.dev/index.json
 https://vrceve.github.io/vrceve-asset/index.json
