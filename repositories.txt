@@ -38,6 +38,7 @@ https://hisacat.github.io/VCCListing/index.json
 https://hkrn.github.io/vpm.json
 https://hoke946.github.io/Trigger2to3_VPM/index.json
 https://hotaru86.github.io/VPM/index.json
+https://HugPhiluu.github.io/PhilSort/index.json
 https://illusive-isc.github.io/vpm-repos/index.json
 https://jazjasmine.github.io/VCC/index.json
 https://JeTeeS.github.io/TES-VPM-Package-Listing/index.json
