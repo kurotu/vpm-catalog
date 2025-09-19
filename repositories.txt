@@ -4,15 +4,19 @@ https://AnosionV.github.io/vpm/index.json
 https://api.vrlabs.dev/listings/category/Components
 https://api.vrlabs.dev/listings/category/Dependencies
 https://api.vrlabs.dev/listings/category/Essentials
+https://api.vrlabs.dev/listings/category/Rehosted
 https://api.vrlabs.dev/listings/category/Systems
+https://awa-vr.github.io/vrc-tools-vpm/index.json
 https://azukimochi.github.io/vpm-repos/index.json
 https://balphagorevr.github.io/balphagore-vcc-listings/index.json
 https://befuddledlabs.github.io/LinuxVRChatSDKPatch/index.json
 https://BlueAmulet.github.io/UdonSharpOptimizer/index.json
+https://CascadianVR.github.io/UnityShapekeySearch/index.json
 https://c-colloid.github.io/PBReplacer-VPM/index.json
 https://ccvrc.github.io/vpm/index.json
 https://Centauri2442.github.io/VRCMasterFailureCheck/index.json
 https://Centauri2442.github.io/VRCNetworkDebugger/index.json
+https://chigirits.github.io/vpm-listing/index.json
 https://codec-xyz.github.io/photo_frame_manager/index.json
 https://cstria0106.github.io/vpm-repos/index.json
 https://cyanlaser.github.io/CyanPlayerObjectPool/index.json
@@ -20,6 +24,7 @@ https://cyanlaser.github.io/CyanTrigger/index.json
 https://d4rkc0d3r.github.io/vpm-repos/main.json
 https://dolphiiiin.github.io/vpm-repos/index.json
 https://drblackrat.github.io/vpm-listing/index.json
+https://dubstepdragon.github.io/consent-cards/index.json
 https://eauploader.github.io/EAUploader-for-VRChat/registry.json
 https://enitimeago.github.io/vpm-repos/index.json
 https://esperecyan.github.io/VRMConverterForVRChat/registry.json
@@ -32,6 +37,7 @@ https://GlinTFraulein.github.io/vpm/index.json
 https://GotoFinal.github.io/GotoScriptsVRC/index.json
 https://guraril.github.io/vpm-repo/vpm.json
 https://Guribo.github.io/TLP/index.json
+https://hai-vr.github.io/alleyway-listing/index.json
 https://hai-vr.github.io/vpm-listing/index.json
 https://hfcRed.github.io/VPM-Listing/index.json
 https://hisacat.github.io/VCCListing/index.json
@@ -52,6 +58,7 @@ https://kurotu.github.io/vpm-repos/vpm.json
 https://kxn4t.github.io/vpm-repos/index.json
 https://kyure-a.github.io/vpm-repos/vpm.json
 https://labthe3rd.github.io/PZCameraSystem/index.json
+https://LauraRozier.github.io/LauraVRCUtils/index.json
 https://lazyoptimiser.euan.net/index.json
 https://lereldarion.github.io/vpm-listing/index.json
 https://lilxyzw.github.io/vpm-repos/vpm.json
@@ -74,9 +81,11 @@ https://pandrabox.github.io/vpm/index.json
 https://poiyomi.github.io/vpm/index.json
 https://pokeyi.dev/vpm-packages/index.json
 https://prismic247.github.io/ScaledColliderSystem/index.json
+https://projektcommunity.github.io/avatar-swag-vpm/index.json
 https://ramtype0.github.io/VpmRepository/index.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
+https://raw.githubusercontent.com/Tsukina-7mochi/glitch-shader/main/vpm.json
 https://raw.githubusercontent.com/Tsukina-7mochi/qvpen-safe-delete/main/vpm.json
 https://r-delta-c.github.io/vpm_repository/index.json
 https://reava.github.io/VPM-Listings/index.json
@@ -85,6 +94,7 @@ https://repo.buddyworks.wtf/index.json
 https://rerigferl.github.io/vpm/vpm.json
 https://ribeKim.github.io/vpm/index.json
 https://rlist.arch-linux.pro/index.json
+https://rollphes.github.io/vpm-repos/vpm.json
 https://rurre.github.io/vpm/index.json
 https://sack-kazu.github.io/vpm-repository/index.json
 https://sanaehururu1200.github.io/ma-suimin_system/index.json
@@ -153,11 +163,13 @@ https://vpm.thry.dev/index.json
 https://vpm.udon.zip/index.json
 https://vpm.ureishi.net/repos.json
 https://vpm.vrsl.dev/index.json
+https://vpm.yukineko.dev/index.json
 https://vrceve.github.io/vrceve-asset/index.json
 https://vrchat.github.io/packages/index.json
 https://vrchat-community.github.io/vpm-listing-curated/index.json
 https://waya0125.com/vpm
 https://whiteflare.github.io/vpm-repos/vpm.json
+https://wholesomevr.github.io/SPS-Configurator/index.json
 https://www.matthewherber.com/Happys-VRC-tools/index.json
 https://www.matthewherber.com/PhysboneConstraints/index.json
 https://www.negura-karasu.net/vpm/
