@@ -6,6 +6,7 @@ https://api.vrlabs.dev/listings/category/Dependencies
 https://api.vrlabs.dev/listings/category/Essentials
 https://api.vrlabs.dev/listings/category/Rehosted
 https://api.vrlabs.dev/listings/category/Systems
+https://autch.github.io/VRC_PopulateScaleAdjusters/index.json
 https://awa-vr.github.io/vrc-tools-vpm/index.json
 https://azukimochi.github.io/vpm-repos/index.json
 https://balphagorevr.github.io/balphagore-vcc-listings/index.json
@@ -89,6 +90,7 @@ https://pokeyi.dev/vpm-packages/index.json
 https://prismic247.github.io/ScaledColliderSystem/index.json
 https://projektcommunity.github.io/avatar-swag-vpm/index.json
 https://ramtype0.github.io/VpmRepository/index.json
+https://raw.githubusercontent.com/APOL-StarLight/VRC-Unity-Essentials/main/vcc.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
 https://raw.githubusercontent.com/Tsukina-7mochi/glitch-shader/main/vpm.json
@@ -96,6 +98,8 @@ https://raw.githubusercontent.com/Tsukina-7mochi/qvpen-safe-delete/main/vpm.json
 https://r-delta-c.github.io/vpm_repository/index.json
 https://reava.github.io/VPM-Listings/index.json
 https://redsim.github.io/vpmlisting/index.json
+https://remuria.natsuneko.com/repositories/com.natsuneko.vpm.json
+https://remuria.natsuneko.com/repositories/com.natsuneko.vpm.worlds.json
 https://repo.buddyworks.wtf/index.json
 https://rerigferl.github.io/vpm/vpm.json
 https://ribeKim.github.io/vpm/index.json
