@@ -122,6 +122,7 @@ https://SleetCat123.github.io/vpm-packages/index.json
 https://sophiebluevr.github.io/vpm/index.json
 https://spokeek.github.io/vpm-repository/index.json
 https://suzuryg.github.io/vpm-repos/vpm.json
+https://taremin.github.io/CopyComponentsByRegex/index.json
 https://timiz0r.github.io/EZUtils/index.json
 https://tliks.github.io/vpm-repos/index.json
 https://tmyt.github.io/vpm/index.json
@@ -151,6 +152,7 @@ https://vpm.kittyn.cat/index.json
 https://vpm.koyashiro.net/index.json
 https://vpm.kwxxw.net/index.json
 https://vpm.kyre.moe/vpm.json
+https://vpm.limitex.dev/index.json
 https://vpm.logilabo.dev/avatars.json
 https://vpm.matcha-soft.com/repos.json
 https://vpm.mimylab.com/index.json
