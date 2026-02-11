@@ -1,3 +1,5 @@
+https://vpm.coderco.su/index.json
+https://aiczk.github.io/VPM/index.json
 https://amehuri.github.io/amehuri_tools/index.json
 https://An-Labo.github.io/An-Labo-NailTool/vpm.json
 https://AnosionV.github.io/vpm/index.json
@@ -122,6 +124,7 @@ https://SleetCat123.github.io/vpm-packages/index.json
 https://sophiebluevr.github.io/vpm/index.json
 https://spokeek.github.io/vpm-repository/index.json
 https://suzuryg.github.io/vpm-repos/vpm.json
+https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://taremin.github.io/CopyComponentsByRegex/index.json
 https://timiz0r.github.io/EZUtils/index.json
 https://tliks.github.io/vpm-repos/index.json
