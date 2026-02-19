@@ -144,7 +144,6 @@ https://vpm.bluwizard.net/index.json
 https://vpm.chanfoo.net/vpm.json
 https://vpm.chocopoi.com/index.json
 https://vpm.coderco.su/index.json
-https://vpm.dreadscripts.com/listings/main.json
 https://vpm.gatosyocora.net/index.json
 https://vpm.gyoku.tech/vpm.json
 https://vpm.hackebein.dev/index.json
