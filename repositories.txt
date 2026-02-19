@@ -1,4 +1,3 @@
-https://vpm.coderco.su/index.json
 https://aiczk.github.io/VPM/index.json
 https://amehuri.github.io/amehuri_tools/index.json
 https://An-Labo.github.io/An-Labo-NailTool/vpm.json
@@ -79,6 +78,7 @@ https://miner28.github.io/MinerPackages/index.json
 https://minminmean.github.io/minminmart/index.json
 https://miya-kan.github.io/vpm-repository/index.json
 https://mmmaellon.github.io/MMMaellonVCCListing/index.json
+https://naari3.github.io/mesh-dent/vpm.json
 https://neuru5278.github.io/main-vpm-repos/index.json
 https://nidonocu.github.io/virtual-gryphon-packages/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
@@ -132,6 +132,7 @@ https://tmyt.github.io/vpm/index.json
 https://toh-csecb.github.io/package-listing/index.json
 https://tp-jp.github.io/vpm-repos/index.json
 https://Tr1turbo.github.io/BlendShare/index.json
+https://tr1turbo.github.io/vpm-listing/index.json
 https://uslashdeleted.github.io/vcc-listing/index.json
 https://valenvrc.com/index.json
 https://vcc.pawlygon.net/index.json
@@ -142,6 +143,7 @@ https://vpm.azuretek.org/azuretek/vpm.json
 https://vpm.bluwizard.net/index.json
 https://vpm.chanfoo.net/vpm.json
 https://vpm.chocopoi.com/index.json
+https://vpm.coderco.su/index.json
 https://vpm.dreadscripts.com/listings/main.json
 https://vpm.gatosyocora.net/index.json
 https://vpm.gyoku.tech/vpm.json
@@ -187,6 +189,7 @@ https://wholesomevr.github.io/SPS-Configurator/index.json
 https://www.matthewherber.com/Happys-VRC-tools/index.json
 https://www.matthewherber.com/PhysboneConstraints/index.json
 https://www.negura-karasu.net/vpm/
+https://xNanochip.github.io/VPM-Package-Listing/index.json
 https://xtlcdn.github.io/vpm/index.json
 https://yueby.github.io/vpm-listing/index.json
 https://z3y.github.io/vpm-package-listing/index.json
