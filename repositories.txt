@@ -79,6 +79,7 @@ https://minminmean.github.io/minminmart/index.json
 https://miya-kan.github.io/vpm-repository/index.json
 https://mmmaellon.github.io/MMMaellonVCCListing/index.json
 https://naari3.github.io/mesh-dent/vpm.json
+https://natanetoon.com/index.json
 https://neuru5278.github.io/main-vpm-repos/index.json
 https://nidonocu.github.io/virtual-gryphon-packages/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
