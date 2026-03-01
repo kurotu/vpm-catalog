@@ -42,6 +42,9 @@ function download() {
   if [ -z "$ID" ]; then
     echo "ID not found in $URL"
     ID=$(urlToFileName <<< "$URL")
+  elif [[ "$ID" == *"/"* ]]; then
+    echo "ID contains path separators, sanitizing: $ID"
+    ID=$(urlToFileName <<< "$ID")
   fi
   echo "$CONTENT" > "$DIR/$ID.json"
 }
