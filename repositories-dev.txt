@@ -1,0 +1,5 @@
+# Subset of repositories for local development.
+# To use all repositories, run: VPM_REPOS_FILE=repositories.txt pnpm run setup
+https://kurotu.github.io/vpm-repos/vpm.json
+https://vpm.anatawa12.com/vpm.json
+https://vpm.nadena.dev/vpm.json

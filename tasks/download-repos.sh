@@ -49,6 +49,8 @@ function download() {
   echo "$CONTENT" > "$DIR/$ID.json"
 }
 
+REPOS_FILE=$(bash "$ROOT/tasks/resolve-repos-file.sh")
+
 mkdir -p "$DIR"
 while read -r URL; do
   if [ "${URL:0:1}" == "#" ]; then
@@ -56,4 +58,4 @@ while read -r URL; do
   fi
   echo "Downloading $URL"
   download "$URL"
-done < "$ROOT/repositories.txt"
+done < "$REPOS_FILE"

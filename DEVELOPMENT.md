@@ -14,29 +14,29 @@
 pnpm install
 ```
 
-### 2. Choose necessary VPM repositories.
-
-> [!TIP]
-> In the later step, setup scripts will download then extract a ton of packages from the repositories.
-> For quick development, you can choose necessary repositories by editing `repositories.txt`.
-
-### 3. Download VPM repositories.
+### 2. Download VPM repositories and packages.
 
 ```shell
-./tasks/download-repos.sh
+pnpm run setup
 ```
 
-Repository JSON files will be saved in `vpm/repos` directory.
+By default, only a small subset of repositories listed in `repositories-dev.txt` is downloaded for faster local development.
 
-### 4. Download VPM packages.
+To download all repositories (same as production), run:
 
 ```shell
-./tasks/download-packages.sh
+VPM_REPOS_FILE=repositories.txt pnpm run setup
 ```
 
-Package zip files will be saved in `vpm/zips` directory. And extracted files will be saved in `vpm/packages` directory.
+You can also point to any custom file:
 
-### 5. Run the development server.
+```shell
+VPM_REPOS_FILE=my-repos.txt pnpm run setup
+```
+
+Repository JSON files will be saved in `vpm/repos`, package zips in `vpm/zips`, and extracted packages in `vpm/packages`.
+
+### 3. Run the development server.
 
 ```shell
 pnpm run dev
