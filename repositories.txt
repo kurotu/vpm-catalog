@@ -78,6 +78,7 @@ https://miner28.github.io/MinerPackages/index.json
 https://minminmean.github.io/minminmart/index.json
 https://miya-kan.github.io/vpm-repository/index.json
 https://mmmaellon.github.io/MMMaellonVCCListing/index.json
+https://moruton1119.github.io/com.morulab.unity-tools/index.json
 https://naari3.github.io/mesh-dent/vpm.json
 https://natanetoon.com/index.json
 https://neuru5278.github.io/main-vpm-repos/index.json
@@ -98,6 +99,7 @@ https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
 https://raw.githubusercontent.com/Tsukina-7mochi/glitch-shader/main/vpm.json
 https://raw.githubusercontent.com/Tsukina-7mochi/qvpen-safe-delete/main/vpm.json
+https://rayleonard-collection-r3c.github.io/vpm-package-listing/index.json
 https://r-delta-c.github.io/vpm_repository/index.json
 https://reava.github.io/VPM-Listings/index.json
 https://redsim.github.io/vpmlisting/index.json
