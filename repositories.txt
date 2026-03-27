@@ -1,4 +1,6 @@
+https://Adjerry91.github.io/VRCFaceTracking-Templates/index.json
 https://aiczk.github.io/VPM/index.json
+https://amarinoa.github.io/AmariNoa-VPM-Listing/index.json
 https://amehuri.github.io/amehuri_tools/index.json
 https://An-Labo.github.io/An-Labo-NailTool/vpm.json
 https://AnosionV.github.io/vpm/index.json
@@ -70,6 +72,7 @@ https://lazyoptimiser.euan.net/index.json
 https://lereldarion.github.io/vpm-listing/index.json
 https://lilxyzw.github.io/vpm-repos/vpm.json
 https://LiveDimensions.github.io/VRRefAssist/index.json
+https://lyrastellate.github.io/vpm-repos/index.json
 https://magmamcnet.github.io/VPM/index.json
 https://mattshark89.github.io/OpenFlight-VRC/index.json
 https://mayoi3.github.io/mayoi-vpm-repo/index.json
@@ -122,6 +125,7 @@ https://scarlet-crystal.github.io/VCC-Package-Listing/index.json
 https://sh0ou.github.io/vpm-repos/vpm.json
 https://sigmal00.github.io/UzumoreShaderVPM/index.json
 https://sinkunvv.github.io/BlendMaestro/index.json
+https://sizimityper.github.io/vpm/index.json
 https://skeb-inc.github.io/skeb-art-panel/index.json
 https://SleetCat123.github.io/vpm-packages/index.json
 https://sophiebluevr.github.io/vpm/index.json
@@ -155,12 +159,14 @@ https://vpm.hoshinolabs.com/vpm.json
 https://vpm.iwa.si/vpm.json
 https://vpm.kaikoga.net/index.json
 https://vpm.kesera2.dev/index.json
+https://vpm.kiba.red/index.json
 https://vpm.kittyn.cat/index.json
 https://vpm.koyashiro.net/index.json
 https://vpm.kwxxw.net/index.json
 https://vpm.kyre.moe/vpm.json
 https://vpm.limitex.dev/index.json
 https://vpm.logilabo.dev/avatars.json
+https://vpm.m4rshal.com/vpm.json
 https://vpm.matcha-soft.com/repos.json
 https://vpm.mimylab.com/index.json
 https://vpm.nadena.dev/vpm.json
@@ -168,6 +174,7 @@ https://vpm.narazaka.net/index.json
 https://vpm.nekobako.net/index.json
 https://vpm.nekomimi.studio/index.json
 https://vpm.niri.la/vpm.json
+https://vpm.noctlab.com/vpm.json
 https://vpm.paltee.dev/index.json
 https://vpm.pimaker.at/index.json
 https://vpm.pukosrv.net/
