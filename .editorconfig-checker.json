@@ -1,0 +1,12 @@
+{
+  "Exclude": [
+    "dist",
+    "playwright-report",
+    "test-results",
+    "vpm",
+    "pnpm-lock.yaml",
+    "LICENSE",
+    ".devcontainer",
+    ".vscode"
+  ]
+}
