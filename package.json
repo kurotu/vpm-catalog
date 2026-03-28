@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "index": "pagefind --site dist --glob \"**/packages/*/**/*.{html}\"",
-    "setup": "bash tasks/download-repos.sh && bash tasks/download-packages.sh"
+    "setup": "bash tasks/download-repos.sh && bash tasks/download-packages.sh",
+    "e2e": "playwright test"
   },
   "dependencies": {
     "@astrojs/check": "^0.6.0",
@@ -25,8 +26,10 @@
   },
   "devDependencies": {
     "@pagefind/default-ui": "^1.1.0",
+    "@playwright/test": "^1.58.2",
     "@tailwindcss/typography": "^0.5.13",
     "@types/mdast": "^4.0.4",
+    "@types/node": "^25.5.0",
     "@types/semver": "^7.5.8",
     "any-json": "^3.1.0",
     "daisyui": "^4.11.1",

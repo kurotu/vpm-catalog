@@ -31,3 +31,10 @@ pnpm-debug.log*
 
 # pnpm store
 .pnpm-store/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
