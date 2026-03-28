@@ -18,11 +18,11 @@ const currentLocale = Astro.currentLocale as Language;
 const relativePath = getRelativePath(currentLocale, Astro.url.pathname);
 ---
 <html lang={Astro.currentLocale} prefix="og: https://ogp.me/ns#">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:title" content={htmlTitle} />
     <meta property="og:description" content="Place to browse community packages for VCC. Discover favorite packages to improve your creation." />
@@ -51,16 +51,16 @@ const relativePath = getRelativePath(currentLocale, Astro.url.pathname);
         </script>
       ) : null
     }
-	</head>
-	<body>
-		<div class="wrapper min-h-screen relative box-border">
-			<slot />
-			<div itemscope itemtype="https://schema.org/WebSite">
-				<link itemprop="url" href={Astro.site || Astro.url.origin} />
-				<meta itemprop="name" content={siteName} />
-			</div>
-		</div>
-	</body>
+  </head>
+  <body>
+    <div class="wrapper min-h-screen relative box-border">
+      <slot />
+      <div itemscope itemtype="https://schema.org/WebSite">
+        <link itemprop="url" href={Astro.site || Astro.url.origin} />
+        <meta itemprop="name" content={siteName} />
+      </div>
+    </div>
+  </body>
 </html>
 
 <style is:global>

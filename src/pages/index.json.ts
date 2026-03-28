@@ -13,7 +13,7 @@ export const GET: APIRoute = async ({request}) => {
     }
     if (!packages[pkg.name].versions[pkg.version]
       || JSON.stringify(packages[pkg.name].versions[pkg.version]).length < JSON.stringify(pkg).length
-     ) {
+    ) {
       packages[pkg.name].versions[pkg.version] = pkg;
     }
   }

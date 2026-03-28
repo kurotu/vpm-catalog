@@ -10,7 +10,8 @@
     "astro": "astro",
     "index": "pagefind --site dist --glob \"**/packages/*/**/*.{html}\"",
     "setup": "bash tasks/download-repos.sh && bash tasks/download-packages.sh",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "lint:editorconfig": "editorconfig-checker"
   },
   "dependencies": {
     "@astrojs/check": "^0.6.0",
@@ -33,6 +34,7 @@
     "@types/semver": "^7.5.8",
     "any-json": "^3.1.0",
     "daisyui": "^4.11.1",
+    "editorconfig-checker": "^6.1.1",
     "mdast": "^3.0.0",
     "pagefind": "^1.1.0",
     "remark-toc": "^9.0.0",
