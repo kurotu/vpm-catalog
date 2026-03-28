@@ -18,7 +18,7 @@ const packageURL = getRelativeLocaleUrl(currentLocale, `packages/${pkg.name}`);
   <div class="card-body flex-row">
     <div class="flex-grow flex-col">
       <div class="card-title flex flex-col items-start md:gap-1 gap-0">
-        <h2><a class="link link-primary link-hover" href={packageURL}>{pkg.displayName}</h2>
+        <h2><a class="link link-primary link-hover" href={packageURL}>{pkg.displayName}</a></h2>
         <p class="text-sm font-light text-base-content">{pkg.name}</p>
       </div>
       <p>{pkg.description}</p>

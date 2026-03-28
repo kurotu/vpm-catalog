@@ -32,8 +32,8 @@ export const GET: APIRoute = async ({request}) => {
   });
 };
 
-async function glob(): Promise<any[]> {
+async function glob(): Promise<VPMRepository[]> {
   const allImports = import.meta.glob("~/../vpm/repos/*.json", {eager: true});
   const results = (await Promise.all(Object.values(allImports)))
-  return results.map((mod: any) => mod.default);
+  return results.map((mod) => (mod as Record<string, VPMRepository>).default);
 }
