@@ -8,7 +8,7 @@ import customRemarkPlugin from './src/remark/customRemarkPlugin';
 import partytown from '@astrojs/partytown';
 import rehypeExternalLinks from 'rehype-external-links';
 
-export const site = process.env['VERCEL'] ? `https://${process.env['VERCEL_PROJECT_PRODUCTION_URL']}` : undefined;
+import { site } from './src/utils/site';
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,7 +30,7 @@ export default defineConfig({
     },
     routing: {
       fallbackType: 'rewrite',
-    }
+    },
   },
   integrations: [
     tailwind(),

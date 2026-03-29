@@ -15,7 +15,9 @@ const {pkg, license} = Astro.props;
 const currentLocale = Astro.currentLocale as Language;
 const t = useTranslations(currentLocale);
 
-const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
+const allRepos = Object.values(
+  import.meta.glob("~/../vpm/repos/*.json", { eager: true, import: 'default' })
+) as VPMRepository[];
 const pkgs = getAllPackages(allRepos);
 
 const authorLabel =  pkg.author ? pkg.author.name : t('component.package-side-pane.undefined');
