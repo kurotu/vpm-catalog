@@ -48,5 +48,8 @@
     "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "packageManager": "pnpm@10.32.1"
 }
