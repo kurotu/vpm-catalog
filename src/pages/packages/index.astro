@@ -13,7 +13,9 @@ const t = useTranslations(currentLocale);
 
 const homeURL = getRelativeLocaleUrl(currentLocale, "");
 
-const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
+const allRepos = Object.values(
+  import.meta.glob("~/../vpm/repos/*.json", { eager: true, import: 'default' })
+) as VPMRepository[];
 const allPackages = getAllPackages(allRepos);
 
 const allNames = Array.from(new Set(allPackages.map(pkg => pkg.name)));

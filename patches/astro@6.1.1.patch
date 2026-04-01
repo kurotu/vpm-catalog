@@ -1,0 +1,13 @@
+diff --git a/dist/core/render-context.js b/dist/core/render-context.js
+index 7d5a36e7b9220a56b747620bd03e2684bc4df8b0..38dc23ca3d25f9fba654c31ef4c25f9a9e0d4c1e 100644
+--- a/dist/core/render-context.js
++++ b/dist/core/render-context.js
+@@ -278,7 +278,7 @@ class RenderContext {
+           break;
+         }
+         case "fallback": {
+-          return new Response(null, { status: 500, headers: { [ROUTE_TYPE_HEADER]: "fallback" } });
++          return new Response(null, { status: 404, headers: { [ROUTE_TYPE_HEADER]: "fallback" } });
+         }
+       }
+       const responseCookies = getCookiesFromResponse(response2);

@@ -12,16 +12,14 @@ import { fetchLicenseData, findLicense } from "~/utils/license";
 import { findLatestReleasePackage, getAllPackages, type VPMPackage, type VPMRepository } from "~/utils/vpm";
 
 export const getStaticPaths = (async () => {
-  const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
+  const allRepos = Object.values(
+    import.meta.glob("~/../vpm/repos/*.json", { eager: true, import: 'default' })
+  ) as VPMRepository[];
   const allPackages = getAllPackages(allRepos);
   const names = Array.from(new Set(allPackages.map(pkg => pkg.name)));
-  let contents: MarkdownInstance<Record<string, any>>[];
-  try {
-    contents = await Astro.glob("~/../vpm/packages/*/README.md");
-  } catch (e) {
-    console.warn(e);
-    contents = [];
-  }
+  const contents = Object.values(
+    import.meta.glob("~/../vpm/packages/*/README.md", { eager: true })
+  ) as MarkdownInstance<Record<string, any>>[];
   const licenses = await fetchLicenseData();
 
   return names.map(name => {

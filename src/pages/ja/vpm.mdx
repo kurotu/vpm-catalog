@@ -2,7 +2,7 @@
 layout: ~/layouts/MarkdownLayout.astro
 title: VPM Catalog リポジトリ
 ---
-import { site } from '~/../astro.config.mjs';
+import { site } from '~/utils/site';
 import { vccAddRepoLink } from '~/utils/vpm';
 export const repoURL = `${new URL('/index.json', site || 'http://localhost:4321')}`
 export const addToVCCURL = vccAddRepoLink(repoURL);

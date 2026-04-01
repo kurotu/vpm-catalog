@@ -12,7 +12,9 @@ const currentLocale = Astro.currentLocale as Language;
 const t = useTranslations(currentLocale);
 const homeURL = getRelativeLocaleUrl(currentLocale, "");
 
-const allRepos: VPMRepository[] = await Astro.glob("~/../vpm/repos/*.json");
+const allRepos = Object.values(
+  import.meta.glob("~/../vpm/repos/*.json", { eager: true, import: 'default' })
+) as VPMRepository[];
 allRepos.sort((a, b) => a.name.localeCompare(b.name));
 
 const title = t('page.repositories.title');
