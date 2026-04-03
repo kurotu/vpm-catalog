@@ -48,6 +48,7 @@ https://guraril.github.io/vpm-repo/vpm.json
 https://Guribo.github.io/TLP/index.json
 https://hai-vr.github.io/alleyway-listing/index.json
 https://hai-vr.github.io/vpm-listing/index.json
+https://hellcat-m18.github.io/vpm-repos/index.json
 https://hfcRed.github.io/VPM-Listing/index.json
 https://hisacat.github.io/VCCListing/index.json
 https://hkrn.github.io/vpm.json
@@ -128,6 +129,7 @@ https://sinkunvv.github.io/BlendMaestro/index.json
 https://sizimityper.github.io/vpm/index.json
 https://skeb-inc.github.io/skeb-art-panel/index.json
 https://SleetCat123.github.io/vpm-packages/index.json
+https://snow1226.github.io/vpm-repos/index.json
 https://sophiebluevr.github.io/vpm/index.json
 https://spokeek.github.io/vpm-repository/index.json
 https://suzuryg.github.io/vpm-repos/vpm.json
