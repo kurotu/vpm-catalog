@@ -1,0 +1,29 @@
+name: Discover repos
+on:
+  workflow_dispatch:
+  # Run this workflow weekly on Friday at 5:30pm UTC
+  schedule:
+    - cron: '30 17 * * 5'
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  discover-repos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js environment
+        uses: actions/setup-node@v4
+
+      - name: Install Copilot CLI
+        run: npm install -g @github/copilot
+
+      - name: Run Copilot CLI
+        env:
+          COPILOT_GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: |
+          copilot -p "直近1か月の新規VPMレポジトリを調査し、報告対象のリポジトリごとにプルリクエストを作成してください。URLはrepositories.txtに辞書順で追記し、プルリクエスト本文にはリポジトリの代表的なパッケージに関する概要も記載してください。すでにリポジトリに対応するプルリクエストが作成されている場合は新しくプルリクエストを作成する必要はありません。" --allow-tool='shell(git:*)' --allow-tool=write --no-ask-user
