@@ -22,8 +22,11 @@ jobs:
       - name: Install Copilot CLI
         run: npm install -g @github/copilot
 
+      - name: Install playwright-cli
+        run: npm install -g @playwright/cli
+
       - name: Run Copilot CLI
         env:
-          COPILOT_GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
-          copilot -p "直近1か月の新規VPMレポジトリを調査し、報告対象のリポジトリごとにプルリクエストを作成してください。URLはrepositories.txtに辞書順で追記し、プルリクエスト本文にはリポジトリの代表的なパッケージに関する概要も記載してください。すでにリポジトリに対応するプルリクエストが作成されている場合は新しくプルリクエストを作成する必要はありません。" --allow-tool='shell(git:*)' --allow-tool=write --no-ask-user
+          copilot -p "$(cat .github/prompts/discover.md)" --allow-tool='shell(git:*)' --allow-tool='shell(gh:*)' --allow-tool='shell(playwright-cli:*)' --allow-tool=write --no-ask-user
