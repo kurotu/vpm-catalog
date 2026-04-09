@@ -2,8 +2,8 @@ name: Discover repos
 on:
   workflow_dispatch:
   # Run this workflow weekly on Friday at 5:30pm UTC
-  schedule:
-    - cron: '30 17 * * 5'
+  # schedule:
+  #   - cron: '30 17 * * 5'
 permissions:
   contents: read
   pull-requests: write
@@ -29,4 +29,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
-          copilot -p "$(cat .github/prompts/discover.md)" --allow-tool='shell(git:*)' --allow-tool='shell(gh:*)' --allow-tool='shell(playwright-cli:*)' --allow-tool=write --no-ask-user
+          copilot -p "$(cat .github/prompts/discover.md)" --allow-all --no-ask-user
