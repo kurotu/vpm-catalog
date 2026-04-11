@@ -3,6 +3,7 @@ https://aiczk.github.io/VPM/index.json
 https://amarinoa.github.io/AmariNoa-VPM-Listing/index.json
 https://amehuri.github.io/amehuri_tools/index.json
 https://An-Labo.github.io/An-Labo-NailTool/vpm.json
+https://Andrey04o.github.io/Chess04o-vpm/index.json
 https://AnosionV.github.io/vpm/index.json
 https://api.vrlabs.dev/listings/category/Components
 https://api.vrlabs.dev/listings/category/Dependencies
@@ -93,6 +94,7 @@ https://orels1.github.io/orels-Unity-Shaders/index.json
 https://o-tr.github.io/vpm/vpm.json
 https://page.853lab.com/vpm-repos/vpm.json
 https://pandrabox.github.io/vpm/index.json
+https://pesky12.github.io/PeskyBox/index.json
 https://poiyomi.github.io/vpm/index.json
 https://pokeyi.dev/vpm-packages/index.json
 https://prismic247.github.io/ScaledColliderSystem/index.json
