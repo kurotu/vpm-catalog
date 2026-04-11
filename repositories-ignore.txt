@@ -4,6 +4,7 @@ https://meronmks.github.io/vpm-repos/vpm.json
 https://page.853lab.com/vpm.json
 https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
 https://raw.githubusercontent.com/Cayahuanca/Unity/main/vpm-packages.json
+https://sizimityper.github.io/reflector-shader/index.json # covered by https://sizimityper.github.io/vpm/index.json
 https://vpm.dreadscripts.com/listings/main.json
 https://vpm.magmamc.dev/index.json
 https://vpm.nadena.dev/vpm-prerelease.json

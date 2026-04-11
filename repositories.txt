@@ -35,10 +35,12 @@ https://dolphiiiin.github.io/vpm-repos/index.json
 https://drblackrat.github.io/vpm-listing/index.json
 https://dubstepdragon.github.io/consent-cards/index.json
 https://eauploader.github.io/EAUploader-for-VRChat/registry.json
+https://emerytheec.github.io/vpm-listing/index.json
 https://enitimeago.github.io/vpm-repos/index.json
 https://esperecyan.github.io/VRMConverterForVRChat/registry.json
 https://ess-ka.github.io/EsskaPackageListing/index.json
 https://facs01-01.github.io/FACS-VPM-Listing/index.json
+https://fiakaiera.github.io/vpm-listing/index.json
 https://foxscore.dev/vpm/index.json
 https://furality.github.io/vcc-packages/index.json
 https://gabsith.github.io/GabSith-VCC-Listing/index.json
@@ -99,7 +101,9 @@ https://poiyomi.github.io/vpm/index.json
 https://pokeyi.dev/vpm-packages/index.json
 https://prismic247.github.io/ScaledColliderSystem/index.json
 https://projektcommunity.github.io/avatar-swag-vpm/index.json
+https://purpzie.com/vpm/index.json
 https://ramtype0.github.io/VpmRepository/index.json
+https://rassi0429.github.io/KokoaVPMRepository/index.json
 https://raw.githubusercontent.com/APOL-StarLight/VRC-Unity-Essentials/main/vcc.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
@@ -207,3 +211,4 @@ https://xNanochip.github.io/VPM-Package-Listing/index.json
 https://xtlcdn.github.io/vpm/index.json
 https://yueby.github.io/vpm-listing/index.json
 https://z3y.github.io/vpm-package-listing/index.json
+https://zwihanderai.github.io/vpm-repos/index.json
