@@ -2,8 +2,8 @@ https://Adjerry91.github.io/VRCFaceTracking-Templates/index.json
 https://aiczk.github.io/VPM/index.json
 https://amarinoa.github.io/AmariNoa-VPM-Listing/index.json
 https://amehuri.github.io/amehuri_tools/index.json
-https://An-Labo.github.io/An-Labo-NailTool/vpm.json
 https://Andrey04o.github.io/Chess04o-vpm/index.json
+https://An-Labo.github.io/An-Labo-NailTool/vpm.json
 https://AnosionV.github.io/vpm/index.json
 https://api.vrlabs.dev/listings/category/Components
 https://api.vrlabs.dev/listings/category/Dependencies
@@ -148,6 +148,7 @@ https://toh-csecb.github.io/package-listing/index.json
 https://tp-jp.github.io/vpm-repos/index.json
 https://Tr1turbo.github.io/BlendShare/index.json
 https://tr1turbo.github.io/vpm-listing/index.json
+https://tsukumodo.github.io/omamori/index.json
 https://uslashdeleted.github.io/vcc-listing/index.json
 https://valenvrc.com/index.json
 https://vcc.pawlygon.net/index.json
