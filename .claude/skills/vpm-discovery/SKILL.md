@@ -90,8 +90,15 @@ playwright-cli install-browser chromium
 4. `VCC 追加`
 5. `booth VCC 追加`
 6. `booth VRChat VPM`
+7. `VCC 入れる`
+8. `VCC booth`
+9. `ALCOM 追加`
+10. `ALCOM リポジトリ`
+11. `ALCOM booth`
 
 `VPM リポジトリ` は実際の告知ポストに当たりやすく、`VPMリポジトリ VRChat` や `index.json VRChat VPM` のように語を増やしすぎると「一致する情報は見つかりませんでした」になりやすい。
+また、VPMインストール方法の表現は「追加」だけでなく「**入れる**」「**入れられる**」も多用されるため、`VCC 入れる` と `VCC booth` で補完する。
+さらに、ALCOMはVCCの後継ツールとして普及が進んでいるため、VCCに言及しない告知ポストを捕捉するために `ALCOM` 系クエリも追加する。
 
 ```bash
 playwright-cli open "https://search.yahoo.co.jp/realtime/search?p=VPM%20%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA&ei=UTF-8"
@@ -126,7 +133,20 @@ BoothでVPM対応ツールを配布する作者の中には、VPMリポジトリ
 
 #### Boothページが見つかったときの精査手順
 
-Boothページ（`*.booth.pm/items/*`）のURLが検索結果に含まれていたら `web_fetch` で取得し、以下をチェックする。
+Boothページ（`*.booth.pm/items/*`）のURLが検索結果に含まれていたら、まず **BoothショップのサブドメインからGitHubユーザーを直接確認する**。これはBoothページを取得する前に行う。
+
+**0. BoothショップのサブドメインからGitHubリポジトリを直接確認（必須）**
+
+`xxx.booth.pm/items/*` の `xxx` 部分をGitHubユーザー名として、**必ず**次のAPIを確認する：
+
+```
+https://api.github.com/users/xxx/repos?type=public&per_page=30
+```
+
+`has_pages: true` かつ `fork: false` なリポジトリをVPM候補として Step 4 に送る。
+これはBoothページにVPM URLが記載されていない場合でも有効な経路であり、スキップしてはならない。
+
+その後、`web_fetch` でBoothページを取得し、以下を追加チェックする。
 
 **A. GitHub Pages URL（直接発見）**
 
@@ -153,10 +173,12 @@ Boothページに掲載されているXリンクをもとに、Yahoo Japanリア
 
 **D. GitHubリンクが見つからない場合のフォールバック**
 
-Booth ShopのサブドメインとGitHubユーザー名が近い命名になっているケースがある
+Booth ShopのサブドメインとGitHubユーザー名が完全一致しないケースがある
 （例: `tsukumodo-lab.booth.pm` → GitHub: `tsukumodo`）。
-`-lab` / `-dev` / `-studio` などのサフィックスを除いた名前で `api.github.com/users/<name>/repos` を試みる。
+サブドメインから `-lab` / `-dev` / `-studio` などのサフィックスを除いた名前でも `api.github.com/users/<name>/repos` を試みる。
 404なら無視してよい。
+
+> **注意**: サブドメインがそのままGitHubユーザー名と一致するケース（例: `yoridrill.booth.pm` → `yoridrill`）は上記の手順0で既にカバーされる。手順0でリポジトリが見つからなかった場合のみ、このフォールバックを試みること。
 
 ---
 
