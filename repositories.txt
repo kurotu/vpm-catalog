@@ -141,7 +141,6 @@ https://snow1226.github.io/vpm-repos/index.json
 https://sophiebluevr.github.io/vpm/index.json
 https://spokeek.github.io/vpm-repository/index.json
 https://suzuryg.github.io/vpm-repos/vpm.json
-https://t2penbix99wcoxkv3a4g.github.io/VPM.ModularAvatarExtensions/index.json
 https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://taremin.github.io/CopyComponentsByRegex/index.json
 https://timiz0r.github.io/EZUtils/index.json
