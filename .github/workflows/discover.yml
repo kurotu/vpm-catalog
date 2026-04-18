@@ -2,8 +2,8 @@ name: Discover repos
 on:
   workflow_dispatch:
   # Run this workflow weekly on Friday at 5:30pm UTC
-  # schedule:
-  #   - cron: '30 17 * * 5'
+  schedule:
+    - cron: '30 17 * * 5'
 
 jobs:
   discover-repos:
