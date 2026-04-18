@@ -3,6 +3,7 @@ https://aiczk.github.io/VPM/index.json
 https://amarinoa.github.io/AmariNoa-VPM-Listing/index.json
 https://amehuri.github.io/amehuri_tools/index.json
 https://Andrey04o.github.io/Chess04o-vpm/index.json
+https://Andrey04o.github.io/TETR04o-vpm/index.json
 https://An-Labo.github.io/An-Labo-NailTool/vpm.json
 https://AnosionV.github.io/vpm/index.json
 https://api.vrlabs.dev/listings/category/Components
@@ -53,6 +54,7 @@ https://hai-vr.github.io/alleyway-listing/index.json
 https://hai-vr.github.io/vpm-listing/index.json
 https://hellcat-m18.github.io/vpm-repos/index.json
 https://hfcRed.github.io/VPM-Listing/index.json
+https://Hhotatea.github.io/AvatarPoseLibrary/index.json
 https://hisacat.github.io/VCCListing/index.json
 https://hkrn.github.io/vpm.json
 https://hoke946.github.io/Trigger2to3_VPM/index.json
@@ -74,6 +76,7 @@ https://labthe3rd.github.io/PZCameraSystem/index.json
 https://LauraRozier.github.io/LauraVRCUtils/index.json
 https://lazyoptimiser.euan.net/index.json
 https://lereldarion.github.io/vpm-listing/index.json
+https://lighfu.github.io/vpm/index.json
 https://lilxyzw.github.io/vpm-repos/vpm.json
 https://LiveDimensions.github.io/VRRefAssist/index.json
 https://lyrastellate.github.io/vpm-repos/index.json
@@ -150,6 +153,7 @@ https://tr1turbo.github.io/vpm-listing/index.json
 https://tsukumodo.github.io/omamori/index.json
 https://uslashdeleted.github.io/vcc-listing/index.json
 https://valenvrc.com/index.json
+https://vavassor.github.io/OrchidSealVPM/index.json
 https://vcc.pawlygon.net/index.json
 https://vcc.vrcfury.com
 https://vpm.32ba.net/index.json
@@ -209,6 +213,8 @@ https://www.matthewherber.com/PhysboneConstraints/index.json
 https://www.negura-karasu.net/vpm/
 https://xNanochip.github.io/VPM-Package-Listing/index.json
 https://xtlcdn.github.io/vpm/index.json
+https://yoridrill.github.io/vpm-repos/vpm.json
 https://yueby.github.io/vpm-listing/index.json
+https://yukoike224.github.io/vpm-avatar-editor-tools/index.json
 https://z3y.github.io/vpm-package-listing/index.json
 https://zwihanderai.github.io/vpm-repos/index.json

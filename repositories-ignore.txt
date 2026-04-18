@@ -1,11 +1,13 @@
 https://gomorroth.github.io/vpm-repos/index.json
+https://kurone-kito.github.io/launchpad-icons/index.json # covered by https://kurone-kito.github.io/vpm/index.json
 https://kurone-kito.github.io/vrc-ui/index.json
 https://meronmks.github.io/vpm-repos/vpm.json
 https://page.853lab.com/vpm.json
+https://poiyomi.github.io/vpm/index.json
 https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
 https://raw.githubusercontent.com/Cayahuanca/Unity/main/vpm-packages.json
 https://sizimityper.github.io/reflector-shader/index.json # covered by https://sizimityper.github.io/vpm/index.json
-https://poiyomi.github.io/vpm/index.json
+https://t2penbix99wcoxkv3a4g.github.io/VPM.ModularAvatarExtensions/index.json # covered by https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://vpm.dreadscripts.com/listings/main.json
 https://vpm.magmamc.dev/index.json
 https://vpm.nadena.dev/vpm-prerelease.json
