@@ -11,6 +11,8 @@ https://api.vrlabs.dev/listings/category/Dependencies
 https://api.vrlabs.dev/listings/category/Essentials
 https://api.vrlabs.dev/listings/category/Rehosted
 https://api.vrlabs.dev/listings/category/Systems
+https://aramaa-vr.github.io/vpm-repos/vpm.json
+https://aurorakai.github.io/vpm/index.json
 https://autch.github.io/VRC_PopulateScaleAdjusters/index.json
 https://awa-vr.github.io/vrc-tools-vpm/index.json
 https://azukimochi.github.io/vpm-repos/index.json
@@ -111,6 +113,7 @@ https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
 https://raw.githubusercontent.com/Tsukina-7mochi/glitch-shader/main/vpm.json
 https://raw.githubusercontent.com/Tsukina-7mochi/qvpen-safe-delete/main/vpm.json
+https://raw.githubusercontent.com/Yunhyuk-Jeong/iyan-vpm/main/vpm.json
 https://rayleonard-collection-r3c.github.io/vpm-package-listing/index.json
 https://r-delta-c.github.io/vpm_repository/index.json
 https://reava.github.io/VPM-Listings/index.json
