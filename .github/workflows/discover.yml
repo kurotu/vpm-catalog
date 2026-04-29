@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: '30 17 * * 5'
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   discover-repos:
     runs-on: ubuntu-latest
@@ -25,6 +29,7 @@ jobs:
 
       - name: Run Copilot CLI
         env:
+          GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           COPILOT_GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           copilot -p "$(cat .github/prompts/discover.md)" --allow-all --no-ask-user
