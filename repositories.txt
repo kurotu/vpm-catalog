@@ -107,6 +107,7 @@ https://pokeyi.dev/vpm-packages/index.json
 https://prismic247.github.io/ScaledColliderSystem/index.json
 https://projektcommunity.github.io/avatar-swag-vpm/index.json
 https://purpzie.com/vpm/index.json
+https://raii-x.github.io/vpm-listing/index.json
 https://ramtype0.github.io/VpmRepository/index.json
 https://rassi0429.github.io/KokoaVPMRepository/index.json
 https://raw.githubusercontent.com/APOL-StarLight/VRC-Unity-Essentials/main/vcc.json
