@@ -205,6 +205,7 @@ https://vpm.thry.dev/index.json
 https://vpm.udon.zip/index.json
 https://vpm.ureishi.net/repos.json
 https://vpm.vrsl.dev/index.json
+https://vpm.whyknot.dev/index.json
 https://vpm.yukineko.dev/index.json
 https://vrceve.github.io/vrceve-asset/index.json
 https://vrchat.github.io/packages/index.json
