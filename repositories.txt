@@ -103,6 +103,7 @@ https://o-tr.github.io/vpm/vpm.json
 https://page.853lab.com/vpm-repos/vpm.json
 https://pandrabox.github.io/vpm/index.json
 https://pesky12.github.io/PeskyBox/index.json
+https://phi16.github.io/VRC_Packages/index.json
 https://pokeyi.dev/vpm-packages/index.json
 https://prismic247.github.io/ScaledColliderSystem/index.json
 https://projektcommunity.github.io/avatar-swag-vpm/index.json
@@ -161,6 +162,7 @@ https://valenvrc.com/index.json
 https://vavassor.github.io/OrchidSealVPM/index.json
 https://vcc.pawlygon.net/index.json
 https://vcc.vrcfury.com
+https://VixenCreations.github.io/VixenToolBox/index.json
 https://vpm.32ba.net/index.json
 https://vpm.anatawa12.com/vpm.json
 https://vpm.azuretek.org/azuretek/vpm.json
