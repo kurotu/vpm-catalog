@@ -34,6 +34,7 @@ https://cyanlaser.github.io/CyanPlayerObjectPool/index.json
 https://cyanlaser.github.io/CyanTrigger/index.json
 https://d4rkc0d3r.github.io/vpm-repos/main.json
 https://deltaneverused.github.io/VRChatPackages/index.json
+https://dine-png.github.io/Di_Ne_Tool/index.json
 https://dolphiiiin.github.io/vpm-repos/index.json
 https://drblackrat.github.io/vpm-listing/index.json
 https://dubstepdragon.github.io/consent-cards/index.json
@@ -83,6 +84,7 @@ https://lilxyzw.github.io/vpm-repos/vpm.json
 https://LiveDimensions.github.io/VRRefAssist/index.json
 https://lyrastellate.github.io/vpm-repos/index.json
 https://magmamcnet.github.io/VPM/index.json
+https://mametsubu8.github.io/vpm-listing/vpm.json
 https://marble810.github.io/vpmlist/index.json
 https://mattshark89.github.io/OpenFlight-VRC/index.json
 https://mayoi3.github.io/mayoi-vpm-repo/index.json
@@ -210,6 +212,7 @@ https://vpm.vrsl.dev/index.json
 https://vpm.whyknot.dev/index.json
 https://vpm.yukineko.dev/index.json
 https://vrceve.github.io/vrceve-asset/index.json
+https://vrc-staples.github.io/VRCUnityDevTools/index.json
 https://vrchat.github.io/packages/index.json
 https://vrchat-community.github.io/vpm-listing-curated/index.json
 https://vrctxl.github.io/VPM/index.json
