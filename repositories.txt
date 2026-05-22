@@ -24,6 +24,7 @@ https://BlueAmulet.github.io/UdonSharpOptimizer/index.json
 https://CascadianVR.github.io/UnityShapekeySearch/index.json
 https://c-colloid.github.io/PBReplacer-VPM/index.json
 https://ccvrc.github.io/vpm/index.json
+https://chillmix-crypto.github.io/avatarscope-vpm/index.json
 https://Centauri2442.github.io/VRCMasterFailureCheck/index.json
 https://Centauri2442.github.io/VRCNetworkDebugger/index.json
 https://chigirits.github.io/vpm-listing/index.json
@@ -163,6 +164,7 @@ https://uslashdeleted.github.io/vcc-listing/index.json
 https://valenvrc.com/index.json
 https://vavassor.github.io/OrchidSealVPM/index.json
 https://vcc.pawlygon.net/index.json
+https://vcc.raphii.co/index.json
 https://vcc.vrcfury.com
 https://VixenCreations.github.io/VixenToolBox/index.json
 https://vpm.32ba.net/index.json
