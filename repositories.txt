@@ -21,13 +21,13 @@ https://befuddledlabs.github.io/LinuxVRChatSDKPatch/index.json
 https://BefuddledLabs.github.io/OpenSyncDance/index.json
 https://blancrenard.github.io/vpm-NolaTools/index.json
 https://BlueAmulet.github.io/UdonSharpOptimizer/index.json
-https://CascadianVR.github.io/UnityShapekeySearch/index.json
 https://c-colloid.github.io/PBReplacer-VPM/index.json
+https://CascadianVR.github.io/UnityShapekeySearch/index.json
 https://ccvrc.github.io/vpm/index.json
-https://chillmix-crypto.github.io/avatarscope-vpm/index.json
 https://Centauri2442.github.io/VRCMasterFailureCheck/index.json
 https://Centauri2442.github.io/VRCNetworkDebugger/index.json
 https://chigirits.github.io/vpm-listing/index.json
+https://chillmix-crypto.github.io/avatarscope-vpm/index.json
 https://codec-xyz.github.io/photo_frame_manager/index.json
 https://cstria0106.github.io/vpm-repos/index.json
 https://cuebitt.github.io/vpm/index.json
