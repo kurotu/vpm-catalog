@@ -1,5 +1,6 @@
 https://gomorroth.github.io/vpm-repos/index.json
 https://kurone-kito.github.io/launchpad-icons/index.json # covered by https://kurone-kito.github.io/vpm/index.json
+https://kurone-kito.github.io/udonsharp-toybox/index.json # covered by https://kurone-kito.github.io/vpm/index.json
 https://kurone-kito.github.io/vrc-ui/index.json
 https://meronmks.github.io/vpm-repos/vpm.json
 https://natane010.github.io/natane_toon_shader/index.json # canonical URL is https://natanetoon.com/index.json
@@ -12,6 +13,7 @@ https://t2penbix99wcoxkv3a4g.github.io/VPM.FaceEmoMMDAutoDisabler/index.json # c
 https://t2penbix99wcoxkv3a4g.github.io/VPM.ModularAvatarExtensions/index.json # covered by https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://t2penbix99wcoxkv3a4g.github.io/VPM.SimpleNightVision/index.json # covered by https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://t2penbix99wcoxkv3a4g.github.io/VPM.WorldFluid/index.json # covered by https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
+https://u-kotovsky.github.io/vpm-listing/index.json # only contains VRChat SDK packages (UdonSharp, ClientSim)
 https://vpm.dreadscripts.com/listings/main.json
 https://vpm.magmamc.dev/index.json
 https://vpm.nadena.dev/vpm-prerelease.json
