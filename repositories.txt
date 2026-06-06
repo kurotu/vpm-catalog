@@ -1,3 +1,4 @@
+https://aariyjp.github.io/vpm-repos/index.json
 https://Adjerry91.github.io/VRCFaceTracking-Templates/index.json
 https://aiczk.github.io/VPM/index.json
 https://amarinoa.github.io/AmariNoa-VPM-Listing/index.json
