@@ -18,14 +18,14 @@ vpm-discoveryスキルを使用してリポジトリを探索します。
 
 作業はmasterとは別ブランチで実施してください。
 リポジトリURLはrepositories.txtに辞書順で追記します。
-- 既存のテキストフォーマットを維持してください。
-- 辞書順であることの確認は `sort` コマンドを使用してください。
 
 repositories.txtに未記載ではあるが無視すべきリポジトリを発見した場合はrepositories-ignore.txtへコメントと共に追記します。
 
 ```
 {URL} # {REASON}
 ```
+
+最後に `tasks/sort-repos.sh` を実行してrepositories.txt等を辞書順にソートしてください。
 
 ### 本文
 
