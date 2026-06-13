@@ -1,6 +1,7 @@
 https://aariyjp.github.io/vpm-repos/index.json
 https://Adjerry91.github.io/VRCFaceTracking-Templates/index.json
 https://aiczk.github.io/VPM/index.json
+https://akiiray.github.io/vpm-repository/index.json
 https://amarinoa.github.io/AmariNoa-VPM-Listing/index.json
 https://amehuri.github.io/amehuri_tools/index.json
 https://An-Labo.github.io/An-Labo-NailTool/vpm.json
@@ -70,11 +71,13 @@ https://HugPhiluu.github.io/PhilSort/index.json
 https://illusive-isc.github.io/vpm-repos/index.json
 https://jazjasmine.github.io/VCC/index.json
 https://JeTeeS.github.io/TES-VPM-Package-Listing/index.json
+https://k3sra.github.io/vrsive-avatar-exporter/index.json
 https://k4584587.github.io/Modular-Auto-Toggle/index.json
 https://kakunpc.github.io/kakunpc_vpm/index.json
 https://kb10uy.github.io/vrc-repository/index.json
 https://kemocade.github.io/Kemocade.Vrc.Data.Extensions/index.json
 https://KitKat4191.github.io/JetSim-VCC-Listing/index.json
+https://kohchaaa.github.io/vpm-repos/vpm.json
 https://kurone-kito.github.io/vpm/index.json
 https://kurotu.github.io/vpm-repos/vpm.json
 https://kxn4t.github.io/vpm-repos/index.json
@@ -102,6 +105,7 @@ https://moruton1119.github.io/com.morulab.unity-tools/index.json
 https://naari3.github.io/mesh-dent/vpm.json
 https://natanetoon.com/index.json
 https://neuru5278.github.io/main-vpm-repos/index.json
+https://nickel-jp.github.io/avatar-recovery-unity/index.json
 https://nidonocu.github.io/virtual-gryphon-packages/index.json
 https://null-k.github.io/vpm-listing/index.json
 https://nullclone.github.io/vpm-listing/index.json
