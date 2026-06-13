@@ -21,7 +21,7 @@ https://t2penbix99wcoxkv3a4g.github.io/VPM.WorldFluid/index.json # covered by ht
 https://u-kotovsky.github.io/vpm-listing/index.json # only contains VRChat SDK packages (UdonSharp, ClientSim)
 https://uslashdeleted.github.io/vcc-listing/index.json # github user not found
 https://vpm.dreadscripts.com/listings/main.json
-https://vpm.kyre.moe/vpm.json # possibly covered by https://kyure-a.github.io/vpm-repos/vpm.json
+https://vpm.kyre.moe/vpm.json # alias (CNAME) of https://kyure-a.github.io/vpm-repos/vpm.json
 https://vpm.magmamc.dev/index.json
 https://vpm.nadena.dev/vpm-prerelease.json
 https://yukoike224.github.io/vpm-avatar-editor-tools/index.json # github repository not found
