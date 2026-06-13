@@ -8,11 +8,13 @@ VPM_REPOS_IGNORE_FILE="$ROOT/repositories-ignore.txt"
 VPM_REPOS_DEV_FILE="$ROOT/repositories-dev.txt"
 
 function sort_repos() {
-    local file="$1"
-    if [ -f "$file" ]; then
-        cat "$file" | LC_ALL=C sort --ignore-case | uniq > "$file.tmp"
-        mv "$file.tmp" "$file"
-    fi
+  local file="$1"
+  if [ -f "$file" ]; then
+    local tmp
+    tmp="$(mktemp "${file}.tmp.XXXXXX")"
+    LC_ALL=C sort --ignore-case "$file" | uniq > "$tmp"
+    mv "$tmp" "$file"
+  fi
 }
 
 sort_repos "$VPM_REPOS_FILE"
