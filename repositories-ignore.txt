@@ -1,8 +1,13 @@
+https://chigirits.github.io/vpm-listing/index.json # moved to https://pasocommate.chigiri.tokyo/index.json
+https://ess-ka.github.io/EsskaPackageListing/index.json # archived repository
 https://gomorroth.github.io/vpm-repos/index.json
+https://guraril.github.io/vpm-repo/vpm.json # github user not found
 https://kurone-kito.github.io/launchpad-icons/index.json # covered by https://kurone-kito.github.io/vpm/index.json
 https://kurone-kito.github.io/udonsharp-toybox/index.json # covered by https://kurone-kito.github.io/vpm/index.json
 https://kurone-kito.github.io/vrc-ui/index.json
+https://magmamcnet.github.io/VPM/index.json # github user not found
 https://meronmks.github.io/vpm-repos/vpm.json
+https://miya-kan.github.io/vpm-repository/index.json # github repository not found
 https://natane010.github.io/natane_toon_shader/index.json # canonical URL is https://natanetoon.com/index.json
 https://page.853lab.com/vpm.json
 https://poiyomi.github.io/vpm/index.json
@@ -14,6 +19,9 @@ https://t2penbix99wcoxkv3a4g.github.io/VPM.ModularAvatarExtensions/index.json # 
 https://t2penbix99wcoxkv3a4g.github.io/VPM.SimpleNightVision/index.json # covered by https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://t2penbix99wcoxkv3a4g.github.io/VPM.WorldFluid/index.json # covered by https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://u-kotovsky.github.io/vpm-listing/index.json # only contains VRChat SDK packages (UdonSharp, ClientSim)
+https://uslashdeleted.github.io/vcc-listing/index.json # github user not found
 https://vpm.dreadscripts.com/listings/main.json
+https://vpm.kyre.moe/vpm.json # alias (CNAME) of https://kyure-a.github.io/vpm-repos/vpm.json
 https://vpm.magmamc.dev/index.json
 https://vpm.nadena.dev/vpm-prerelease.json
+https://yukoike224.github.io/vpm-avatar-editor-tools/index.json # github repository not found
