@@ -30,6 +30,7 @@ https://Centauri2442.github.io/VRCMasterFailureCheck/index.json
 https://Centauri2442.github.io/VRCNetworkDebugger/index.json
 https://ch4rindo.github.io/vpm/index.json
 https://chillmix-crypto.github.io/avatarscope-vpm/index.json
+https://club-maul.github.io/vpm-listing/index.json
 https://codec-xyz.github.io/photo_frame_manager/index.json
 https://cstria0106.github.io/vpm-repos/index.json
 https://cuebitt.github.io/vpm/index.json
