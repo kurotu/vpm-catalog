@@ -108,6 +108,7 @@ https://nullclone.github.io/vpm-listing/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
 https://nyakomechan.github.io/vpm-repository/index.json
 https://o-tr.github.io/vpm/vpm.json
+https://omeletteak.github.io/vpm-listing/index.json
 https://orels1.github.io/orels-Unity-Shaders/index.json
 https://page.853lab.com/vpm-repos/vpm.json
 https://pandrabox.github.io/vpm/index.json
@@ -123,6 +124,7 @@ https://qsyi.github.io/vpm-repos/index.json
 https://r-delta-c.github.io/vpm_repository/index.json
 https://raii-x.github.io/vpm-listing/index.json
 https://ramtype0.github.io/VpmRepository/index.json
+https://raphiiko.github.io/VRTI-Avatar-Menu/index.json
 https://rassi0429.github.io/KokoaVPMRepository/index.json
 https://raw.githubusercontent.com/APOL-StarLight/VRC-Unity-Essentials/main/vcc.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
@@ -140,6 +142,7 @@ https://rerigferl.github.io/vpm/vpm.json
 https://ribeKim.github.io/vpm/index.json
 https://rlist.arch-linux.pro/index.json
 https://rollphes.github.io/vpm-repos/vpm.json
+https://rroki-0u0.github.io/vpm-repos/index.json
 https://rurre.github.io/vpm/index.json
 https://sack-kazu.github.io/vpm-repository/index.json
 https://sanaehururu1200.github.io/ma-suimin_system/index.json
