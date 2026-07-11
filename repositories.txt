@@ -124,7 +124,6 @@ https://qsyi.github.io/vpm-repos/index.json
 https://r-delta-c.github.io/vpm_repository/index.json
 https://raii-x.github.io/vpm-listing/index.json
 https://ramtype0.github.io/VpmRepository/index.json
-https://raphiiko.github.io/VRTI-Avatar-Menu/index.json
 https://rassi0429.github.io/KokoaVPMRepository/index.json
 https://raw.githubusercontent.com/APOL-StarLight/VRC-Unity-Essentials/main/vcc.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/master/index.json
