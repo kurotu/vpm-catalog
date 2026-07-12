@@ -108,6 +108,7 @@ https://nullclone.github.io/vpm-listing/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
 https://nyakomechan.github.io/vpm-repository/index.json
 https://o-tr.github.io/vpm/vpm.json
+https://omeletteak.github.io/vpm-listing/index.json
 https://orels1.github.io/orels-Unity-Shaders/index.json
 https://page.853lab.com/vpm-repos/vpm.json
 https://pandrabox.github.io/vpm/index.json
@@ -140,6 +141,7 @@ https://rerigferl.github.io/vpm/vpm.json
 https://ribeKim.github.io/vpm/index.json
 https://rlist.arch-linux.pro/index.json
 https://rollphes.github.io/vpm-repos/vpm.json
+https://rroki-0u0.github.io/vpm-repos/index.json
 https://rurre.github.io/vpm/index.json
 https://sack-kazu.github.io/vpm-repository/index.json
 https://sanaehururu1200.github.io/ma-suimin_system/index.json
