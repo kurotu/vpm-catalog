@@ -50,6 +50,7 @@ https://esperecyan.github.io/VRMConverterForVRChat/registry.json
 https://facs01-01.github.io/FACS-VPM-Listing/index.json
 https://fiakaiera.github.io/vpm-listing/index.json
 https://foxscore.dev/vpm/index.json
+https://fuka-vr.github.io/vpm-repos/index.json
 https://furality.github.io/vcc-packages/index.json
 https://gabsith.github.io/GabSith-VCC-Listing/index.json
 https://gfool6.github.io/vpm-repos/vpm-list.json
@@ -86,6 +87,7 @@ https://LauraRozier.github.io/LauraVRCUtils/index.json
 https://lazyoptimiser.euan.net/index.json
 https://lereldarion.github.io/vpm-listing/index.json
 https://lighfu.github.io/vpm/index.json
+https://lilxyzw.github.io/vpm-repos-shadercore-modules/vpm.json
 https://lilxyzw.github.io/vpm-repos/vpm.json
 https://LiveDimensions.github.io/VRRefAssist/index.json
 https://lyrastellate.github.io/vpm-repos/index.json
@@ -232,6 +234,7 @@ https://vrceve.github.io/vrceve-asset/index.json
 https://vrchat-community.github.io/vpm-listing-curated/index.json
 https://vrchat.github.io/packages/index.json
 https://vrctxl.github.io/VPM/index.json
+https://vrsuya.com/vpm/vpm.json
 https://wagunasu812.github.io/vpm-listing/index.json
 https://waya0125.com/vpm
 https://whiteflare.github.io/vpm-repos/vpm.json
