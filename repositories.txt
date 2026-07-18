@@ -36,6 +36,7 @@ https://cstria0106.github.io/vpm-repos/index.json
 https://cuebitt.github.io/vpm/index.json
 https://cyanlaser.github.io/CyanPlayerObjectPool/index.json
 https://cyanlaser.github.io/CyanTrigger/index.json
+https://cympfh.cc/vpm/index.json
 https://d4rkc0d3r.github.io/vpm-repos/main.json
 https://deltaneverused.github.io/VRChatPackages/index.json
 https://dine-png.github.io/Di_Ne_Tool/index.json
@@ -200,6 +201,7 @@ https://vpm.kwxxw.net/index.json
 https://vpm.limitex.dev/index.json
 https://vpm.logilabo.dev/avatars.json
 https://vpm.m4rshal.com/vpm.json
+https://vpm.maaaaa.net/index.json
 https://vpm.matcha-soft.com/repos.json
 https://vpm.micksam7.com/index.json
 https://vpm.mimylab.com/index.json
@@ -242,4 +244,5 @@ https://xtlcdn.github.io/vpm/index.json
 https://yoridrill.github.io/vpm-repos/vpm.json
 https://yueby.github.io/vpm-listing/index.json
 https://z3y.github.io/vpm-package-listing/index.json
+https://zenithval.github.io/vpm/index.json
 https://zwihanderai.github.io/vpm-repos/index.json
