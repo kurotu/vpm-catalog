@@ -194,6 +194,7 @@ https://vpm.hackebein.dev/index.json
 https://vpm.hinasense.jp/vpm.json
 https://vpm.hoshinolabs.com/vpm.json
 https://vpm.iwa.si/vpm.json
+https://vpm.k-neco.com/index.json
 https://vpm.kaikoga.net/index.json
 https://vpm.kesera2.dev/index.json
 https://vpm.kiba.red/index.json
@@ -229,6 +230,7 @@ https://vpm.vrsl.dev/index.json
 https://vpm.whyknot.dev/index.json
 https://vpm.yozolab.net/index.json
 https://vpm.yukineko.dev/index.json
+https://vpm.yuna0x0.com/index.json
 https://vrc-staples.github.io/VRCUnityDevTools/index.json
 https://vrceve.github.io/vrceve-asset/index.json
 https://vrchat-community.github.io/vpm-listing-curated/index.json
