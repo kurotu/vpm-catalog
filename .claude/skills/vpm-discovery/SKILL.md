@@ -227,9 +227,7 @@ playwright-cliでの検証より `web_fetch` の方が高速で安定してい�
 
 1. HTTPステータスが200（404などはそのURLを除外）
 2. JSONとして解析可能
-3. 以下のいずれかのフィールドを含む：
-   - `packages` オブジェクト（VPMリポジトリの必須フィールド）
-   - `name` + `id` + `url`
+3. `packages` オブジェクトを含み、かつ `packages` が空でない（キーが1件以上ある）
 
 追加ルール:
 
@@ -237,6 +235,8 @@ playwright-cliでの検証より `web_fetch` の方が高速で安定してい�
 - ルートURL自体が有効でも、レスポンスがHTMLなら報告対象にしない
 - `index.json` と `vpm.json` の両方が有効な場合は、JSONの `url` フィールドと一致する方を優先する
 - Yahoo経由で見つけたURLも、報告前に必ず `web_fetch` でJSONレスポンスを確認する
+- `name` + `id` + `url` だけを持つ単体パッケージJSONは、VPMリポジトリJSONではないため報告対象にしない
+- `packages: {}` のような空リポジトリは「中身なし」として除外する
 
 複数の候補URLは **並列で `web_fetch`** して効率よく確認する。
 
@@ -256,6 +256,10 @@ Step 1で収集した既知URLセットと照合し、**既に収録済みのURL
 ## Step 7: 代表パッケージの取得と集約度の評価
 
 未収録URLが確定したら、各リポジトリJSONから情報を取得し、**集約的かどうか**を判定する。
+
+### 中身のないリポジトリの除外（必須）
+
+`packages` が空、または実質的に有効なパッケージIDを1件も含まないURLは、報告しない。
 
 ### 集約的リポジトリ（優先報告）
 
@@ -283,7 +287,6 @@ Step 1で収集した既知URLセットと照合し、**既に収録済みのURL
 - `https://sizimityper.github.io/reflector-shader/index.json` の `com.sizimityper.reflector-shader`
 - `https://sizimityper.github.io/vpm/index.json` に同じ `com.sizimityper.reflector-shader` が含まれる
 - この場合は後者を優先し、前者は冗長として除外する
-- 除外を再判定しなくて済むよう、`repositories-ignore.txt` に `https://sizimityper.github.io/reflector-shader/index.json # covered by https://sizimityper.github.io/vpm/index.json` のように理由付きで記録してよい
 
 これは「有効なJSON URLかどうか」ではなく、**カタログとして追加価値があるか**で判断するためのルールである。
 
@@ -327,6 +330,7 @@ Step 1で収集した既知URLセットと照合し、**既に収録済みのURL
 
 - 必要なら説明文で「最近発見できたが repo 自体は以前から存在する」と補足してよい
 - ただし、**集約的リポジトリに収録済みの個別リポジトリは冗長なので報告しない**
+- **`packages` が空の中身なしリポジトリは報告しない**
 - 冗長・不要と判断したURLは `repositories-ignore.txt` に理由付きで記録してよい（形式は Step 1 参照）
 
 ---
