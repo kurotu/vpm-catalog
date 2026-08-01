@@ -230,6 +230,14 @@ playwright-cliでの検証より `web_fetch` の方が高速で安定してい�
 3. 以下のいずれかのフィールドを含む：
    - `packages` オブジェクト（VPMリポジトリの必須フィールド）
    - `name` + `id` + `url`
+4. **JSON内の `url` フィールドと、実際にフェッチしたURLを比較する**（比較時の正規化はスキーム・ホストの大文字小文字と末尾スラッシュに限定し、パスは変更しない）
+   - VPMリポジトリのJSONは自分自身の正規URLを `url` フィールドに自己申告していることが多い。これがフェッチ元URLと食い違う場合、フェッチ元は**別ドメインへのミラー/エイリアス**（GitHub Pagesのデフォルトドメインとカスタムドメインの両方が生きているケースなど）である可能性が高い
+   - `.url` が既知URLセット（Step 1）に既に含まれていれば、フェッチ元URLは同一リポジトリの重複として除外する
+   - `.url` が既知セットに含まれていなければ、`.url` 自体にも `web_fetch` してみる。200でJSONが返り `id` が一致すれば、そちらを正規URLとして報告する（見つけた側のURLではなく）
+   - `.url` へのアクセスが失敗する（404・タイムアウト等）、または200でも `id` が一致しない（テンプレート流用などで `url` フィールドが書き換えられていない）場合は、そちらの `.url` は信用せず、実際に機能しているフェッチ元URLをそのまま報告する
+   - `url` フィールド自体が存在しない場合はこのチェックをスキップする（食い違いとして扱わない）
+
+例: `https://cympfh.github.io/vpm/index.json` を発見したが、中身の `url` フィールドは `https://cympfh.cc/vpm/index.json` だった。`cympfh.cc/vpm/index.json` は既に収録済みだったため、このgithub.io URLは同一リポジトリのミラーと判断し報告しなかった。同様のパターンはカスタムドメインを持つ作者（`vpm.<domain>` 系、独自ドメイン系）で頻発する。
 
 追加ルール:
 
@@ -250,6 +258,7 @@ Step 1で収集した既知URLセットと照合し、**既に収録済みのURL
 - 拾ったHTML URLは、JSON URLに正規化してから既知URLセットと比較すること
 - `repositories-ignore.txt` に含まれるURLも除外すること（形式は Step 1 参照）
 - さらに、**別の集約的リポジトリで実質的にカバー済みの個別リポジトリは冗長候補として除外する**こと
+- **URL文字列が既知セットと一致しなくても、Step 5-4 の `.url` チェックで既知の収録済みリポジトリと同一だと判明した場合は同一リポジトリのミラーとして除外する**こと。既知リポジトリの `id` を事前に網羅的に収集する必要はなく、候補の `.url` を辿った先が既知URLと一致するかどうかで判定すればよい
 
 ---
 
@@ -283,9 +292,26 @@ Step 1で収集した既知URLセットと照合し、**既に収録済みのURL
 - `https://sizimityper.github.io/reflector-shader/index.json` の `com.sizimityper.reflector-shader`
 - `https://sizimityper.github.io/vpm/index.json` に同じ `com.sizimityper.reflector-shader` が含まれる
 - この場合は後者を優先し、前者は冗長として除外する
-- 除外を再判定しなくて済むよう、`repositories-ignore.txt` に `https://sizimityper.github.io/reflector-shader/index.json # covered by https://sizimityper.github.io/vpm/index.json` のように理由付きで記録してよい
+- 除外を再判定しなくて済むよう、`https://sizimityper.github.io/reflector-shader/index.json # covered by https://sizimityper.github.io/vpm/index.json` のように理由付きで報告に記録してよい（スキル実行中に `repositories-ignore.txt` は更新しない）
 
 これは「有効なJSON URLかどうか」ではなく、**カタログとして追加価値があるか**で判断するためのルールである。
+
+### 同一作者の既存収録リポジトリとの重複確認
+
+候補リポジトリのGitHubオーナーが、`repositories.txt` に**別のリポジトリ名で**既に収録されている場合（例: `club-maul.github.io/vpm-listing` は収録済みだが、新たに見つけた `Club-Maul.github.io/staff-scanner-v2` は未収録）、その既存リポジトリのJSONを取得し、候補の `packages` とパッケージIDが重複していないか確認する。
+
+- パッケージIDが完全一致し、かつ既存リポジトリ側のバージョン数が同等以上なら、候補は「既存リポジトリでカバー済み」と判断して報告しない
+- これは同じ作者が単発ツール用に個別リポジトリを切っただけで、既にメインのまとめリポジトリに同じパッケージを追加済み、というケースで起きやすい
+- `<候補URL> # covered by <既存URL>` の形式で理由付きの除外情報を報告に記録してよい（スキル実行中に `repositories-ignore.txt` は更新しない。Step 8参照）
+
+### テンプレート・開発専用ダミーの除外
+
+JSONが正常に取得でき、`packages` も存在するのに**実際にはVRChat制作に使えない**リポジトリがある。これらはVPMクライアントには読み込めても、カタログの利用者にとって価値がないため報告しない。
+
+- **VRChat公式サンプルテンプレートの未改変フォーク**: `vrchat-community/template-package` や `vrchat-community/template-package-listing` を単にフォーク・公開しただけで中身を差し替えていないもの。`id` が `com.vrchat.demo-template.listing` / `com.vrchat.example-listing` である、または `displayName` が "VRChat Example Package" 、`description` が "Simple Package for testing Automation" など、テンプレート特有の文言であれば該当する
+- **開発者専用・テスト用ダミー**: リポジトリ名や `name` フィールドに "DEVELOPER ONLY" 等が明記されている、またはパッケージIDが `*upm-test-*` のようなテストフィクスチャで占められている場合、一般ユーザー向けの配布物ではないため除外する
+
+判断に迷う場合は、代表パッケージの `description` / `displayName` / `author` を確認し、実際にVRChatアバター/ワールド制作に使える内容かどうかを基準にする。
 
 ### 代表パッケージの選択（単一の場合も含む）
 
@@ -327,7 +353,7 @@ Step 1で収集した既知URLセットと照合し、**既に収録済みのURL
 
 - 必要なら説明文で「最近発見できたが repo 自体は以前から存在する」と補足してよい
 - ただし、**集約的リポジトリに収録済みの個別リポジトリは冗長なので報告しない**
-- 冗長・不要と判断したURLは `repositories-ignore.txt` に理由付きで記録してよい（形式は Step 1 参照）
+- 冗長・不要と判断したURLは `repositories-ignore.txt` 用に理由付きで報告してよい（形式は Step 1 参照。実ファイルの更新は行わない）
 
 ---
 
@@ -340,3 +366,4 @@ Step 1で収集した既知URLセットと照合し、**既に収録済みのURL
 - GoogleやYahooでBot検出（CAPTCHA等）が発生した場合はスキップして他の検索手段を使う
 - 同じドメインの別パス（例: `vpm.example.com/a.json` と `vpm.example.com/b.json`）は別リポジトリとして扱う
 - vrc-get（`vrc-get/vrc-get`）などVPMクライアントツール自体はリポジトリではないので除外する
+- GitHub Pagesのデフォルトドメイン（`<user>.github.io/...`）とカスタムドメインの両方が生きている作者は多い。**JSON内の `id` と `url` フィールドはリポジトリの同一性判定・優先URL判定の一番強い根拠**になるので、URL文字列の見た目が違っても必ず確認する（Step 5-4, Step 6参照）
