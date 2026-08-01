@@ -230,7 +230,7 @@ playwright-cliでの検証より `web_fetch` の方が高速で安定してい�
 3. 以下のいずれかのフィールドを含む：
    - `packages` オブジェクト（VPMリポジトリの必須フィールド）
    - `name` + `id` + `url`
-4. **JSON内の `url` フィールドと、実際にフェッチしたURLを比較する**（大文字小文字・末尾スラッシュを正規化した上で比較）
+4. **JSON内の `url` フィールドと、実際にフェッチしたURLを比較する**（比較時の正規化はスキーム・ホストの大文字小文字と末尾スラッシュに限定し、パスは変更しない）
    - VPMリポジトリのJSONは自分自身の正規URLを `url` フィールドに自己申告していることが多い。これがフェッチ元URLと食い違う場合、フェッチ元は**別ドメインへのミラー/エイリアス**（GitHub Pagesのデフォルトドメインとカスタムドメインの両方が生きているケースなど）である可能性が高い
    - `.url` が既知URLセット（Step 1）に既に含まれていれば、フェッチ元URLは同一リポジトリの重複として除外する
    - `.url` が既知セットに含まれていなければ、`.url` 自体にも `web_fetch` してみる。200でJSONが返り `id` が一致すれば、そちらを正規URLとして報告する（見つけた側のURLではなく）
@@ -292,7 +292,7 @@ Step 1で収集した既知URLセットと照合し、**既に収録済みのURL
 - `https://sizimityper.github.io/reflector-shader/index.json` の `com.sizimityper.reflector-shader`
 - `https://sizimityper.github.io/vpm/index.json` に同じ `com.sizimityper.reflector-shader` が含まれる
 - この場合は後者を優先し、前者は冗長として除外する
-- 除外を再判定しなくて済むよう、`repositories-ignore.txt` に `https://sizimityper.github.io/reflector-shader/index.json # covered by https://sizimityper.github.io/vpm/index.json` のように理由付きで記録してよい
+- 除外を再判定しなくて済むよう、`https://sizimityper.github.io/reflector-shader/index.json # covered by https://sizimityper.github.io/vpm/index.json` のように理由付きで報告に記録してよい（スキル実行中に `repositories-ignore.txt` は更新しない）
 
 これは「有効なJSON URLかどうか」ではなく、**カタログとして追加価値があるか**で判断するためのルールである。
 
@@ -302,7 +302,7 @@ Step 1で収集した既知URLセットと照合し、**既に収録済みのURL
 
 - パッケージIDが完全一致し、かつ既存リポジトリ側のバージョン数が同等以上なら、候補は「既存リポジトリでカバー済み」と判断して報告しない
 - これは同じ作者が単発ツール用に個別リポジトリを切っただけで、既にメインのまとめリポジトリに同じパッケージを追加済み、というケースで起きやすい
-- `repositories-ignore.txt` に `<候補URL> # covered by <既存URL>` の形式で記録してよい（Step 8参照）
+- `<候補URL> # covered by <既存URL>` の形式で理由付きの除外情報を報告に記録してよい（スキル実行中に `repositories-ignore.txt` は更新しない。Step 8参照）
 
 ### テンプレート・開発専用ダミーの除外
 
@@ -353,7 +353,7 @@ JSONが正常に取得でき、`packages` も存在するのに**実際にはVRC
 
 - 必要なら説明文で「最近発見できたが repo 自体は以前から存在する」と補足してよい
 - ただし、**集約的リポジトリに収録済みの個別リポジトリは冗長なので報告しない**
-- 冗長・不要と判断したURLは `repositories-ignore.txt` に理由付きで記録してよい（形式は Step 1 参照）
+- 冗長・不要と判断したURLは `repositories-ignore.txt` 用に理由付きで報告してよい（形式は Step 1 参照。実ファイルの更新は行わない）
 
 ---
 
