@@ -56,6 +56,7 @@ https://fuka-vr.github.io/vpm-repos/index.json
 https://furality.github.io/vcc-packages/index.json
 https://gabsith.github.io/GabSith-VCC-Listing/index.json
 https://gfool6.github.io/vpm-repos/vpm-list.json
+https://github.raith.one/index.json
 https://GlinTFraulein.github.io/vpm/index.json
 https://GotoFinal.github.io/GotoScriptsVRC/index.json
 https://gummidot.github.io/vpm-listing/index.json
@@ -135,7 +136,6 @@ https://purpzie.com/vpm/index.json
 https://qsyi.github.io/vpm-repos/index.json
 https://r-delta-c.github.io/vpm_repository/index.json
 https://raii-x.github.io/vpm-listing/index.json
-https://RaithSphere.github.io/vcc/index.json
 https://ramtype0.github.io/VpmRepository/index.json
 https://raspichu.github.io/vpm-listing/index.json
 https://rassi0429.github.io/KokoaVPMRepository/index.json
