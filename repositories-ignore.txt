@@ -1,28 +1,50 @@
+https://BUDDYWORKS-VR.github.io/vpm-listing/index.json # duplicate of https://repo.buddyworks.wtf/index.json
 https://chigirits.github.io/vpm-listing/index.json # moved to https://pasocommate.chigiri.tokyo/index.json
+https://Club-Maul.github.io/staff-scanner-v2/index.json # covered by https://club-maul.github.io/vpm-listing/index.json
+https://cympfh.github.io/vpm/index.json # duplicate of https://cympfh.cc/vpm/index.json
+https://ElMoha943.github.io/valenvrc_package_listing/index.json # duplicate of https://valenvrc.com/index.json
 https://ess-ka.github.io/EsskaPackageListing/index.json # archived repository
 https://gomorroth.github.io/vpm-repos/index.json
 https://guraril.github.io/vpm-repo/vpm.json # github user not found
+https://hai-vr.github.io/vpm-listing-developeronly/index.json # developer-only test listing, not for end users
 https://kurone-kito.github.io/launchpad-icons/index.json # covered by https://kurone-kito.github.io/vpm/index.json
 https://kurone-kito.github.io/udonsharp-toybox/index.json # covered by https://kurone-kito.github.io/vpm/index.json
+https://kurone-kito.github.io/vpm-project-template/index.json # unmodified VRChat package template, not a real listing
 https://kurone-kito.github.io/vrc-ui/index.json
+https://kurotu.github.io/vpm-repos/index.json # duplicate of https://kurotu.github.io/vpm-repos/vpm.json
+https://Limitex.github.io/vpm/index.json # duplicate of https://vpm.limitex.dev/index.json
 https://magmamcnet.github.io/VPM/index.json # github user not found
 https://meronmks.github.io/vpm-repos/vpm.json
 https://miya-kan.github.io/vpm-repository/index.json # github repository not found
+https://Narazaka.github.io/vpm-repos/index.json # duplicate of https://vpm.narazaka.net/index.json
 https://natane010.github.io/natane_toon_shader/index.json # canonical URL is https://natanetoon.com/index.json
+https://nekobako.github.io/vpm-listing/index.json # duplicate of https://vpm.nekobako.net/index.json
 https://page.853lab.com/vpm.json
+https://pasocommate.github.io/vpm-listing/index.json # duplicate of https://pasocommate.chigiri.tokyo/index.json
+https://PawlygonStudio.github.io/VCC-Listing/index.json # duplicate of https://vcc.pawlygon.net/index.json
+https://PiMaker.github.io/vpm-listing/index.json # duplicate of https://vpm.pimaker.at/index.json
 https://poiyomi.github.io/vpm/index.json
+https://Poyotoron.github.io/vpm.maaaaa.net/index.json # duplicate of https://vpm.maaaaa.net/index.json
 https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
+https://Purpzie.github.io/vpm/index.json # duplicate of https://purpzie.com/vpm/index.json
 https://raphiiko.github.io/VRTI-Avatar-Menu/index.json # covered by https://vcc.raphii.co/index.json
 https://raw.githubusercontent.com/Cayahuanca/Unity/main/vpm-packages.json
+https://RealWhyKnot.github.io/whyknot-vpm/index.json # duplicate of https://vpm.whyknot.dev/index.json
+https://rinchan-hoshino.github.io/vpm/index.json # duplicate of https://vpm.k-neco.com/index.json
 https://sizimityper.github.io/reflector-shader/index.json # covered by https://sizimityper.github.io/vpm/index.json
+https://soumt-r.github.io/RC-Tools-VPM/index.json # duplicate of https://vpm.rerac.dev/index.json
 https://t2penbix99wcoxkv3a4g.github.io/VPM.FaceEmoMMDAutoDisabler/index.json # covered by https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://t2penbix99wcoxkv3a4g.github.io/VPM.ModularAvatarExtensions/index.json # covered by https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://t2penbix99wcoxkv3a4g.github.io/VPM.SimpleNightVision/index.json # covered by https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://t2penbix99wcoxkv3a4g.github.io/VPM.WorldFluid/index.json # covered by https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
+https://Tatamo.github.io/vpm-listing/index.json # duplicate of https://vpm.udon.zip/index.json
+https://techanon.github.io/vrc-assets/index.json # duplicate of https://vpm.techanon.dev/index.json
 https://u-kotovsky.github.io/vpm-listing/index.json # only contains VRChat SDK packages (UdonSharp, ClientSim)
 https://uslashdeleted.github.io/vcc-listing/index.json # github user not found
 https://vpm.dreadscripts.com/listings/main.json
 https://vpm.kyre.moe/vpm.json # alias (CNAME) of https://kyure-a.github.io/vpm-repos/vpm.json
 https://vpm.magmamc.dev/index.json
 https://vpm.nadena.dev/vpm-prerelease.json
+https://vrchat-community.github.io/template-package-listing/index.json # official VRChat example listing template, not a real listing
+https://vrchat-community.github.io/template-package/index.json # official VRChat example package template, not a real listing
 https://yukoike224.github.io/vpm-avatar-editor-tools/index.json # github repository not found
