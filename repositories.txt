@@ -118,7 +118,7 @@ https://nekoare.github.io/vpm-listing/index.json
 https://neuru5278.github.io/main-vpm-repos/index.json
 https://nickel-jp.github.io/avatar-recovery-unity/index.json
 https://nidonocu.github.io/virtual-gryphon-packages/index.json
-https://nitda-lab.github.io/facemake-vpm/vpm.json
+https://nitda-lab.github.io/vpm/vpm.json
 https://null-k.github.io/vpm-listing/index.json
 https://nullclone.github.io/vpm-listing/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
