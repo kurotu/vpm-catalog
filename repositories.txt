@@ -2,6 +2,7 @@ https://aariyjp.github.io/vpm-repos/index.json
 https://Adjerry91.github.io/VRCFaceTracking-Templates/index.json
 https://aiczk.github.io/VPM/index.json
 https://akiiray.github.io/vpm-repository/index.json
+https://alanbacker.github.io/vpm/index.json
 https://amarinoa.github.io/AmariNoa-VPM-Listing/index.json
 https://amehuri.github.io/amehuri_tools/index.json
 https://An-Labo.github.io/An-Labo-NailTool/vpm.json
@@ -86,6 +87,7 @@ https://kakunpc.github.io/kakunpc_vpm/index.json
 https://kama-boko-vrc.github.io/VRChatTools/index.json
 https://kb10uy.github.io/vrc-repository/index.json
 https://kemocade.github.io/Kemocade.Vrc.Data.Extensions/index.json
+https://kie610.github.io/vpm-listing/index.json
 https://kikurage1989.github.io/ragecraftVPM/index.json
 https://KitKat4191.github.io/JetSim-VCC-Listing/index.json
 https://kohchaaa.github.io/vpm-repos/vpm.json
