@@ -93,6 +93,7 @@ https://kie610.github.io/vpm-listing/index.json
 https://kikurage1989.github.io/ragecraftVPM/index.json
 https://KitKat4191.github.io/JetSim-VCC-Listing/index.json
 https://kohchaaa.github.io/vpm-repos/vpm.json
+https://koz39.github.io/vpm-listing/index.json
 https://kurone-kito.github.io/vpm/index.json
 https://kurotu.github.io/vpm-repos/vpm.json
 https://kxn4t.github.io/vpm-repos/index.json
