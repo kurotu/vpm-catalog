@@ -72,6 +72,7 @@ https://hellcat-m18.github.io/vpm-repos/index.json
 https://HelpingHandsVR.github.io/vpm/index.json
 https://hfcRed.github.io/VPM-Listing/index.json
 https://Hhotatea.github.io/AvatarPoseLibrary/index.json
+https://hinzka.github.io/NK-Installer/index.json
 https://hisacat.github.io/VCCListing/index.json
 https://hkrn.github.io/vpm.json
 https://hoke946.github.io/Trigger2to3_VPM/index.json
@@ -214,6 +215,7 @@ https://vpm.chanfoo.net/vpm.json
 https://vpm.chocopoi.com/index.json
 https://vpm.coderco.su/index.json
 https://vpm.gatosyocora.net/index.json
+https://vpm.gokoukotori.com/index.json
 https://vpm.gyoku.tech/vpm.json
 https://vpm.hackebein.dev/index.json
 https://vpm.hinasense.jp/vpm.json
