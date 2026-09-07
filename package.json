@@ -36,7 +36,7 @@
     "@types/semver": "^7.5.8",
     "any-json": "^3.1.0",
     "daisyui": "^4.11.1",
-    "editorconfig-checker": "^6.1.1",
+    "editorconfig-checker": "^6.2.0",
     "eslint": "^10.1.0",
     "eslint-plugin-astro": "^1.6.0",
     "mdast": "^3.0.0",
