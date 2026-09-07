@@ -43,7 +43,7 @@ https://u-kotovsky.github.io/vpm-listing/index.json # only contains VRChat SDK p
 https://uslashdeleted.github.io/vcc-listing/index.json # github user not found
 https://vpm.dreadscripts.com/listings/main.json
 https://vpm.kyre.moe/vpm.json # alias (CNAME) of https://kyure-a.github.io/vpm-repos/vpm.json
-https://vpm.magmamc.dev/index.json
+https://vpm.magmamc.dev/index.json # URL is https://MagmaVRC.github.io/VPM/index.json
 https://vpm.nadena.dev/vpm-prerelease.json
 https://vrchat-community.github.io/template-package-listing/index.json # official VRChat example listing template, not a real listing
 https://vrchat-community.github.io/template-package/index.json # official VRChat example package template, not a real listing

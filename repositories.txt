@@ -1,3 +1,4 @@
+http://vpm.yuna0x0.com/index.json
 https://aariyjp.github.io/vpm-repos/index.json
 https://Adjerry91.github.io/VRCFaceTracking-Templates/index.json
 https://aiczk.github.io/VPM/index.json
@@ -95,6 +96,7 @@ https://kie610.github.io/vpm-listing/index.json
 https://kikurage1989.github.io/ragecraftVPM/index.json
 https://KitKat4191.github.io/JetSim-VCC-Listing/index.json
 https://kohchaaa.github.io/vpm-repos/vpm.json
+https://komugi0906.github.io/vpm-repository/index.json
 https://koz39.github.io/vpm-listing/index.json
 https://kurone-kito.github.io/vpm/index.json
 https://kurotu.github.io/vpm-repos/vpm.json
@@ -105,11 +107,13 @@ https://LauraRozier.github.io/LauraVRCUtils/index.json
 https://lazyoptimiser.euan.net/index.json
 https://lereldarion.github.io/vpm-listing/index.json
 https://lighfu.github.io/vpm/index.json
+https://lightbulb4.github.io/vpm/index.json
 https://lilxyzw.github.io/vpm-repos-shadercore-modules/vpm.json
 https://lilxyzw.github.io/vpm-repos/vpm.json
 https://LiveDimensions.github.io/VRRefAssist/index.json
 https://LuiStudio.github.io/VPM-Package-Listing/index.json
 https://lyrastellate.github.io/vpm-repos/index.json
+https://MagmaVRC.github.io/VPM/index.json
 https://mametsubu8.github.io/vpm-listing/vpm.json
 https://marble810.github.io/vpmlist/index.json
 https://mattshark89.github.io/OpenFlight-VRC/index.json
@@ -204,6 +208,8 @@ https://tp-jp.github.io/vpm-repos/index.json
 https://Tr1turbo.github.io/BlendShare/index.json
 https://tr1turbo.github.io/vpm-listing/index.json
 https://tsukumodo.github.io/omamori/index.json
+https://Udonite.github.io/vpm/index.json
+https://URektMe.github.io/rainywithin-vpm/index.json
 https://valenvrc.com/index.json
 https://vavassor.github.io/OrchidSealVPM/index.json
 https://vcc.aitsys.dev/index.json
@@ -236,7 +242,6 @@ https://vpm.limitex.dev/index.json
 https://vpm.logilabo.dev/avatars.json
 https://vpm.m4rshal.com/vpm.json
 https://vpm.maaaaa.net/index.json
-https://vpm.magmamc.dev/index.json
 https://vpm.matcha-soft.com/repos.json
 https://vpm.micksam7.com/index.json
 https://vpm.mimylab.com/index.json
