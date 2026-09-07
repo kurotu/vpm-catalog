@@ -242,7 +242,6 @@ https://vpm.limitex.dev/index.json
 https://vpm.logilabo.dev/avatars.json
 https://vpm.m4rshal.com/vpm.json
 https://vpm.maaaaa.net/index.json
-https://vpm.magmamc.dev/index.json
 https://vpm.matcha-soft.com/repos.json
 https://vpm.micksam7.com/index.json
 https://vpm.mimylab.com/index.json
