@@ -199,6 +199,7 @@ https://suzuryg.github.io/vpm-repos/vpm.json
 https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://taremin.github.io/CopyComponentsByRegex/index.json
 https://timiz0r.github.io/EZUtils/index.json
+https://tliks.github.io/facetune-release/index.json
 https://tliks.github.io/vpm-repos/index.json
 https://tmiosg-commits.github.io/avatar-refinery/vpm.json
 https://tmyt.github.io/vpm/index.json
@@ -217,6 +218,7 @@ https://vcc.pawlygon.net/index.json
 https://vcc.raphii.co/index.json
 https://vcc.vrcfury.com
 https://VixenCreations.github.io/VixenToolBox/index.json
+https://vpm-repo.mekabu.io/index.json
 https://vpm.32ba.net/index.json
 https://vpm.anatawa12.com/vpm.json
 https://vpm.azuretek.org/azuretek/vpm.json
