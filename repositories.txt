@@ -47,6 +47,7 @@ https://deltaneverused.github.io/VRChatPackages/index.json
 https://dine-png.github.io/Di_Ne_Tool/index.json
 https://dolphiiiin.github.io/vpm-repos/index.json
 https://drblackrat.github.io/vpm-listing/index.json
+https://drsakuu.github.io/vpm-listing/index.json
 https://dubstepdragon.github.io/consent-cards/index.json
 https://eauploader.github.io/EAUploader-for-VRChat/registry.json
 https://emerytheec.github.io/vpm-listing/index.json
@@ -263,6 +264,7 @@ https://vpm.rs64.net/vpm.json
 https://vpm.sleightly.dev/index.json
 https://vpm.smisann.net/vpm.json
 https://vpm.techanon.dev/index.json
+https://vpm.tesca.io/vpm.json
 https://vpm.thry.dev/index.json
 https://vpm.udon.zip/index.json
 https://vpm.ureishi.net/repos.json
