@@ -124,6 +124,7 @@ https://meatwo310.net/vpm/index.json
 https://meronmks.github.io/vpm/index.json
 https://miner28.github.io/MinerPackages/index.json
 https://minminmean.github.io/minminmart/index.json
+https://mitsuya0077.github.io/VR-Vlog-lilToon-Exporter/index.json
 https://mmmaellon.github.io/MMMaellonVCCListing/index.json
 https://moruton1119.github.io/com.morulab.unity-tools/index.json
 https://naari3.github.io/mesh-dent/vpm.json
@@ -256,6 +257,7 @@ https://vpm.niri.la/vpm.json
 https://vpm.noctlab.com/vpm.json
 https://vpm.paltee.dev/index.json
 https://vpm.pimaker.at/index.json
+https://vpm.pipipigiken.jp/vpm.json
 https://vpm.pukosrv.net/
 https://vpm.raitichan.net/vpm.json
 https://vpm.razgriz.one/index.json
