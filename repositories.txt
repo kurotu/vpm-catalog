@@ -139,7 +139,6 @@ https://nuruwo8.github.io/nuruwo-vpm-list/index.json
 https://nyakomechan.github.io/vpm-repository/index.json
 https://o-tr.github.io/vpm/vpm.json
 https://omeletteak.github.io/vpm-listing/index.json
-https://orange3134.github.io/vpm/index.json
 https://orels1.github.io/orels-Unity-Shaders/index.json
 https://page.853lab.com/vpm-repos/vpm.json
 https://pandrabox.github.io/vpm/index.json
@@ -257,6 +256,7 @@ https://vpm.niri.la/vpm.json
 https://vpm.noctlab.com/vpm.json
 https://vpm.paltee.dev/index.json
 https://vpm.pimaker.at/index.json
+https://vpm.pipipigiken.jp/vpm.json
 https://vpm.pukosrv.net/
 https://vpm.raitichan.net/vpm.json
 https://vpm.razgriz.one/index.json
