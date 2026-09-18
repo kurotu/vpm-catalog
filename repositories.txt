@@ -124,6 +124,7 @@ https://meatwo310.net/vpm/index.json
 https://meronmks.github.io/vpm/index.json
 https://miner28.github.io/MinerPackages/index.json
 https://minminmean.github.io/minminmart/index.json
+https://mintlily.lgbt/projects/vrchat-vpm-listing/index.json
 https://mitsuya0077.github.io/VR-Vlog-lilToon-Exporter/index.json
 https://mmmaellon.github.io/MMMaellonVCCListing/index.json
 https://moruton1119.github.io/com.morulab.unity-tools/index.json
@@ -171,6 +172,7 @@ https://remuria.natsuneko.com/repositories/com.natsuneko.vpm.worlds.json
 https://repo.buddyworks.wtf/index.json
 https://rerigferl.github.io/vpm/vpm.json
 https://ribeKim.github.io/vpm/index.json
+https://rinya-mitsuki.github.io/vpm-repository/index.json
 https://rlist.arch-linux.pro/index.json
 https://rollphes.github.io/vpm-repos/vpm.json
 https://rroki-0u0.github.io/vpm-repos/index.json
