@@ -15,6 +15,7 @@ https://kurotu.github.io/vpm-repos/index.json # duplicate of https://kurotu.gith
 https://Limitex.github.io/vpm/index.json # duplicate of https://vpm.limitex.dev/index.json
 https://magmamcnet.github.io/VPM/index.json # github user not found
 https://meronmks.github.io/vpm-repos/vpm.json
+https://mintlily.github.io/vrchat-vpm-listing/index.json # duplicate of https://mintlily.lgbt/projects/vrchat-vpm-listing/index.json
 https://miya-kan.github.io/vpm-repository/index.json # github repository not found
 https://Narazaka.github.io/vpm-repos/index.json # duplicate of https://vpm.narazaka.net/index.json
 https://natane010.github.io/natane_toon_shader/index.json # canonical URL is https://natanetoon.com/index.json
