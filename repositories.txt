@@ -28,6 +28,7 @@ https://bekosantux.github.io/vpm-repos/index.json
 https://blackorbit1.github.io/orbiters-vpm/index.json
 https://blancrenard.github.io/vpm-NolaTools/index.json
 https://BlueAmulet.github.io/UdonSharpOptimizer/index.json
+https://box.pesky.zone/index.json
 https://c-colloid.github.io/PBReplacer-VPM/index.json
 https://CascadianVR.github.io/UnityShapekeySearch/index.json
 https://ccvrc.github.io/vpm/index.json
@@ -39,6 +40,7 @@ https://chillmix-crypto.github.io/avatarscope-vpm/index.json
 https://club-maul.github.io/vpm-listing/index.json
 https://codec-xyz.github.io/photo_frame_manager/index.json
 https://cstria0106.github.io/vpm-repos/index.json
+https://CucumberWorks.github.io/vpm/index.json
 https://cuebitt.github.io/vpm/index.json
 https://cyanlaser.github.io/CyanPlayerObjectPool/index.json
 https://cyanlaser.github.io/CyanTrigger/index.json
@@ -66,6 +68,7 @@ https://gist.githubusercontent.com/JanSharp/a69f1861bc23acb1e1c157f715de62bc/raw
 https://github.raith.one/index.json
 https://GlinTFraulein.github.io/vpm/index.json
 https://GotoFinal.github.io/GotoScriptsVRC/index.json
+https://GRIMREAPER35487.github.io/Synthos-VRC-Packages/index.json
 https://gummidot.github.io/vpm-listing/index.json
 https://Guribo.github.io/TLP/index.json
 https://Hackebein.github.io/VPM-Listing/index.json
@@ -92,6 +95,7 @@ https://k4584587.github.io/Modular-Auto-Toggle/index.json
 https://KaefiBOT.github.io/VPM-Listing/index.json
 https://kakunpc.github.io/kakunpc_vpm/index.json
 https://kama-boko-vrc.github.io/VRChatTools/index.json
+https://kamyu1537.github.io/vcc-listing/index.json
 https://kb10uy.github.io/vrc-repository/index.json
 https://kemocade.github.io/Kemocade.Vrc.Data.Extensions/index.json
 https://kie610.github.io/vpm-listing/index.json
@@ -200,6 +204,7 @@ https://skeb-inc.github.io/skeb-art-panel/index.json
 https://SleetCat123.github.io/vpm-packages/index.json
 https://snow1226.github.io/vpm-repos/index.json
 https://sophiebluevr.github.io/vpm/index.json
+https://sora-lice.github.io/SGimmicks-VPM/index.json
 https://spokeek.github.io/vpm-repository/index.json
 https://spsndmf.vpm.nrzk.net/index.json
 https://suzufactory.github.io/vpm-repos/vpm.json
@@ -241,6 +246,7 @@ https://vpm.gatosyocora.net/index.json
 https://vpm.gokoukotori.com/index.json
 https://vpm.gyoku.tech/vpm.json
 https://vpm.hackebein.dev/index.json
+https://vpm.haru0416.dev/index.json
 https://vpm.hinasense.jp/vpm.json
 https://vpm.hoshinolabs.com/vpm.json
 https://vpm.iwa.si/vpm.json
