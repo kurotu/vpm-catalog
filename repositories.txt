@@ -28,6 +28,7 @@ https://bekosantux.github.io/vpm-repos/index.json
 https://blackorbit1.github.io/orbiters-vpm/index.json
 https://blancrenard.github.io/vpm-NolaTools/index.json
 https://BlueAmulet.github.io/UdonSharpOptimizer/index.json
+https://bmbb93.github.io/clearwater-vrc/index.json
 https://box.pesky.zone/index.json
 https://c-colloid.github.io/PBReplacer-VPM/index.json
 https://CascadianVR.github.io/UnityShapekeySearch/index.json
@@ -46,10 +47,12 @@ https://cyanlaser.github.io/CyanPlayerObjectPool/index.json
 https://cyanlaser.github.io/CyanTrigger/index.json
 https://cympfh.cc/vpm/index.json
 https://d4rkc0d3r.github.io/vpm-repos/main.json
+https://d9speed.github.io/Unity_Tools/index.json
 https://deltaneverused.github.io/VRChatPackages/index.json
 https://dine-png.github.io/Di_Ne_Tool/index.json
 https://dolphiiiin.github.io/vpm-repos/index.json
 https://drblackrat.github.io/vpm-listing/index.json
+https://drcain1.github.io/Meshia.MeshSimplification/vpm/index.json
 https://drsakuu.github.io/vpm-listing/index.json
 https://dubstepdragon.github.io/consent-cards/index.json
 https://eauploader.github.io/EAUploader-for-VRChat/registry.json
@@ -163,6 +166,7 @@ https://qsyi.github.io/vpm-repos/index.json
 https://r-delta-c.github.io/vpm_repository/index.json
 https://raii-x.github.io/vpm-listing/index.json
 https://ramtype0.github.io/VpmRepository/index.json
+https://rara-vrc.github.io/rara-avatar-tools/index.json
 https://raspichu.github.io/vpm-listing/index.json
 https://rassi0429.github.io/KokoaVPMRepository/index.json
 https://raw.githubusercontent.com/APOL-StarLight/VRC-Unity-Essentials/main/vcc.json
@@ -174,6 +178,7 @@ https://raw.githubusercontent.com/Yunhyuk-Jeong/iyan-vpm/main/vpm.json
 https://rayleonard-collection-r3c.github.io/vpm-package-listing/index.json
 https://reava.github.io/VPM-Listings/index.json
 https://redsim.github.io/vpmlisting/index.json
+https://reframe.illusive-isc.jp/vpm/index.json
 https://remuria.natsuneko.com/repositories/com.natsuneko.vpm.json
 https://remuria.natsuneko.com/repositories/com.natsuneko.vpm.worlds.json
 https://repo.buddyworks.wtf/index.json
