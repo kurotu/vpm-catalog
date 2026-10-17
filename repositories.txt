@@ -50,6 +50,7 @@ https://d4rkc0d3r.github.io/vpm-repos/main.json
 https://d9speed.github.io/Unity_Tools/index.json
 https://deltaneverused.github.io/VRChatPackages/index.json
 https://dine-png.github.io/Di_Ne_Tool/index.json
+https://docmevr.github.io/vpm/index.json
 https://dolphiiiin.github.io/vpm-repos/index.json
 https://drblackrat.github.io/vpm-listing/index.json
 https://drcain1.github.io/Meshia.MeshSimplification/vpm/index.json
@@ -289,6 +290,7 @@ https://vpm.smisann.net/vpm.json
 https://vpm.techanon.dev/index.json
 https://vpm.tesca.io/vpm.json
 https://vpm.thry.dev/index.json
+https://vpm.tsvrc.com/index.json
 https://vpm.udon.zip/index.json
 https://vpm.ureishi.net/repos.json
 https://vpm.vrsl.dev/index.json
