@@ -20,6 +20,7 @@ https://miya-kan.github.io/vpm-repository/index.json # github repository not fou
 https://Narazaka.github.io/vpm-repos/index.json # duplicate of https://vpm.narazaka.net/index.json
 https://natane010.github.io/natane_toon_shader/index.json # canonical URL is https://natanetoon.com/index.json
 https://nekobako.github.io/vpm-listing/index.json # duplicate of https://vpm.nekobako.net/index.json
+https://orange3134.github.io/vpm/index.json # duplicate of https://vpm.pipipigiken.jp/vpm.json
 https://page.853lab.com/vpm.json
 https://pasocommate.github.io/vpm-listing/index.json # duplicate of https://pasocommate.chigiri.tokyo/index.json
 https://PawlygonStudio.github.io/VCC-Listing/index.json # duplicate of https://vcc.pawlygon.net/index.json
@@ -48,4 +49,5 @@ https://vpm.magmamc.dev/index.json # URL is https://MagmaVRC.github.io/VPM/index
 https://vpm.nadena.dev/vpm-prerelease.json
 https://vrchat-community.github.io/template-package-listing/index.json # official VRChat example listing template, not a real listing
 https://vrchat-community.github.io/template-package/index.json # official VRChat example package template, not a real listing
+https://vrvlog.fun/exporter/index.json # covered by https://mitsuya0077.github.io/VR-Vlog-lilToon-Exporter/index.json
 https://yukoike224.github.io/vpm-avatar-editor-tools/index.json # github repository not found
