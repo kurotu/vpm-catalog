@@ -49,5 +49,4 @@ https://vpm.magmamc.dev/index.json # URL is https://MagmaVRC.github.io/VPM/index
 https://vpm.nadena.dev/vpm-prerelease.json
 https://vrchat-community.github.io/template-package-listing/index.json # official VRChat example listing template, not a real listing
 https://vrchat-community.github.io/template-package/index.json # official VRChat example package template, not a real listing
-https://vrvlog.fun/exporter/index.json # covered by https://mitsuya0077.github.io/VR-Vlog-lilToon-Exporter/index.json
 https://yukoike224.github.io/vpm-avatar-editor-tools/index.json # github repository not found
