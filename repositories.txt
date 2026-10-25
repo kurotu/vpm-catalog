@@ -135,10 +135,10 @@ https://meronmks.github.io/vpm/index.json
 https://miner28.github.io/MinerPackages/index.json
 https://minminmean.github.io/minminmart/index.json
 https://mintlily.lgbt/projects/vrchat-vpm-listing/index.json
-https://mitsuya0077.github.io/VR-Vlog-lilToon-Exporter/index.json
 https://mmmaellon.github.io/MMMaellonVCCListing/index.json
 https://moruton1119.github.io/com.morulab.unity-tools/index.json
 https://naari3.github.io/mesh-dent/vpm.json
+https://nails.vrc-zapper.com/vpm/index.json
 https://natanetoon.com/index.json
 https://nekoare.github.io/vpm-listing/index.json
 https://neuru5278.github.io/main-vpm-repos/index.json
@@ -167,6 +167,7 @@ https://qsyi.github.io/vpm-repos/index.json
 https://r-delta-c.github.io/vpm_repository/index.json
 https://raii-x.github.io/vpm-listing/index.json
 https://ramtype0.github.io/VpmRepository/index.json
+https://rappyr.github.io/Bavi-VPM/index.json
 https://rara-vrc.github.io/rara-avatar-tools/index.json
 https://raspichu.github.io/vpm-listing/index.json
 https://rassi0429.github.io/KokoaVPMRepository/index.json
@@ -263,6 +264,7 @@ https://vpm.kiba.red/index.json
 https://vpm.kittyn.cat/index.json
 https://vpm.koyashiro.net/index.json
 https://vpm.kwxxw.net/index.json
+https://vpm.ladyluh.dev/index.json
 https://vpm.limitex.dev/index.json
 https://vpm.logiccuteguy.com/index.json
 https://vpm.logilabo.dev/avatars.json
@@ -305,6 +307,7 @@ https://VRCLearn.github.io/filamented/index.json
 https://vrclearn.github.io/HierarchyDecorator/index.json
 https://vrctxl.github.io/VPM/index.json
 https://vrsuya.com/vpm/vpm.json
+https://vrvlog.fun/exporter/index.json
 https://wagunasu812.github.io/vpm-listing/index.json
 https://waya0125.com/vpm
 https://whiteflare.github.io/vpm-repos/vpm.json
