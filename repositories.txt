@@ -28,6 +28,7 @@ https://bekosantux.github.io/vpm-repos/index.json
 https://blackorbit1.github.io/orbiters-vpm/index.json
 https://blancrenard.github.io/vpm-NolaTools/index.json
 https://BlueAmulet.github.io/UdonSharpOptimizer/index.json
+https://blys-rarin.github.io/SurarinVPM/index.json
 https://bmbb93.github.io/clearwater-vrc/index.json
 https://box.pesky.zone/index.json
 https://c-colloid.github.io/PBReplacer-VPM/index.json
@@ -37,6 +38,7 @@ https://Centauri2442.github.io/VRCMasterFailureCheck/index.json
 https://Centauri2442.github.io/VRCNetworkDebugger/index.json
 https://ch4rindo.github.io/vpm/index.json
 https://chemicalcrux.github.io/vpm-listing/index.json
+https://chikumatateshina.github.io/QvPen_AvatarFollowSystem/index.json
 https://chillmix-crypto.github.io/avatarscope-vpm/index.json
 https://club-maul.github.io/vpm-listing/index.json
 https://codec-xyz.github.io/photo_frame_manager/index.json
@@ -49,8 +51,10 @@ https://cympfh.cc/vpm/index.json
 https://d4rkc0d3r.github.io/vpm-repos/main.json
 https://d9speed.github.io/Unity_Tools/index.json
 https://deltaneverused.github.io/VRChatPackages/index.json
+https://dennoko.github.io/vpm-repos/index.json
 https://dine-png.github.io/Di_Ne_Tool/index.json
 https://docmevr.github.io/vpm/index.json
+https://docs.unlibra.com/vpm/index.json
 https://dolphiiiin.github.io/vpm-repos/index.json
 https://drblackrat.github.io/vpm-listing/index.json
 https://drcain1.github.io/Meshia.MeshSimplification/vpm/index.json
@@ -73,6 +77,7 @@ https://github.raith.one/index.json
 https://GlinTFraulein.github.io/vpm/index.json
 https://GotoFinal.github.io/GotoScriptsVRC/index.json
 https://GRIMREAPER35487.github.io/Synthos-VRC-Packages/index.json
+https://guiltycrownsa.github.io/KuraActionManager/index.json
 https://gummidot.github.io/vpm-listing/index.json
 https://Guribo.github.io/TLP/index.json
 https://Hackebein.github.io/VPM-Listing/index.json
@@ -87,6 +92,7 @@ https://hinzka.github.io/NK-Installer/index.json
 https://hisacat.github.io/VCCListing/index.json
 https://hkrn.github.io/vpm.json
 https://hoke946.github.io/Trigger2to3_VPM/index.json
+https://horicraft.github.io/asset-catalog-vpm/index.json
 https://horicraft.github.io/vpm/index.json
 https://hotaru86.github.io/VPM/index.json
 https://HugPhiluu.github.io/PhilSort/index.json
@@ -127,11 +133,14 @@ https://lyrastellate.github.io/vpm-repos/index.json
 https://MagmaVRC.github.io/VPM/index.json
 https://mametsubu8.github.io/vpm-listing/vpm.json
 https://marble810.github.io/vpmlist/index.json
+https://markoapple.github.io/vpm/index.json
 https://mattshark89.github.io/OpenFlight-VRC/index.json
 https://mayoi3.github.io/mayoi-vpm-repo/index.json
 https://meadowsage.github.io/mashirotheater-vpm/index.json
 https://meatwo310.net/vpm/index.json
+https://merciagrimauge.github.io/vpm-repository/index.json
 https://meronmks.github.io/vpm/index.json
+https://migimaru.github.io/vpm/index.json
 https://miner28.github.io/MinerPackages/index.json
 https://minminmean.github.io/minminmart/index.json
 https://mintlily.lgbt/projects/vrchat-vpm-listing/index.json
@@ -141,11 +150,13 @@ https://naari3.github.io/mesh-dent/vpm.json
 https://nails.vrc-zapper.com/vpm/index.json
 https://natanetoon.com/index.json
 https://nekoare.github.io/vpm-listing/index.json
+https://nerdrx.github.io/nxclone/index.json
 https://neuru5278.github.io/main-vpm-repos/index.json
 https://nickel-jp.github.io/avatar-recovery-unity/index.json
 https://nidonocu.github.io/virtual-gryphon-packages/index.json
 https://nitda-lab.github.io/vpm/vpm.json
 https://njsgdd10086.github.io/vpm-listing/index.json
+https://noshirannegi.github.io/vpm/index.json
 https://null-k.github.io/vpm-listing/index.json
 https://nullclone.github.io/vpm-listing/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
@@ -218,6 +229,7 @@ https://suzufactory.github.io/vpm-repos/vpm.json
 https://suzuryg.github.io/vpm-repos/vpm.json
 https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://taremin.github.io/CopyComponentsByRegex/index.json
+https://tenteeeee.github.io/vpm-repos/index.json
 https://timiz0r.github.io/EZUtils/index.json
 https://tliks.github.io/facetune-release/index.json
 https://tliks.github.io/vpm-repos/index.json
@@ -236,6 +248,7 @@ https://Udonite.github.io/vpm/index.json
 https://URektMe.github.io/rainywithin-vpm/index.json
 https://valenvrc.com/index.json
 https://vavassor.github.io/OrchidSealVPM/index.json
+https://vcamapp.github.io/vcam-avatar-exporter/index.json
 https://vcc.aitsys.dev/index.json
 https://vcc.pawlygon.net/index.json
 https://vcc.raphii.co/index.json
@@ -295,6 +308,7 @@ https://vpm.thry.dev/index.json
 https://vpm.tsvrc.com/index.json
 https://vpm.udon.zip/index.json
 https://vpm.ureishi.net/repos.json
+https://vpm.vrctools.io/index.json
 https://vpm.vrsl.dev/index.json
 https://vpm.whyknot.dev/index.json
 https://vpm.yozolab.net/index.json
@@ -302,6 +316,7 @@ https://vpm.yukineko.dev/index.json
 https://vrc-staples.github.io/VRCUnityDevTools/index.json
 https://vrceve.github.io/vrceve-asset/index.json
 https://vrchat-community.github.io/vpm-listing-curated/index.json
+https://vrchat-legends.github.io/Aviseek-SDK/index.json
 https://vrchat.github.io/packages/index.json
 https://VRCLearn.github.io/filamented/index.json
 https://vrclearn.github.io/HierarchyDecorator/index.json

@@ -7,6 +7,8 @@ https://ess-ka.github.io/EsskaPackageListing/index.json # archived repository
 https://gomorroth.github.io/vpm-repos/index.json
 https://guraril.github.io/vpm-repo/vpm.json # github user not found
 https://hai-vr.github.io/vpm-listing-developeronly/index.json # developer-only test listing, not for end users
+https://horicraft.github.io/asset-notebook-vpm/index.json # mirror of https://horicraft.github.io/asset-catalog-vpm/index.json
+https://horicraft.github.io/vpm-beta/index.json # tester-only beta listing
 https://kurone-kito.github.io/launchpad-icons/index.json # covered by https://kurone-kito.github.io/vpm/index.json
 https://kurone-kito.github.io/udonsharp-toybox/index.json # covered by https://kurone-kito.github.io/vpm/index.json
 https://kurone-kito.github.io/vpm-project-template/index.json # unmodified VRChat package template, not a real listing
@@ -32,7 +34,9 @@ https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
 https://Purpzie.github.io/vpm/index.json # duplicate of https://purpzie.com/vpm/index.json
 https://raphiiko.github.io/VRTI-Avatar-Menu/index.json # covered by https://vcc.raphii.co/index.json
 https://raw.githubusercontent.com/Cayahuanca/Unity/main/vpm-packages.json
+https://raw.githubusercontent.com/haroon911/unity-mcp-vpm/main/index.json # third-party package mirror, not VRChat-specific
 https://RealWhyKnot.github.io/whyknot-vpm/index.json # duplicate of https://vpm.whyknot.dev/index.json
+https://redwyre.github.io/vpm/index.json # no packages
 https://rinchan-hoshino.github.io/vpm/index.json # duplicate of https://vpm.k-neco.com/index.json
 https://sizimityper.github.io/reflector-shader/index.json # covered by https://sizimityper.github.io/vpm/index.json
 https://soumt-r.github.io/RC-Tools-VPM/index.json # duplicate of https://vpm.rerac.dev/index.json
