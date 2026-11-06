@@ -32,6 +32,7 @@ https://poiyomi.github.io/vpm/index.json
 https://Poyotoron.github.io/vpm.maaaaa.net/index.json # duplicate of https://vpm.maaaaa.net/index.json
 https://project-eauploader.github.io/EAUploader-for-VRChat/registry.json
 https://Purpzie.github.io/vpm/index.json # duplicate of https://purpzie.com/vpm/index.json
+https://r-fallingstar.github.io/unity-mcp-alcom/index.json # fork repackaging com.coplaydev.unity-mcp, covered by https://raw.githubusercontent.com/haroon911/unity-mcp-vpm/main/index.json
 https://raphiiko.github.io/VRTI-Avatar-Menu/index.json # covered by https://vcc.raphii.co/index.json
 https://raw.githubusercontent.com/Cayahuanca/Unity/main/vpm-packages.json
 https://raw.githubusercontent.com/haroon911/unity-mcp-vpm/main/index.json # third-party package mirror, not VRChat-specific
@@ -52,6 +53,7 @@ https://vpm.dreadscripts.com/listings/main.json
 https://vpm.kyre.moe/vpm.json # alias (CNAME) of https://kyure-a.github.io/vpm-repos/vpm.json
 https://vpm.magmamc.dev/index.json # URL is https://MagmaVRC.github.io/VPM/index.json
 https://vpm.nadena.dev/vpm-prerelease.json
+https://VR-Vlog.github.io/VR-Vlog-Avatar-Exporter/index.json # same packages as https://vrvlog.fun/exporter/index.json
 https://vrchat-community.github.io/template-package-listing/index.json # official VRChat example listing template, not a real listing
 https://vrchat-community.github.io/template-package/index.json # official VRChat example package template, not a real listing
 https://yukoike224.github.io/vpm-avatar-editor-tools/index.json # github repository not found
