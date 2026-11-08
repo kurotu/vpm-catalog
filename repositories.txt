@@ -342,7 +342,7 @@ https://www.matthewherber.com/PhysboneConstraints/index.json
 https://www.negura-karasu.net/vpm/
 https://xNanochip.github.io/VPM-Package-Listing/index.json
 https://xtlcdn.github.io/vpm/index.json
-https://yakigura.github.io/vpm/index.json
+https://yakigura.github.io/vpm-qvpalette/index.json
 https://yato96fox.github.io/UnityExpansion-Release/index.json
 https://YerGodDamnRight.github.io/YGDR-VPM-Listing/index.json
 https://yoridrill.github.io/vpm-repos/vpm.json
