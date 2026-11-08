@@ -21,15 +21,29 @@ jobs:
       - name: Set up Node.js environment
         uses: actions/setup-node@v4
 
-      - name: Install Copilot CLI
-        run: npm install -g @github/copilot
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
 
       - name: Install playwright-cli
         run: npm install -g @playwright/cli
 
-      - name: Run Copilot CLI
+      - name: Configure git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Run Claude Code
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          COPILOT_GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
-          copilot -p "$(cat .github/prompts/discover.md)" --allow-all --no-ask-user
+          claude -p "$(cat .github/prompts/discover.md)" \
+            --model opus \
+            --effort high \
+            --permission-mode acceptEdits \
+            --allowedTools \
+              "Skill" "Read" "Edit" "Write" "Glob" "Grep" "WebFetch" "WebSearch" \
+              "Bash(git:*)" "Bash(gh:*)" "Bash(curl:*)" "Bash(jq:*)" \
+              "Bash(playwright-cli:*)" "Bash(bash tasks/sort-repos.sh)" "Bash(./tasks/sort-repos.sh)" \
+              "Bash(cat:*)" "Bash(grep:*)" "Bash(sort:*)" "Bash(date:*)" \
+            --output-format stream-json --verbose

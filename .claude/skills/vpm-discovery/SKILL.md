@@ -13,7 +13,7 @@ VRChatのVPM（VPM Package Manager）リポジトリを新たに発見するス�
 1. **既知URLの読み込み** — フィルタリング用に既存リストを収集
 2. **GitHub API検索** — 複数クエリで直近1か月の更新・露出がある候補を収集
 3. **補完検索** — Yahoo Japan リアルタイム・Google・Booth連携 をplaywright-cliで検索
-4. **URL正規化と検証** — 短縮URL展開後、`index.json` / `vpm.json` に正規化して `web_fetch` で確認
+4. **URL正規化と検証** — 短縮URL展開後、`index.json` / `vpm.json` に正規化して `WebFetch` で確認
 5. **結果報告** — 未収録URLを集約的リポジトリ優先で報告
 
 ---
@@ -47,7 +47,7 @@ GitHub Search UIではなく **GitHub Search API** を使う。ブラウザ不�
 
 > **重要**: ここでの「直近1か月」は**検索範囲**を絞るための条件であり、**報告対象の repository created_at を直近1か月に限定する意味ではない**。過去に作成されたリポジトリでも、直近1か月の更新・公開・告知によって今回初めて発見できた未収録URLであれば報告する。
 
-以下の複数クエリを **並列で `web_fetch`** して候補を収集する：
+以下の複数クエリを **並列で `WebFetch`** して候補を収集する：
 
 ```
 https://api.github.com/search/repositories?q=vpm+vrchat+pushed%3A>YYYY-MM-DD&sort=updated&order=desc&per_page=30
@@ -116,7 +116,7 @@ Bot検出やJavaScriptエラーが発生した場合はスキップして次に�
 
 ### 3-2: Google 検索
 
-Googleはヘッドレスブラウザを頻繁にブロックするため、`web_fetch` を先に試みる：
+Googleはヘッドレスブラウザを頻繁にブロックするため、`WebFetch` を先に試みる：
 ```
 https://www.google.com/search?q=VRChat+vpm+index.json+site%3Agithub.io&tbs=qdr%3Am
 ```
@@ -146,11 +146,11 @@ https://api.github.com/users/xxx/repos?type=public&per_page=100&sort=updated
 - ユーザーが存在しない場合（404）はこの経路をスキップして次のチェックへ進む。
 - レスポンスの `Link` ヘッダに `rel="next"` が含まれる場合は、`page=2`, `page=3` … と順にフェッチして全リポジトリを取得する。
 - `fork: false` な公開リポジトリは **`has_pages` で絞り込まず** VPM候補として Step 4 に送る。
-  `has_pages: true` は GitHub Pages URL 推定の優先材料にはなるが必須条件ではない。`raw.githubusercontent.com/.../index.json` や `.../vpm.json` のような **Pagesを使わないJSON配布** もあるため、Step 4 のURL正規化・`web_fetch` 検証で判定する。
+  `has_pages: true` は GitHub Pages URL 推定の優先材料にはなるが必須条件ではない。`raw.githubusercontent.com/.../index.json` や `.../vpm.json` のような **Pagesを使わないJSON配布** もあるため、Step 4 のURL正規化・`WebFetch` 検証で判定する。
 
 これはBoothページにVPM URLが記載されていない場合でも有効な経路であり、スキップしてはならない。
 
-その後、`web_fetch` でBoothページを取得し、以下を追加チェックする。
+その後、`WebFetch` でBoothページを取得し、以下を追加チェックする。
 
 **A. GitHub Pages URL（直接発見）**
 
@@ -222,8 +222,8 @@ URLを収集したら、正規化後のURLに実際にアクセスして**VPMリ
 
 ## Step 5: URL検証
 
-候補URLそれぞれに対して **`web_fetch`** でアクセスし、以下の条件を確認する。
-playwright-cliでの検証より `web_fetch` の方が高速で安定しているため、こちらを優先する。
+候補URLそれぞれに対して **`WebFetch`** でアクセスし、以下の条件を確認する。
+playwright-cliでの検証より `WebFetch` の方が高速で安定しているため、こちらを優先する。
 
 1. HTTPステータスが200（404などはそのURLを除外）
 2. JSONとして解析可能
@@ -233,7 +233,7 @@ playwright-cliでの検証より `web_fetch` の方が高速で安定してい�
 4. **JSON内の `url` フィールドと、実際にフェッチしたURLを比較する**（比較時の正規化はスキーム・ホストの大文字小文字と末尾スラッシュに限定し、パスは変更しない）
    - VPMリポジトリのJSONは自分自身の正規URLを `url` フィールドに自己申告していることが多い。これがフェッチ元URLと食い違う場合、フェッチ元は**別ドメインへのミラー/エイリアス**（GitHub Pagesのデフォルトドメインとカスタムドメインの両方が生きているケースなど）である可能性が高い
    - `.url` が既知URLセット（Step 1）に既に含まれていれば、フェッチ元URLは同一リポジトリの重複として除外する
-   - `.url` が既知セットに含まれていなければ、`.url` 自体にも `web_fetch` してみる。200でJSONが返り `id` が一致すれば、そちらを正規URLとして報告する（見つけた側のURLではなく）
+   - `.url` が既知セットに含まれていなければ、`.url` 自体にも `WebFetch` してみる。200でJSONが返り `id` が一致すれば、そちらを正規URLとして報告する（見つけた側のURLではなく）
    - `.url` へのアクセスが失敗する（404・タイムアウト等）、または200でも `id` が一致しない（テンプレート流用などで `url` フィールドが書き換えられていない）場合は、そちらの `.url` は信用せず、実際に機能しているフェッチ元URLをそのまま報告する
    - `url` フィールド自体が存在しない場合はこのチェックをスキップする（食い違いとして扱わない）
 
@@ -244,9 +244,9 @@ playwright-cliでの検証より `web_fetch` の方が高速で安定してい�
 - 元の候補URLがHTMLページや短縮URLだった場合、**最終的に200でJSONを返したURLだけ**を報告URLとして採用する
 - ルートURL自体が有効でも、レスポンスがHTMLなら報告対象にしない
 - `index.json` と `vpm.json` の両方が有効な場合は、JSONの `url` フィールドと一致する方を優先する
-- Yahoo経由で見つけたURLも、報告前に必ず `web_fetch` でJSONレスポンスを確認する
+- Yahoo経由で見つけたURLも、報告前に必ず `WebFetch` でJSONレスポンスを確認する
 
-複数の候補URLは **並列で `web_fetch`** して効率よく確認する。
+複数の候補URLは **並列で `WebFetch`** して効率よく確認する。
 
 ---
 
