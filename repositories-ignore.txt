@@ -9,6 +9,7 @@ https://guraril.github.io/vpm-repo/vpm.json # github user not found
 https://hai-vr.github.io/vpm-listing-developeronly/index.json # developer-only test listing, not for end users
 https://horicraft.github.io/asset-notebook-vpm/index.json # mirror of https://horicraft.github.io/asset-catalog-vpm/index.json
 https://horicraft.github.io/vpm-beta/index.json # tester-only beta listing
+https://hyde4280.github.io/garakshop-vpm/index.json # no packages
 https://kurone-kito.github.io/launchpad-icons/index.json # covered by https://kurone-kito.github.io/vpm/index.json
 https://kurone-kito.github.io/udonsharp-toybox/index.json # covered by https://kurone-kito.github.io/vpm/index.json
 https://kurone-kito.github.io/vpm-project-template/index.json # unmodified VRChat package template, not a real listing
@@ -23,8 +24,10 @@ https://miya-kan.github.io/vpm-repository/index.json # github repository not fou
 https://Narazaka.github.io/vpm-repos/index.json # duplicate of https://vpm.narazaka.net/index.json
 https://natane010.github.io/natane_toon_shader/index.json # canonical URL is https://natanetoon.com/index.json
 https://nekobako.github.io/vpm-listing/index.json # duplicate of https://vpm.nekobako.net/index.json
+https://nickel-jp.github.io/copyright-check-bypass/index.json # auto-accepts the VRChat SDK copyright agreement dialog
 https://orange3134.github.io/vpm/index.json # duplicate of https://vpm.pipipigiken.jp/vpm.json
 https://page.853lab.com/vpm.json
+https://pandanakami.github.io/PandaVAT/index.json # covered by https://pandanakami.github.io/vpm-package-list/index.json
 https://pasocommate.github.io/vpm-listing/index.json # duplicate of https://pasocommate.chigiri.tokyo/index.json
 https://PawlygonStudio.github.io/VCC-Listing/index.json # duplicate of https://vcc.pawlygon.net/index.json
 https://PiMaker.github.io/vpm-listing/index.json # duplicate of https://vpm.pimaker.at/index.json
@@ -39,6 +42,7 @@ https://raw.githubusercontent.com/haroon911/unity-mcp-vpm/main/index.json # thir
 https://RealWhyKnot.github.io/whyknot-vpm/index.json # duplicate of https://vpm.whyknot.dev/index.json
 https://redwyre.github.io/vpm/index.json # no packages
 https://rinchan-hoshino.github.io/vpm/index.json # duplicate of https://vpm.k-neco.com/index.json
+https://sgzincanya.github.io/Zincat/index.json # alias of https://raw.githubusercontent.com/SgZincanya/Zincat/main/docs/index.json
 https://sizimityper.github.io/reflector-shader/index.json # covered by https://sizimityper.github.io/vpm/index.json
 https://soumt-r.github.io/RC-Tools-VPM/index.json # duplicate of https://vpm.rerac.dev/index.json
 https://t2penbix99wcoxkv3a4g.github.io/VPM.FaceEmoMMDAutoDisabler/index.json # covered by https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
@@ -47,6 +51,7 @@ https://t2penbix99wcoxkv3a4g.github.io/VPM.SimpleNightVision/index.json # covere
 https://t2penbix99wcoxkv3a4g.github.io/VPM.WorldFluid/index.json # covered by https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://Tatamo.github.io/vpm-listing/index.json # duplicate of https://vpm.udon.zip/index.json
 https://techanon.github.io/vrc-assets/index.json # duplicate of https://vpm.techanon.dev/index.json
+https://teetee-ropan.github.io/TeeTools-vpm/index.json # alias of https://raw.githubusercontent.com/TeeTee-Ropan/TeeTools-vpm/main/index.json
 https://u-kotovsky.github.io/vpm-listing/index.json # only contains VRChat SDK packages (UdonSharp, ClientSim)
 https://uslashdeleted.github.io/vcc-listing/index.json # github user not found
 https://vpm.dreadscripts.com/listings/main.json
