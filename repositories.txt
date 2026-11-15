@@ -21,6 +21,7 @@ https://aurorakai.github.io/vpm/index.json
 https://autch.github.io/VRC_PopulateScaleAdjusters/index.json
 https://awa-vr.github.io/vrc-tools-vpm/index.json
 https://awakenginexe.github.io/AvatarTuner/index.json
+https://azelrack.github.io/VRChat-AzelVPMListing/index.json
 https://azukimochi.github.io/vpm-repos/index.json
 https://balphagorevr.github.io/balphagore-vcc-listings/index.json
 https://befuddledlabs.github.io/LinuxVRChatSDKPatch/index.json
@@ -100,6 +101,7 @@ https://horicraft.github.io/vpm/index.json
 https://hotaru86.github.io/VPM/index.json
 https://HugPhiluu.github.io/PhilSort/index.json
 https://illusive-isc.github.io/vpm-repos/index.json
+https://itsrenjilabs.github.io/vpm/index.json
 https://jazjasmine.github.io/VCC/index.json
 https://JeTeeS.github.io/TES-VPM-Package-Listing/index.json
 https://JustYaz.github.io/mobile-avatar-studio/index.json
@@ -126,6 +128,7 @@ https://labthe3rd.github.io/PZCameraSystem/index.json
 https://LauraRozier.github.io/LauraVRCUtils/index.json
 https://lazyoptimiser.euan.net/index.json
 https://lereldarion.github.io/vpm-listing/index.json
+https://lgcchina.github.io/LGC-VRC-Packages/index.json
 https://lighfu.github.io/vpm/index.json
 https://lightbulb4.github.io/vpm/index.json
 https://lilxyzw.github.io/vpm-repos-shadercore-modules/vpm.json
@@ -162,6 +165,7 @@ https://nidonocu.github.io/virtual-gryphon-packages/index.json
 https://nitda-lab.github.io/vpm/vpm.json
 https://njsgdd10086.github.io/vpm-listing/index.json
 https://noshirannegi.github.io/vpm/index.json
+https://notzoeydev.github.io/ZoeyAddons/index.json
 https://null-k.github.io/vpm-listing/index.json
 https://nullclone.github.io/vpm-listing/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
@@ -170,6 +174,8 @@ https://o-tr.github.io/vpm/vpm.json
 https://omeletteak.github.io/vpm-listing/index.json
 https://orels1.github.io/orels-Unity-Shaders/index.json
 https://page.853lab.com/vpm-repos/vpm.json
+https://pandanakami.github.io/UdonSharpPlus/index.json
+https://pandanakami.github.io/vpm-package-list/index.json
 https://pandrabox.github.io/vpm/index.json
 https://pasocommate.chigiri.tokyo/index.json
 https://pesky12.github.io/PeskyBox/index.json
@@ -187,9 +193,12 @@ https://rappyr.github.io/Bavi-VPM/index.json
 https://rara-vrc.github.io/rara-avatar-tools/index.json
 https://raspichu.github.io/vpm-listing/index.json
 https://rassi0429.github.io/KokoaVPMRepository/index.json
+https://raw.githubusercontent.com/ainoobmanpg/avatar-fork/main/vpm/index.json
 https://raw.githubusercontent.com/APOL-StarLight/VRC-Unity-Essentials/main/vcc.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/main/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
+https://raw.githubusercontent.com/SgZincanya/Zincat/main/docs/index.json
+https://raw.githubusercontent.com/TeeTee-Ropan/TeeTools-vpm/main/index.json
 https://raw.githubusercontent.com/Tsukina-7mochi/glitch-shader/main/vpm.json
 https://raw.githubusercontent.com/Tsukina-7mochi/qvpen-safe-delete/main/vpm.json
 https://raw.githubusercontent.com/Yunhyuk-Jeong/iyan-vpm/main/vpm.json
@@ -237,6 +246,7 @@ https://suzuryg.github.io/vpm-repos/vpm.json
 https://t2penbix99wcoxkv3a4g.github.io/VPM/index.json
 https://taremin.github.io/CopyComponentsByRegex/index.json
 https://tenteeeee.github.io/vpm-repos/index.json
+https://thearmagan.github.io/AUI/index.json
 https://thesilver0913.github.io/ulexite-store/index.json
 https://timiz0r.github.io/EZUtils/index.json
 https://tliks.github.io/facetune-release/index.json
@@ -322,6 +332,7 @@ https://vpm.vrsl.dev/index.json
 https://vpm.whyknot.dev/index.json
 https://vpm.yozolab.net/index.json
 https://vpm.yukineko.dev/index.json
+https://vrc-staples.github.io/vpm-packages/index.json
 https://vrc-staples.github.io/VRCUnityDevTools/index.json
 https://vrceve.github.io/vrceve-asset/index.json
 https://vrchat-community.github.io/vpm-listing-curated/index.json
@@ -342,6 +353,7 @@ https://www.matthewherber.com/PhysboneConstraints/index.json
 https://www.negura-karasu.net/vpm/
 https://xNanochip.github.io/VPM-Package-Listing/index.json
 https://xtlcdn.github.io/vpm/index.json
+https://yakigura.github.io/vpm-qvinfox/index.json
 https://yakigura.github.io/vpm-qvpalette/index.json
 https://yato96fox.github.io/UnityExpansion-Release/index.json
 https://YerGodDamnRight.github.io/YGDR-VPM-Listing/index.json
