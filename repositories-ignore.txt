@@ -9,7 +9,6 @@ https://guraril.github.io/vpm-repo/vpm.json # github user not found
 https://hai-vr.github.io/vpm-listing-developeronly/index.json # developer-only test listing, not for end users
 https://horicraft.github.io/asset-notebook-vpm/index.json # mirror of https://horicraft.github.io/asset-catalog-vpm/index.json
 https://horicraft.github.io/vpm-beta/index.json # tester-only beta listing
-https://hyde4280.github.io/garakshop-vpm/index.json # no packages
 https://kurone-kito.github.io/launchpad-icons/index.json # covered by https://kurone-kito.github.io/vpm/index.json
 https://kurone-kito.github.io/udonsharp-toybox/index.json # covered by https://kurone-kito.github.io/vpm/index.json
 https://kurone-kito.github.io/vpm-project-template/index.json # unmodified VRChat package template, not a real listing
