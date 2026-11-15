@@ -20,6 +20,7 @@ vpm-discoveryスキルを使用してリポジトリを探索します。
 リポジトリURLはrepositories.txtに辞書順で追記します。
 
 repositories.txtに未記載ではあるが無視すべきリポジトリを発見した場合はrepositories-ignore.txtへコメントと共に追記します。
+ただし、中にパッケージがない、または公開から1週間未満のリポジトリは整備が行き届いていない可能性があるため、単に無視します（repositories.txtにもrepositories-ignore.txtにも追加しません）。
 
 ```
 {URL} # {REASON}
