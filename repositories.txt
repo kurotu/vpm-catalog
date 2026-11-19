@@ -36,6 +36,7 @@ https://box.pesky.zone/index.json
 https://c-colloid.github.io/PBReplacer-VPM/index.json
 https://CascadianVR.github.io/UnityShapekeySearch/index.json
 https://ccvrc.github.io/vpm/index.json
+https://cdn.moii.me/vpm/index.json
 https://Centauri2442.github.io/VRCMasterFailureCheck/index.json
 https://Centauri2442.github.io/VRCNetworkDebugger/index.json
 https://ch4rindo.github.io/vpm/index.json
@@ -197,6 +198,7 @@ https://raw.githubusercontent.com/ainoobmanpg/avatar-fork/main/vpm/index.json
 https://raw.githubusercontent.com/APOL-StarLight/VRC-Unity-Essentials/main/vcc.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/main/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
+https://raw.githubusercontent.com/kureh4/NN-Quest-Converter/main/Website/index.json
 https://raw.githubusercontent.com/SgZincanya/Zincat/main/docs/index.json
 https://raw.githubusercontent.com/TeeTee-Ropan/TeeTools-vpm/main/index.json
 https://raw.githubusercontent.com/Tsukina-7mochi/glitch-shader/main/vpm.json
