@@ -101,6 +101,7 @@ https://horicraft.github.io/asset-catalog-vpm/index.json
 https://horicraft.github.io/vpm/index.json
 https://hotaru86.github.io/VPM/index.json
 https://HugPhiluu.github.io/PhilSort/index.json
+https://hyde4280.github.io/garakshop-vpm/index.json
 https://illusive-isc.github.io/vpm-repos/index.json
 https://itsrenjilabs.github.io/vpm/index.json
 https://jazjasmine.github.io/VCC/index.json
@@ -128,6 +129,7 @@ https://kyure-a.github.io/vpm-repos/vpm.json
 https://labthe3rd.github.io/PZCameraSystem/index.json
 https://LauraRozier.github.io/LauraVRCUtils/index.json
 https://lazyoptimiser.euan.net/index.json
+https://lemoneru.github.io/vpm-repos/index.json
 https://lereldarion.github.io/vpm-listing/index.json
 https://lgcchina.github.io/LGC-VRC-Packages/index.json
 https://lighfu.github.io/vpm/index.json
