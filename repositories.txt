@@ -17,6 +17,7 @@ https://api.vrlabs.dev/listings/category/Essentials
 https://api.vrlabs.dev/listings/category/Rehosted
 https://api.vrlabs.dev/listings/category/Systems
 https://aramaa-vr.github.io/vpm-repos/vpm.json
+https://argentumdesigns.github.io/vpm/index.json
 https://aurorakai.github.io/vpm/index.json
 https://autch.github.io/VRC_PopulateScaleAdjusters/index.json
 https://awa-vr.github.io/vrc-tools-vpm/index.json
@@ -173,9 +174,13 @@ https://null-k.github.io/vpm-listing/index.json
 https://nullclone.github.io/vpm-listing/index.json
 https://nuruwo8.github.io/nuruwo-vpm-list/index.json
 https://nyakomechan.github.io/vpm-repository/index.json
+https://nyaohtech.github.io/nyaohtech-vpm/index.json
 https://o-tr.github.io/vpm/vpm.json
 https://omeletteak.github.io/vpm-listing/index.json
+https://OrcaFox-TailandTide.github.io/package-bundler/index.json
 https://orels1.github.io/orels-Unity-Shaders/index.json
+https://osakishoukai.github.io/vpm/index.json
+https://packages.buicha.jp/vpm.json
 https://page.853lab.com/vpm-repos/vpm.json
 https://pandanakami.github.io/UdonSharpPlus/index.json
 https://pandanakami.github.io/vpm-package-list/index.json
@@ -190,6 +195,7 @@ https://projektcommunity.github.io/avatar-swag-vpm/index.json
 https://purpzie.com/vpm/index.json
 https://qsyi.github.io/vpm-repos/index.json
 https://r-delta-c.github.io/vpm_repository/index.json
+https://radiann-kswg.github.io/VRCShader_ShapeChange/index.json
 https://raii-x.github.io/vpm-listing/index.json
 https://ramtype0.github.io/VpmRepository/index.json
 https://rappyr.github.io/Bavi-VPM/index.json
@@ -199,6 +205,7 @@ https://rassi0429.github.io/KokoaVPMRepository/index.json
 https://raw.githubusercontent.com/ainoobmanpg/avatar-fork/main/vpm/index.json
 https://raw.githubusercontent.com/APOL-StarLight/VRC-Unity-Essentials/main/vcc.json
 https://raw.githubusercontent.com/AzuriteLab/azlab_vrc_repos/main/index.json
+https://raw.githubusercontent.com/GNimrodG/unity-vrc-mcp/vpm/index.json
 https://raw.githubusercontent.com/ksrgtech/vpm-repository/refs/heads/live/index.json
 https://raw.githubusercontent.com/kureh4/NN-Quest-Converter/main/Website/index.json
 https://raw.githubusercontent.com/SgZincanya/Zincat/main/docs/index.json
@@ -234,6 +241,7 @@ https://SemmieDev.github.io/vpm-listing/index.json
 https://sh0ou.github.io/vpm-repos/vpm.json
 https://shiboneko.github.io/vrc-packages/index.json
 https://sigmal00.github.io/UzumoreShaderVPM/index.json
+https://SillyNickDev.github.io/sable-toolbox/index.json
 https://sinkunvv.github.io/BlendMaestro/index.json
 https://siwo32.github.io/mim-project-health-scanner-vpm/index.json
 https://sizimityper.github.io/vpm/index.json
@@ -285,6 +293,7 @@ https://vpm.bluwizard.net/index.json
 https://vpm.chanfoo.net/vpm.json
 https://vpm.chocopoi.com/index.json
 https://vpm.coderco.su/index.json
+https://vpm.foulfoxhacks.dev/index.json
 https://vpm.gatosyocora.net/index.json
 https://vpm.gokoukotori.com/index.json
 https://vpm.gyoku.tech/vpm.json
